@@ -6,3 +6,18 @@ p{
 	text-align: center;
 	text-indent: 0;
 }
+
+.navbar .nav>li>a{
+	color:#4cb4e8;
+}
+
+.zocial{
+	width:36px;
+}
+
+.zocial{
+	height:19px;
+}
+.navbar .divider-vertical{
+	margin: 0px;
+}
