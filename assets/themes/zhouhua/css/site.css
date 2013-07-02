@@ -51,3 +51,9 @@ p{
     -moz-box-shadow: 8px 8px 20px 0px #59f;
     box-shadow: 8px 8px 20px 0px #59f;
 }
+.syntaxhighlighter code{
+	box-shadow: none;
+}
+.syntaxhighlighter{
+	margin-top: 0 !important;
+}
