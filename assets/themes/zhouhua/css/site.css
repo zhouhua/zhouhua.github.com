@@ -21,3 +21,25 @@ p{
 .navbar .divider-vertical{
 	margin: 0px;
 }
+
+.parent{
+	height:200px;
+	padding: 40px 0;
+	background: #ccc;
+	border: 1px solid #666;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius:6px;
+
+}
+.child{
+	height:100px;
+	background: #77f;
+	border: 1px solid #666;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius:6px;
+    -webkit-box-shadow: 8px 8px 20px 0px #59f;
+    -moz-box-shadow: 8px 8px 20px 0px #59f;
+    box-shadow: 8px 8px 20px 0px #59f;
+}
