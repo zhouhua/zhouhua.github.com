@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      
+        网页中元素实现水平居中的方法 - 
+      
+      Zhou Hua
+    </title>
+    
+    <meta name="author" content="Zhou Hua">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="baidu-site-verification" content="cvEhoWZLGH" />
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+
+    <script src="/assets/themes/hooligan/js/jquery.min.js"></script>
+    <script src="/assets/themes/hooligan/bootstrap/js/bootstrap.min.js"></script>
+
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/themes/hooligan/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="/assets/themes/hooligan/css-social-buttons/css/zocial.stripped.css" />
+    <link href="/assets/themes/hooligan/css/pygments.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/hooligan/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
+    <link href="/assets/themes/hooligan/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/assets/themes/zhouhua/css/site.css" rel="stylesheet" type="text/css" media="all">
+    
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>      
+
+
+          <a class="brand" href="/">Zhou Hua</a>
+
+
+          <div class="nav-collapse">
+            <ul class="nav">
+              
+              
+              
+
+
+  
+    
+      
+        
+          
+          <li><a class="transparent" href="/archive.html">文章列表</a></li>
+          
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+          
+          <li><a class="transparent" href="/categories.html">分类</a></li>
+          
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+          
+          <li><a class="transparent" href="/pages.html">Pages</a></li>
+          
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+    
+      
+        
+          
+          <li><a class="transparent" href="/tags.html">标签</a></li>
+          
+        
+      
+    
+  
+    
+      
+        
+      
+    
+  
+
+
+
+            </ul>
+            <ul class="nav pull-right social visible-desktop">
+              
+              <li class="divider-vertical"></li>
+                <li>
+                  <a href="https://www.github.com/zhouhua" class="zocial transparent github icon" target="_blank">
+                    <span class="hidden-desktop">Github</a>
+                  </a>
+                </li>
+              
+                  
+                       
+              
+              <li class="divider-vertical"></li>
+                <li>
+                  <a href="http://www.weibo.com/weiyujingchen" class="zocial transparent weibo icon" target="_blank">
+                  <span class="hidden-desktop">微博</a>
+                  </a>
+                </li>
+                                   
+                         
+                                  
+              
+              <li class="divider-vertical"></li>
+                <li>
+                  <a href="http://feeds.feedburner.com/feedname" class="zocial transparent rss icon" target="_blank">
+                    <span class="hidden-desktop">FeedBurner</a>
+                  </a>
+                </li>
+              
+              <li class="divider-vertical"></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="content">
+        
+<div class="page-header">
+  <h1>
+    网页中元素实现水平居中的方法 
+    
+      <br/>
+      <small>本文为原创，转载请注明出处</small>
+    
+  </h1>
+</div>
+
+<div class="row">
+  <div class="span8">
+    <p>网页中元素居中的需求很普遍，今天就要谈谈相对比较简单，使用场合更多的水平居中。</p>
+
+<h2 id='id4'>行级元素居中</h2>
+<hr />
+<p>我们知道css中有一个text-align的属性来定义子元素的水平对齐，不过它仅对行级元素生效。一种思路就是我们将想要居中的元素规定成inline或inline-block元素。</p>
+<div class='code-title'>CSS代码</div><div class='highlight'><pre><code class='css'><span class='lineno'>1</span> <span class='nc'>.parent</span><span class='p'>{</span>
+<span class='lineno'>2</span> 	<span class='k'>text-align</span><span class='o'>:</span> <span class='k'>center</span><span class='p'>;</span>
+<span class='lineno'>3</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>100</span><span class='o'>%</span><span class='p'>;</span>
+<span class='lineno'>4</span> <span class='p'>}</span>
+<span class='lineno'>5</span> <span class='nc'>.child</span><span class='p'>{</span>
+<span class='lineno'>6</span> 	<span class='k'>display</span><span class='o'>:</span> <span class='k'>inline</span><span class='o'>-</span><span class='k'>block</span><span class='p'>;</span>
+<span class='lineno'>7</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>200px</span><span class='p'>;</span>
+<span class='lineno'>8</span> <span class='p'>}</span>
+</code></pre></div><div class='code-title'>HTML代码</div><div class='highlight'><pre><code class='html'><span class='lineno'>1</span> <span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;parent&quot;</span><span class='nt'>&gt;</span>
+<span class='lineno'>2</span> 	<span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;child&quot;</span><span class='nt'>&gt;</span>我要居中<span class='nt'>&lt;/div&gt;</span>
+<span class='lineno'>3</span> <span class='nt'>&lt;/div&gt;</span>
+</code></pre></div><div class='row-fluid'>
+	<div class='parent' style='text-align:center;width:100%;'>
+		<div class='child' style='display:inline-block;width:200px;'>我要居中</div>
+	</div>
+</div>
+<blockquote>
+<p>注意，inline-block在低版本IE和firefox中支持不佳，为了兼容低版本IE，我们需要给所有的inline-block元素加上一段hack：</p>
+</blockquote>
+<div class='highlight'><pre><code class='css'><span class='lineno'>1</span> 	<span class='nt'>display</span><span class='o'>:</span> <span class='nt'>-moz-inline-stack</span><span class='o'>;</span>
+<span class='lineno'>2</span>     <span class='nt'>display</span><span class='nd'>:inline-block</span><span class='o'>;</span>
+<span class='lineno'>3</span>     <span class='o'>*</span><span class='nt'>zoom</span><span class='nd'>:1</span><span class='o'>;</span>
+<span class='lineno'>4</span>     <span class='nt'>_zoom</span><span class='nd'>:1</span><span class='o'>;</span>
+<span class='lineno'>5</span>     <span class='o'>*</span><span class='nt'>display</span><span class='nd'>:inline</span><span class='o'>;</span>
+<span class='lineno'>6</span>     <span class='nt'>_display</span><span class='nd'>:inline</span><span class='o'>;</span>
+</code></pre></div>
+<h2 id='margin'>margin自适应居中</h2>
+<hr />
+<p>inline-block是一把双刃剑，虽然常常可以解决一些布局的难题，但兼容性问题很大。一方面建议开发者把上面我给出的hack代码放在css一个class中，如果在页面中要用到inline-block，则给这个元素加上这个class。不过不想用inline-block的话，还是有别的方法的，比如很多前端朋友都会用到的margin自适应居中。这是我见过最简单的方法，只需要给子元素设置左右margin为auto即可。原理很简单，当一个块级元素的左右margin为auto时，浏览器根据父元素和子元素的宽度计算出一个使其居中的左右margin。</p>
+<div class='code-title'>CSS代码</div><div class='highlight'><pre><code class='css'><span class='lineno'>1</span> <span class='nc'>.parent</span><span class='p'>{</span>
+<span class='lineno'>2</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>100</span><span class='o'>%</span><span class='p'>;</span>
+<span class='lineno'>3</span> <span class='p'>}</span>
+<span class='lineno'>4</span> <span class='nc'>.child</span><span class='p'>{</span>
+<span class='lineno'>5</span> 	<span class='k'>margin</span><span class='o'>:</span> <span class='m'>0</span> <span class='k'>auto</span><span class='p'>;</span>
+<span class='lineno'>6</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>200px</span><span class='p'>;</span>
+<span class='lineno'>7</span> <span class='p'>}</span>
+</code></pre></div><div class='code-title'>HTML代码</div><div class='highlight'><pre><code class='html'><span class='lineno'>1</span> <span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;parent&quot;</span><span class='nt'>&gt;</span>
+<span class='lineno'>2</span> 	<span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;child&quot;</span><span class='nt'>&gt;</span>我要居中<span class='nt'>&lt;/div&gt;</span>
+<span class='lineno'>3</span> <span class='nt'>&lt;/div&gt;</span>
+</code></pre></div><div class='row-fluid'>
+	<div class='parent' style='width:100%;'>
+		<div class='child' style='margin:0 auto;width:200px;'>我要居中</div>
+	</div>
+</div>
+<blockquote>
+<p>注意，这个方法虽然很简单，但由于行级元素对margin不敏感，因而此方法仅能用于块元素，即inline，inline-block，甚至inline-table的元素无法用此方法实现水平居中。</p>
+</blockquote>
+
+<h2 id='id5'>绝对定位</h2>
+<hr />
+<p>绝对定位也许是处理布局问题最有效的手段，当往往给人一种“暴力”的感觉。简单粗暴但高效的方法在编程时永远是最有价值的。那么绝对定位是如何做到水平居中的呢？我们知道，要对一个元素进行绝对定位，我们常常会规定它相对于relative元素的top、left、right、bottom中的一个或几个。很容易地，我们能想出，要让它能居中，我们可以设定 <code>left=(W-w)/2=W*50%-w*50%</code> ,其中W为relative元素（如父元素）的宽，w为居中元素的宽。不过有一个问题：css中并不能进行这样的数值计算。不过这个问题有解，我们可以借助负margin值来解决这个问题，我们可以先设定 <code>left:50%</code> ，这时候元素是偏向右的，我们还需要让它左移自己宽度的一半。假设自身宽度为200px，那么我们可以规定：<code>margin-left:-100px</code> ，请特别注意这里的负号！</p>
+<div class='code-title'>CSS代码</div><div class='highlight'><pre><code class='css'><span class='lineno'> 1</span> <span class='nc'>.parent</span><span class='p'>{</span>
+<span class='lineno'> 2</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>100</span><span class='o'>%</span><span class='p'>;</span>
+<span class='lineno'> 3</span> 	<span class='k'>position</span><span class='o'>:</span><span class='k'>relative</span><span class='p'>;</span>
+<span class='lineno'> 4</span> <span class='p'>}</span>
+<span class='lineno'> 5</span> <span class='nc'>.child</span><span class='p'>{</span>
+<span class='lineno'> 6</span> 	<span class='k'>position</span><span class='o'>:</span><span class='k'>absolute</span><span class='p'>;</span>
+<span class='lineno'> 7</span> 	<span class='k'>left</span><span class='o'>:</span><span class='m'>50</span><span class='o'>%</span>
+<span class='lineno'> 8</span> 	<span class='k'>margin-left</span><span class='o'>:-</span><span class='m'>100px</span><span class='p'>;</span>
+<span class='lineno'> 9</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>200px</span><span class='p'>;</span>
+<span class='lineno'>10</span> <span class='p'>}</span>
+</code></pre></div><div class='code-title'>HTML代码</div><div class='highlight'><pre><code class='html'><span class='lineno'>1</span> <span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;parent&quot;</span><span class='nt'>&gt;</span>
+<span class='lineno'>2</span> 	<span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;child&quot;</span><span class='nt'>&gt;</span>我要居中<span class='nt'>&lt;/div&gt;</span>
+<span class='lineno'>3</span> <span class='nt'>&lt;/div&gt;</span>
+</code></pre></div><div class='row-fluid'>
+	<div class='parent' style='width:100%;position:relative;'>
+		<div class='child' style='width:200px;position:absolute;left:50%;margin-left:-100px;'>我要居中</div>
+	</div>
+</div>
+<blockquote>
+<p>想必大家从我之前的说明里已经能看到这个方法的一点弊端了。对！这个方法要求我们必须先知道元素的宽度。对于动态的元素，如果我们无法事先得知元素的宽度，那么纯CSS无法解决这个问题，只能借助javascript获取宽度值后再更改margin-left的属性值。</p>
+</blockquote>
+
+<h2 id='id6'>表格布局</h2>
+
+<p>在css兴起之前，表格布局大行其道。我记得我初中时刚接触网页制作，老师讲课也好，参考资料也好，均是表格布局的例子。不过表格布局的页面可读性实在很差，可维护性和可扩展性都很低。不过不得不说，用表格布局确能有效解决好多复杂的布局问题。对于表格布局，我的态度是：反对页面整体使用表格布局，但在局部，可以使用表格布局，不过要求表格结构完整，不允许表格嵌套。</p>
+
+<p>回到正题，如果仅仅是解决水平居中的问题，采用表格布局，我们完全可以不用使用css,我们只要给包含要居中内容的单元格添加属性 <code>align=&quot;center&quot;</code> 即可。</p>
+<div class='code-title'>CSS代码</div><div class='highlight'><pre><code class='css'><span class='lineno'>1</span> <span class='nc'>.child</span><span class='p'>{</span>
+<span class='lineno'>2</span> 	<span class='k'>width</span><span class='o'>:</span><span class='m'>200px</span><span class='p'>;</span>
+<span class='lineno'>3</span> <span class='p'>}</span>
+</code></pre></div><div class='code-title'>HTML代码</div><div class='highlight'><pre><code class='html'><span class='lineno'>1</span> <span class='nt'>&lt;td</span> <span class='na'>class=</span><span class='s'>&quot;parent&quot;</span><span class='nt'>&gt;</span>
+<span class='lineno'>2</span> 	<span class='nt'>&lt;div</span> <span class='na'>class=</span><span class='s'>&quot;child&quot;</span><span class='nt'>&gt;</span>我要居中<span class='nt'>&lt;/div&gt;</span>
+<span class='lineno'>3</span> <span class='nt'>&lt;/td&gt;</span>
+</code></pre></div><div class='row-fluid'>
+	<table width='100%'>
+		<tbody>
+			<tr>
+				<td align='center' class='parent'>
+					<div class='child' style='width:200px'>我要居中</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+    <hr>
+    <div class="pagination btn-group">
+      
+        <a class="btn prev" href="/2013/06/20/skills" title="统计代码行数的小技巧">&larr; 上一页</a>
+      
+        <a class="btn" href="/archive.html">文章列表</a>
+      
+        <a class="btn next disabled">下一页 &rarr;</a>
+      
+    </div>
+    <hr>
+    
+
+
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_shortname = 'zhouhuagithub'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink"><span class="logo-disqus">Disqus</span></a>提供评论功能
+        
+
+
+
+  </div>
+  
+  <div class="span4">
+    <section>
+      <h4>发布日期</h4>
+      <div class="date"><span>2013年07月01日</span></div>
+    </section>
+    
+      <section>
+        <h4>分类</h4>
+        <span class="category">
+          技术
+        </span>
+      </section>
+    
+    
+      <section>
+        <h4>标签</h4>
+        <ul class="tag_box">
+          
+          
+
+
+  
+     
+    	<li><a href="/tags.html#css-ref">css <span>1</span></a></li>
+     
+    	<li><a href="/tags.html#水平居中-ref">水平居中 <span>1</span></a></li>
+    
+  
+
+
+
+        </ul>
+      </section>
+             
+  </div>
+</div>
+
+
+      </div>
+
+      <footer>
+        <p>&copy; Zhou Hua 2013 
+          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
+          and <a href="http://github.com/dhulihan/hooligan" target="_blank">The Hooligan Theme</a>
+        </p>
+      </footer>
+    </div> <!-- /container -->
+    
+  </body>
+</html>
+

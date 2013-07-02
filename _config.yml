@@ -13,7 +13,7 @@ destination: "../../My Web Sites/WebSite1"
 # so be sure to set them if your theme uses them.
 #
 title : Zhou Hua
-tagline: Site Tagline
+tagline: nil
 author :
   name : Zhou Hua
   email : zhou--hua@163.com
