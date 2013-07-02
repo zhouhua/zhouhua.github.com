@@ -9,17 +9,22 @@
       <small>本文为原创，转载请注明出处</small>
     {% endif %}
   </h1>
+  <!-- UYAN COUNT BEGIN -->
+<a href="链接到的URL地址(产生评论的URL地址)，务必填写，同时URL中允许加入＃标签实现描点功能" id="uyan_count_unit" du="如果网站定义了du参数此处请填上" su="如果网站定义了su参数此处请填上">0条评论</a>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1808684"></script> <!-- 如果已经过加载此行JS，即可不用重复加载 -->
+<!-- UYAN COUNT END -->
 </div>
 
 <div class="row">
   <div class="span8">
     {{ content }}
     <hr>
-    <!-- UJian Button BEGIN -->
-  <div class="ujian-hook"></div>
-  <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=1808684"></script>
-  <a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
-  <!-- UJian Button END -->
+<!-- UJian Button BEGIN -->
+<div class="ujian-hook"></div>
+<script type="text/javascript">var ujian_config = {lkrc:5,target:1};</script>
+<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&uid=1808684"></script>
+<a href="http://www.ujian.cc" style="border:0;"><img src="http://img.ujian.cc/pixel.png" alt="友荐云推荐" style="border:0;padding:0;margin:0;" /></a>
+<!-- UJian Button END -->
     <div class="pagination btn-group">
       {% if page.previous %}
         <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一页</a>
