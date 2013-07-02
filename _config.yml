@@ -6,7 +6,6 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
 pygments: true
 
-destination: "../../My Web Sites/WebSite1"
 
 
 # Themes are encouraged to use these universal variables 
@@ -82,7 +81,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
+    provider : uyan
     disqus :
       short_name : zhouhuaGithub
 
