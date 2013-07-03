@@ -25,9 +25,10 @@ p{
 .code-title{
 	font-size: 1.2em;
 	border: 1px solid #999;
-	background: #666;
+	background: #fff;
 	padding: 4px 10px;
 	width:80px;
+
 }
 
 .parent{
@@ -41,6 +42,7 @@ p{
 
 }
 .child{
+	color: white;
 	height:100px;
 	background: #77f;
 	border: 1px solid #666;
@@ -53,6 +55,7 @@ p{
 }
 .syntaxhighlighter code{
 	box-shadow: none;
+	text-shadow: 1px 1px 1px #444;
 }
 .syntaxhighlighter{
 	margin-top: 0 !important;
