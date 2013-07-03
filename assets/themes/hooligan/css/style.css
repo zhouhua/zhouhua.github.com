@@ -97,7 +97,7 @@ hr {
 
 .content {
 }
-.content img {
+#mainContent img {
   box-shadow: 9px 10px 15px rgba(0, 0, 0, 0.5);
 }
 .content.no-header {
