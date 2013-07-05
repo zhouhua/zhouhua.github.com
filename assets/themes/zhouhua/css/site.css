@@ -6,7 +6,12 @@ p{
 	text-align: center;
 	text-indent: 0;
 }
-
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
 .navbar .nav>li>a{
 	color:#4cb4e8;
 }
