@@ -1,6 +1,13 @@
 <div class="page-header">
   <h1>
-    {{ page.title }} 
+    {{ page.title }} <span class="jiathis_style">
+  <a class="jiathis_like_tsina"></a>
+</span>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+
+<!-- JiaThis Button END -->
     {% if page.tagline & page.tagline != '' %}
       <br/>
       <small>{{ page.tagline }}
@@ -9,20 +16,38 @@
       <small>本文为原创，转载请注明出处
     {% endif %}
     <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style">
-  <a class="jiathis_like_tsina"></a>
-</div>
-<script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
-</script>
 
-<!-- JiaThis Button END -->
   </small>
   </h1>
   <!-- UYAN COUNT BEGIN -->
 <!-- UYAN COUNT END -->
 </div>
+<div class="row">
+  <!-- JiaThis Button BEGIN -->
+<div class="jiathis_style_32x32">
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_weixin"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_email"></a>
+<a class="jiathis_button_print"></a>
+<a class="jiathis_button_copy"></a>
+<a href="http://www.jiathis.com/share?uid=1808684" class="jiathis jiathis_txt jiathis_separator jtico jtico_jiathis" target="_blank"></a>
+<a class="jiathis_counter_style"></a>
+</div>
+<script type="text/javascript" >
+var jiathis_config={
+  data_track_clickback:true,
+  summary:"",
+  ralateuid:{
+    "tsina":"weiyujingchen"
+  },
+  hideMore:false
+}
+<!-- JiaThis Button END -->
 
+</div>
 <div class="row">
   <div class="span8">
     <div id="mainContent">{{ content }}</div>
@@ -106,7 +131,6 @@ var jiathis_config={
 <!-- JiaThis Button END -->
 
 
-<script type="text/javascript">
 <script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1369026054788331" charset="utf-8"></script>
 var jiathis_config = {data_track_clickback:'true'};
 </script>
