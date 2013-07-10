@@ -90,7 +90,7 @@ blockquote {
  }
  #license p{
  	text-indent: 0;
- 	margin-bottom: 0px;
+ 	padding-bottom: 0px;
  }
  #license img{
  	margin: 10px 10px 0px 0px;

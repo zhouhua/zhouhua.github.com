@@ -157,7 +157,7 @@ input,
 input[type="file"],
 select,
 textarea {
-  color: white;
+  color: #111;
   border-color: #111111;
 }
 
