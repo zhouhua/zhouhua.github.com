@@ -1,66 +1,59 @@
-<script type="text/javascript">
-var jiathis_config = {
-    shareImg:{
-        "showType":"ALL",
-        "imgwidth":"200px",
-        "imgheight":"200px"
-    }
-}
-</script>
-
 <div class="page-header">
   <h1>
-    {{ page.title }} 
-
-<!-- JiaThis Button END -->
-    {% if page.tagline & page.tagline != '' %}
-      <br/>
-      <small>{{ page.tagline }}
-    {%else%}
-      <br/>
-      <small>本文为原创，转载请注明出处
-    {% endif %}
-    <!-- JiaThis Button BEGIN -->
-
-  </small>
+    {{ page.title }} <br/>
+    <small>原作者：<a href="http://zhouhua.github.io">{{site.author.name}}</a></small>
   </h1>
 </div>
 
-<!-- JiaThis Button END -->
 <div class="row">
   <div class="span8">
     <div class="row" style="padding:0px 0px 10px 20px;">
-  <!-- JiaThis Button BEGIN -->
-<div class="jiathis_style_24x24">
-  <span class="left" style="line-height:24px; font-size:18px;">分享到：</span>
-  <a class="jiathis_button_tsina"></a>
-  <a class="jiathis_button_tqq"></a>
-  <a class="jiathis_button_renren"></a>
-  <a class="jiathis_button_weixin"></a>
-  <a class="jiathis_button_qzone"></a>
-  <a class="jiathis_button_email"></a>
-  <a class="jiathis_button_print"></a>
-  <a href="http://www.jiathis.com/share?uid=1808684" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
-  <a class="jiathis_counter_style"></a>
+  <!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_tsina"></a>
+<a class="bds_qzone"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_print"></a>
+<a class="bds_copy"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
 </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6754193" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
 <script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1369026054788331" charset="utf-8"></script>
-<!-- JiaThis Button END -->
+<!-- Baidu Button END -->
 
-<!-- JiaThis Button BEGIN -->
-<div class="jiathis_style right">
-  <a class="jiathis_like_tsina"></a>
-</div>
-<script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
+<!-- 将此标记放在您希望显示like按钮的位置 -->
+<div class="bdlikebutton right"></div>
+
+<!-- 将此代码放在适当的位置，建议在body结束前 -->
+<script id="bdlike_shell"></script>
+<script>
+var bdShare_config = {
+  "type":"small",
+  "color":"blue",
+  "uid":"6754193"
+};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js?uid=1369026054788331" charset="utf-8"></script>
-<!-- JiaThis Button END -->
 </div>
     <div class="jiathis_streak" id="mainContent">{{ content }}</div>
     <hr>
+
+    {% if page.zzurl & page.zzurl != '' %}
+      <div id="license" class="well">
+        <p>本文转自<a href="{{page.zzurl}}" target="_blank">{{page.zztitle}}</a></p>
+        <p>原作者为<a href="{{page.zzauthorurl}}" target="_blank">{{page.zzauthor}}</a></p>
+      </div>
+    {%else%}
+      <div id="license" class="well">
+        <a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" rel="license" target="_blank"><img style="border-right-width: 0pt; border-top-width: 0pt; border-bottom-width: 0pt; border-left-width: 0pt" alt="Creative Commons License" align="left" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"></a>
+        <p>本文基于<a title="Attribution-NonCommercial 3.0 Unported" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank">署名-非商业性使用 3.0</a>许可协议发布，转载、演绎必须保留本文的署名<a href="http://zhouhua.github.io" target="_blank">周骅</a>（包含链接http://zhouhua.github.io），且不得用于商业目的。如您有任何疑问或者授权方面的协商，请<a href="mailto:zhou--hua@163.com" target="_blank">与我联系</a>。</p>
+      </div>
+    {% endif %}
 <!-- UJian Button BEGIN -->
 <div class="ujian-hook"></div>
 <script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?type=slide&amp;uid=1808684"></script>
@@ -133,19 +126,25 @@ var jiathis_config = {data_track_clickback:'true'};
 <!-- JiaThis Button END -->
 
 
-<!-- JiaThis Button BEGIN -->
-<!--
-<script type="text/javascript" >
-var jiathis_config={
-  data_track_clickback:true,
-  summary:"",
-  ralateuid:{
-    "tsina":"weiyujingchen"
-  },
-  showClose:true,
-  hideMore:false
-}
+<!-- Baidu Button BEGIN -->
+<script type="text/javascript" id="bdshare_js" data="type=slide&amp;img=3&amp;pos=right&amp;uid=6754193" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"bdTop":222};
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
 </script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?uid=1808684&btn=r2.gif&move=1" charset="utf-8"></script>
--->
-<!-- JiaThis Button END -->
+<!-- Baidu Button END -->
+
+<!-- 将此代码放在适当的位置，建议在body结束前 -->
+<script id="bdimgshare_shell"></script>
+<script>
+var bdShare_config_imgshare = {
+  "type":"list"
+  ,"size":"small"
+  ,"pos":"top"
+  ,"color":"black"
+  ,"list":["qzone","tsina","tqq","renren","t163"]
+  ,"uid":"6754193"
+};
+document.getElementById("bdimgshare_shell").src="http://bdimg.share.baidu.com/static/js/imgshare_shell.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>

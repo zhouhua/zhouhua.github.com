@@ -11,7 +11,7 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="ujianVerification" content="5866e50ebdecd9fa3f5360b69416367d" />
+    <meta name="google-translate-customization" content="cb822fea05893542-738e06295900bef3-gde00bc2d862813b6-11"></meta>
     <!-- HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -27,7 +27,7 @@
     <link href="{{ ASSET_PATH }}/css/darkstrap.css" rel="stylesheet" type="text/css" media="all">    
     <link href="{{ ASSET_PATH }}/css/style.css?body=1" rel="stylesheet" type="text/css" media="all">
     <link href="{{ BASE_PATH }}/assets/themes/zhouhua/css/site.css" rel="stylesheet" type="text/css" media="all">
-    
+    <link title="RSS 2.0" type="application/rss+xml" href="http://feed.feedsky.com/ZhouHuaBlog" rel="alternate" />
     <!-- fav and touch icons -->
   <!-- Update these with your own images
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -111,7 +111,7 @@
               {% if site.author.feedburner %}
               <li class="divider-vertical"></li>
                 <li>
-                  <a href="http://feeds.feedburner.com/{{ site.author.feedburner }}" class="zocial transparent rss icon" target="_blank">
+                  <a href="http://feed.feedsky.com/ZhouHuaBlog" class="zocial transparent rss icon" target="_blank">
                     <span class="hidden-desktop">FeedBurner</a>
                   </a>
                 </li>
@@ -135,6 +135,11 @@
         </p>
       </footer>
     </div> <!-- /container -->
+    <div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'zh-CN', includedLanguages: 'en,zh-TW', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true, gaTrack: true, gaId: 'UA-35493639-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     {% include JB/analytics %}
   </body>
 </html>
