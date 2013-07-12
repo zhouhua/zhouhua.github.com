@@ -6,9 +6,6 @@ title: 周骅
 
 首页建设中……
 
-<div class="tagCloud" style="width:100%;height:500px;">
-    
-</div>
 
 <div>
 <ul class="posts">
@@ -17,10 +14,3 @@ title: 周骅
   {% endfor %}
 </ul>
 </div>
-<script type="text/javascript" src="http://julying.com/lab/_jslib/jQuery.js"> 
-</script>
-<script type="text/javascript" src="http://julying.com/lab/coffee/js/jquery.coffee.js"> 
-</script>
-<script>
-    $(".tagCloud").coffee();
-</script>
