@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>
+      {% if page.title %}
+        {{ page.title }} - 
+      {% endif %}
+      {{ site.title }}
+    </title>
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-translate-customization" content="cb822fea05893542-738e06295900bef3-gde00bc2d862813b6-11"> </meta>
+    <!-- HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"> </script>
+    <![endif]-->
+
+
+    <script src="{{ ASSET_PATH }}/javascript/jquery.min.js"> </script>
+
+    <script src='https://cdn.firebase.com/v0/firebase.js'> </script>
+
+    <link href="{{ ASSET_PATH }}/css/modern.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/css/modern-responsive.css" rel="stylesheet">    
+    <link rel="stylesheet" type="text/css" href="{{ ASSET_PATH }}/css-social-buttons/css/zocial.stripped.css" />
+
+    <link href="{{ ASSET_PATH }}/css/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="{{ ASSET_PATH }}/css/site.css" rel="stylesheet" type="text/css" media="all">
+    <link title="RSS 2.0" type="application/rss+xml" href="http://feed.feedsky.com/ZhouHuaBlog" rel="alternate" />
+    <!-- fav and touch icons -->
+  <!-- Update these with your own images
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+  -->
+  </head>
+
+  <body class="metrouicss">
+    <div class="nav-bar bg-color-darken">
+      <div class="nav-bar-inner padding10">  
+
+
+          <a class="element brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+
+          <span class="divider"> </span>
+          <span class="pull-menu"> </span>
+          <ul class="menu">
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+          </ul>
+            
+            <ul class="nav pull-right social visible-desktop">
+              <li> <a href="mailto://zhou--hua@163.com" class="zocial transparent email icon" target="_blank"> <span class="hidden-desktop">邮件与我联系</span> </a> </li>
+              {% if site.author.github %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="https://www.github.com/{{ site.author.github }}" class="zocial transparent github icon" target="_blank">
+                    <span class="hidden-desktop">Github</a>
+                  </a>
+                </li>
+              {% endif %}
+              {% if site.author.googleplus %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="https://profiles.google.com/{{ site.author.google }}" class="zocial transparent googleplus icon" target="_blank">
+                    <span class="hidden-desktop">Google+</a>
+                  </a>
+                </li>
+              {% endif %}    
+              {% if site.author.twitter %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="http://www.twitter.com/{{ site.author.twitter }}" class="zocial transparent twitter icon" target="_blank">
+                  <span class="hidden-desktop">Twitter</a>
+                  </a>
+                </li>
+              {% endif %}         
+              {% if site.author.weibo %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="http://www.weibo.com/{{ site.author.weibo }}" class="zocial transparent weibo icon" target="_blank">
+                  <span class="hidden-desktop">微博</a>
+                  </a>
+                </li>
+              {% endif %}                     
+              {% if site.author.facebook %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="http://www.facebook.com/{{ site.author.facebook }}" class="zocial transparent facebook icon" target="_blank">
+                    <span class="hidden-desktop">Facebook</a>
+                  </a>
+                </li>
+              {% endif %}           
+              {% if site.author.linkedin %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="http://www.linkedin.com/in/{{ site.author.linkedin }}" class="zocial transparent linkedin icon" target="_blank">
+                    <span class="hidden-desktop">LinkedIn</a>
+                  </a>
+                </li>
+              {% endif %}                    
+              {% if site.author.feedburner %}
+              <li class="divider-vertical"> </li>
+                <li>
+                  <a href="http://feed.feedsky.com/ZhouHuaBlog" class="zocial transparent rss icon" target="_blank">
+                    <span class="hidden-desktop">FeedBurner</a>
+                  </a>
+                </li>
+              {% endif %}
+              <li class="divider-vertical"> </li>
+            </ul>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="grid">
+        {{ content }}
+      </div>
+
+      <footer>
+        <p>&copy; {{ site.author.name }} 2013 
+          周骅
+        </p>
+        <p class="textCenter">
+          {% include JB/analytics %}
+        </p>
+      </footer>
+    </div> <!-- /container -->
+<div id="google_translate_element"> </div> <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'zh-CN', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT, multilanguagePage: true, gaTrack: true, gaId: 'UA-35493639-1'}, 'google_translate_element');
+}
+</script> <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script>
+  </body>
+</html>

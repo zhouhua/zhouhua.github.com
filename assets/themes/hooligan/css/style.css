@@ -69,20 +69,20 @@ hr {
   height: 1px;
 }
 
-.navbar {
+.nav-bar {
   margin-bottom: 0;
 }
-.navbar div.navbar-inner {
+.nav-bar div.nav-bar-inner {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
   border-radius: 0;
 }
-.navbar div.navbar-inner a.brand {
+.nav-bar div.nav-bar-inner a.brand {
   padding: 10px 20px;
 }
-.navbar div.navbar-inner ul.nav:first-child li a {
+.nav-bar div.nav-bar-inner ul.nav:first-child li a {
   padding: 12px 10px 8px;
 }
 

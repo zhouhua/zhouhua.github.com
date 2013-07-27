@@ -3,14 +3,14 @@ layout: post
 category : 技术
 tags : [Javascript, 一元操作符, ECMAScript]
 title: 从 +new Date 说起，Javascript的一元操作符
-abstract: 
+abstract: Javascript中有一些一元操作符往往被我们所忽略，本文介绍几个有用的一元操作符。
 ---
 {% include JB/setup %}
 {% capture POST_PIC_PATH %}{{ PIC_PATH }}/technology/operator/{% endcapture %}
 <link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
 <link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
 
-在偶然打开[d3](http://d3js.org)的源代码的时候，我看到了这样一段代码。
+在偶然打开 [d3](http://d3js.org) 的源代码的时候，我看到了这样一段代码。
 
 <pre class="brush: javascript;">
 if (!Date.now) Date.now = function() {
@@ -44,14 +44,14 @@ if (!Date.now) Date.now = function() {
 var a=10;
 console.log(a++ - 1);
 </pre>
-<p class="textCenter"><img class="JIATHIS_IMG_OK" src="{{POST_PIC_PATH}}result1.jpg" alt=""></p>
+<p class="textCenter"> <img class="img-polaroid img-hover" src="{{POST_PIC_PATH}}result1.jpg" alt=""> </p>
 <p class="textCenter">图1：<code>a++</code> 运算结果</p>
 <div class="code-title">Javascript代码</div>
 <pre class="brush: javascript;">
 var a=10;
 console.log(++a - 1);
 </pre>
-<p class="textCenter"><img class="JIATHIS_IMG_OK" src="{{POST_PIC_PATH}}result2.jpg" alt=""></p>
+<p class="textCenter"> <img class="img-polaroid img-hover" src="{{POST_PIC_PATH}}result2.jpg" alt=""> </p>
 <p class="textCenter">图2：<code>++a</code> 运算结果</p>
 
 从以上实验结果我们知道，`a++ - 1` 先执行出 `a - 1` 的结果，再执行 `a=a+1`，所以相当于“先运算再赋值”；而 `++a - 1` 则不同，它是先执行 `a=a+1`，再用新的a来参与运算 `a - 1`，因而这是“先赋值再运算”。
@@ -66,7 +66,7 @@ console.log(++a - 1);
 
 这里的 `delete` 与C++中的 `delete` 关键字不同，这不是用来释放一个对象的内存空间，而是释放对象内部的一个自定义属性和方法的引用。对于 `delete` 的用法，我用一张图片来说明。
 
-<p class="textCenter"><img class="JIATHIS_IMG_OK" src="{{POST_PIC_PATH}}result3.jpg" alt=""></p>
+<p class="textCenter"> <img class="img-polaroid img-hover" src="{{POST_PIC_PATH}}result3.jpg" alt=""> </p>
 
 我们定义了一个Date类型的对象 `a`，并给它定义一个属性 `name` 和一个方法 `speak`，然后我们用 `delete` 操作符将自定义的属性和方法删除。同时我们也发现，对于Javascript内置的属性和方法是不可以通过 `delete` 操作符删除的，这里我们测试的是Date对象的valueOf方法。
 
@@ -82,7 +82,7 @@ console.log(++a - 1);
 <pre class="brush: html;">
 &lt;a href="javascript:void(0)">我是一个死链接&lt;/a>
 </pre>
-<p><a href="javascript:void(0)">我是一个死链接</a></p>
+<p> <a href="javascript:void(0)">我是一个死链接</a> </p>
 
 ###打开新窗口
 
@@ -91,7 +91,7 @@ console.log(++a - 1);
 <pre class="brush: html;">
 &lt;a href="javascript:window.open('about:blank')">打开新窗口&lt;/a>
 </pre>
-<p id="welcomeBack">我不建议读者点这个<a href="javascript:window.open('http://zhouhua.github.io/return/unaryoperator')">链接</a>，不过我测试下来，chrome浏览器是对这个问题做了处理，如果你是想故意测试这个bug，请换IE浏览器来点击前面的链接。这个时候 `void`操作符就能够发挥作用了，我们把代码改为：</p>
+<p id="welcomeBack">我不建议读者点这个<a href="javascript:window.open('http://zhouhua.github.io/return/UnaryOperator')">链接</a>，不过我测试下来，chrome浏览器是对这个问题做了处理，如果你是想故意测试这个bug，请换IE浏览器来点击前面的链接。这个时候 <code>void</code> 操作符就能够发挥作用了，我们把代码改为：</p>
 <pre class="brush: html;">
 &lt;a href="javascript:void(window.open('about:blank'))">打开新窗口&lt;/a>
 </pre>

@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="small-12 columns site-panel" style="width:41.66666666%;">
+    <div class="site-tile">
+      <a class="brand right" href="{{ HOME_PATH }}">{{ site.title }}</a>
+    </div>
+    <hr/>
+    <div class="site-nav">
+      <ul class="side-nav right">
+        {% assign pages_list = site.pages %}
+        {% assign group = 'navigation' %}
+        {% include JB/pages_list %}
+      </ul>
+    </div>
+    <hr/>
+    <div class="site-social">
+      <ul class="side-nav right">
+        <li>
+          <a href="mailto://zhou--hua@163.com" class="zocial email icon" target="_blank"> </a>
+          <a href="https://www.github.com/{{ site.author.github }}" class="zocial github icon" target="_blank"> </a>
+          <a href="http://www.weibo.com/{{ site.author.weibo }}" class="zocial weibo icon" target="_blank"> </a>
+          <a href="http://feed.feedsky.com/ZhouHuaBlog" class="zocial rss icon" target="_blank"> </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="large-7 small-12 columns page-panel">
+		<h1 class="page-head">
+  		{{ page.title }} {% if page.tagline %} <small>{{ page.tagline }}</small>{% endif %}</h1>
+  		{{ content }}
+  </div>
+</div>
