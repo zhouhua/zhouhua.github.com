@@ -1,4 +1,5 @@
 
+</script><script src="http://s22.cnzz.com/stat.php?id=5545205&web_id=5545205&show=pic1" language="JavaScript"> </script>
 <script type="text/javascript">
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{ site.JB.analytics.google.tracking_id }}']);
@@ -9,4 +10,3 @@
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
-</script><script src="http://s22.cnzz.com/stat.php?id=5545205&web_id=5545205&show=pic1" language="JavaScript"></script>
