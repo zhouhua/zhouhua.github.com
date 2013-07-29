@@ -20,8 +20,6 @@
 
     <script src="{{ ASSET_PATH }}/javascript/vendor/jquery.js"> </script>
     <script src="{{ ASSET_PATH }}/javascript/foundation.min.js"> </script>
-
-    <script src='https://cdn.firebase.com/v0/firebase.js'> </script>
     <link href="{{ ASSET_PATH }}/css/general_foundicons.css" rel="stylesheet"> 
     <link href="{{ ASSET_PATH }}/css/normalize.css" rel="stylesheet">
     <link href="{{ ASSET_PATH }}/css/foundation.min.css" rel="stylesheet">    
@@ -39,7 +37,7 @@
 </head>
 <body>
   {{ content }}
-  {% include JB/analytics %}
+
   <div class="translate hide-for-small">
     <div id="google_translate_element"> </div>
     <script type="text/javascript">
@@ -49,5 +47,6 @@ function googleTranslateElementInit() {
 </script> 
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"> </script>
   </div>
+  {% include JB/analytics %}
 </body>
 </html>
