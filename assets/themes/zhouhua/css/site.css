@@ -1,6 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Advent+Pro);
 @import url(http://fonts.googleapis.com/css?family=Oxygen);
-
 table {
   max-width: 100%;
   background-color: transparent;
@@ -159,6 +158,7 @@ body {
   text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
   font-family: 'Oxygen', '微软雅黑', sans-serif;
   min-height: 500px;
+  position: relative;
 }
 img {
 width: auto	9;
@@ -243,6 +243,7 @@ code{
 	border: 1px solid #E1E1E8;
 	background: white;
 	border-left: 5px solid #999;
+  border-radius: 3px;
 }
 
 pre > code {
@@ -355,29 +356,37 @@ blockquote {
 	text-shadow:3px 3px 8px rgba(0,0,0,0.6);
  }
  .page-panel{
- 	background: url(../images/bgs/bg.png) repeat;
- 	padding-left: 2%;
+ 	background: url(../images/bgs/bg.png) repeat; 	
+  padding: 10px 3%;
  	box-shadow: -5px 0px 10px rgba(0,0,0,0.5);
+  position: absolute;
+  top:0;
+  left: 33.333333%;
+  width:66.666666%;
  }
  .site-panel{
  	background: url(../images/bgs/body.png) repeat;
- 	
- 	padding-right:3%;
+ 	padding: 10px 2%;
  	width:33.333333%;
  	height:100%;
  	position: fixed;
  	left: 0;
  	top:0;
  }
+  .page-panel.page{
+  top:0;
+  left: 41.6666666%;
+  width:58.3333333%;
+ }
+ .site-panel.page{
+  padding: 10px 2%;
+  width:41.6666666%;
+  height:100%;
+  position: fixed;
+ }
  .site-nav{
  	text-align: right;
 	font-size: 18px;
- }
- .translate{
- 	position: fixed;
- 	left:1em;
- 	bottom: 1em;
- 	width:180px;
  }
  li i{
  	font-size: 12px;
