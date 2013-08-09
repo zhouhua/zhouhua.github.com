@@ -1,6 +1,6 @@
 <div class="row">
   <div class="small-12 columns site-panel">
-    <div class="site-tile">
+    <div class="site-title">
       <a class="brand right" href="{{ HOME_PATH }}">{{ site.title }}</a>
     </div>
     <hr/>
@@ -24,6 +24,10 @@
     </div>
   </div>
   <div class="small-12 columns page-panel">
+    <div class="site-title">
+       <div id="clock"></div>
+    </div>
+    <hr/>
   <h1 class="page-head link">
     {{ page.title }} <br/>
     <small>原作者：<a href="http://zhouhua.github.io">{{site.author.name}}</a> </small>
@@ -31,33 +35,17 @@
 
 <div class="row">
   <div class="large-8 small-12 columns">
-    <div class="row" style="padding:0px 0px 0px 20px;">
+    <div class="row" style="padding:0px 20px 0px 20px;">
   <!-- Baidu Button BEGIN -->
       <!-- Baidu Button BEGIN -->
 <div id="bdshare" class="bdshare_b left" style="line-height: 12px;">
 <img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
 <a class="shareCount"> </a>
 </div>
-<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=6754193" > </script>
-<script type="text/javascript" id="bdshell_js"> </script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-</script>
 <!-- Baidu Button END -->
-
 <!-- 将此标记放在您希望显示like按钮的位置 -->
-<div class="bdlikebutton"> </div>
+<div class="bdlikebutton right"></div>
 
-<!-- 将此代码放在适当的位置，建议在body结束前 -->
-<script id="bdlike_shell"> </script>
-<script>
-var bdShare_config = {
-  "type":"small",
-  "color":"orange",
-  "uid":"6754193"
-};
-document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
-</script>
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
     <hr>
@@ -140,5 +128,27 @@ var bdShare_config_imgshare = {
 };
 document.getElementById("bdimgshare_shell").src="http://bdimg.share.baidu.com/static/js/imgshare_shell.js?cdnversion=" + Math.ceil(new Date()/3600000);
 </script>
+
+<!-- 将此代码放在适当的位置，建议在body结束前 -->
+<script id="bdlike_shell"></script>
+<script>
+var bdShare_config = {
+  "type":"small",
+  "color":"orange",
+  "uid":"6754193"
+};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
+</script>
+<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=6754193" > </script>
+<script type="text/javascript" id="bdshell_js"> </script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+</script>
   </div>
 </div>
+
+<script type="text/javascript">
+    var now=new Date();
+    var clock = $('#clock').FlipClock(3600*now.getHours()+60*now.getMinutes()+now.getSeconds(),
+            {clockFace: 'TwentyFourHourClock'});
+</script>
