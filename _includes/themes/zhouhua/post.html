@@ -1,96 +1,83 @@
-<div class="row">
-  <div class="small-12 columns site-panel">
-    <div class="site-title">
-      <a class="brand right" href="{{ HOME_PATH }}">{{ site.title }}</a>
-    </div>
-    <hr/>
-    <div class="site-nav">
-      <ul class="side-nav right">
-        {% assign pages_list = site.pages %}
-        {% assign group = 'navigation' %}
-        {% include JB/pages_list %}
-      </ul>
-    </div>
-    <hr/>
-    <div class="site-social">
-      <ul class="side-nav right">
-        <li>
-          <a href="mailto://zhou--hua@163.com" class="zocial email icon" target="_blank"> </a>
-          <a href="https://www.github.com/{{ site.author.github }}" class="zocial github icon" target="_blank"> </a>
-          <a href="http://www.weibo.com/{{ site.author.weibo }}" class="zocial weibo icon" target="_blank"> </a>
-          <a href="http://feed.feedsky.com/ZhouHuaBlog" class="zocial rss icon" target="_blank"> </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="small-12 columns page-panel">
-    <div class="site-title">
-       <div id="clock"></div>
-    </div>
-    <hr/>
-  <h1 class="page-head link">
+<div class="page-header">
+  <div class="page-header-content">
     {{ page.title }} <br/>
-    <small>原作者：<a href="http://zhouhua.github.io">{{site.author.name}}</a> </small>
-  </h1>
+    <small>原作者：<a href="http://zhouhua.github.io">{{site.author.name}}</a></small>
+  </div>
+</div>
 
 <div class="row">
-  <div class="large-8 small-12 columns">
-    <div class="row" style="padding:0px 20px 0px 20px;">
+  <div class="span8">
+    <div class="row" style="padding:0px 0px 10px 20px;">
   <!-- Baidu Button BEGIN -->
-      <!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_b left" style="line-height: 12px;">
-<img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
-<a class="shareCount"> </a>
+<div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+<a class="bds_tsina"></a>
+<a class="bds_qzone"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_print"></a>
+<a class="bds_copy"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
 </div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=6754193" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
 <!-- Baidu Button END -->
+
 <!-- 将此标记放在您希望显示like按钮的位置 -->
 <div class="bdlikebutton right"></div>
 
+<!-- 将此代码放在适当的位置，建议在body结束前 -->
+<script id="bdlike_shell"></script>
+<script>
+var bdShare_config = {
+  "type":"small",
+  "color":"blue",
+  "uid":"6754193"
+};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
+</script>
 </div>
-    <div class="link" id="mainContent">{{ content }}</div>
+    <div class="jiathis_streak" id="mainContent">{{ content }}</div>
     <hr>
 
     {% if page.zzurl & page.zzurl != '' %}
-      <div id="license" class="panel link">
-        <p>本文转自<a href="{{page.zzurl}}" target="_blank">{{page.zztitle}}</a> </p>
-        <p>原作者为<a href="{{page.zzauthorurl}}" target="_blank">{{page.zzauthor}}</a> </p>
+      <div id="license" class="well">
+        <p>本文转自<a href="{{page.zzurl}}" target="_blank">{{page.zztitle}}</a></p>
+        <p>原作者为<a href="{{page.zzauthorurl}}" target="_blank">{{page.zzauthor}}</a></p>
       </div>
     {%else%}
-      <div id="license" class="panel link">
-        <a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" rel="license" target="_blank"> <img style="border-right-width: 0pt; border-top-width: 0pt; border-bottom-width: 0pt; border-left-width: 0pt" alt="Creative Commons License" align="left" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"> </a>
+      <div id="license" class="well">
+        <a href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" rel="license" target="_blank"><img style="border-right-width: 0pt; border-top-width: 0pt; border-bottom-width: 0pt; border-left-width: 0pt" alt="Creative Commons License" align="left" src="http://i.creativecommons.org/l/by-nc/3.0/88x31.png"></a>
         <p>本文基于<a title="Attribution-NonCommercial 3.0 Unported" href="http://creativecommons.org/licenses/by-nc/3.0/deed.zh" target="_blank">署名-非商业性使用 3.0</a>许可协议发布，转载、演绎必须保留本文的署名<a href="http://zhouhua.github.io" target="_blank">周骅</a>（包含链接http://zhouhua.github.io），且不得用于商业目的。如您有任何疑问或者授权方面的协商，请<a href="mailto:zhou--hua@163.com" target="_blank">与我联系</a>。</p>
       </div>
     {% endif %}
-    <ul class="button-group round">
+    <div class="pagination btn-group">
       {% if page.previous %}
-        <li> <a class="button secondary" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; {{page.previous.title}}</a> </li>
+        <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; 上一页</a>
       {% else %}
-        <li> <a class="button secondary disabled" href="javascript:void(0);" >这是第一篇</a> </li>
+        <a class="btn disabled prev">&larr; 上一页</a>
       {% endif %}
-        <li> <a class="button secondary" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">文章列表</a> </li>
+        <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">文章列表</a>
       {% if page.next %}
-        <li> <a class="button secondary" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">{{ page.next.title }} &rarr;</a> </li>
+        <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">下一页 &rarr;</a>
       {% else %}
-        <li> <a class="button secondary disabled" href="javascript:void(0);" >这是最后一篇</a> </li>
+        <a class="btn next disabled">下一页 &rarr;</a>
       {% endif %}
-    </ul>
-    <!-- UJian Button BEGIN -->
-<div class="ujian-hook"> </div>
-<script type="text/javascript">var ujian_config = {target:1};</script>
-<script type="text/javascript" src="http://v1.ujian.cc/code/ujian.js?uid=1808684"> </script>
-<!-- UJian Button END -->
-
+    </div>
     <hr>
     {% include JB/comments %}
   </div>
-  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1808684"> </script>
-  <div class="large-4 small-12 columns">
+  <script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=1808684"></script>
+  <div class="span4">
     <section>
-      <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=550&amp;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=1655302624&amp;verifier=92dd58d1&amp;dpc=1"> </iframe>
+      <iframe width="100%" height="550" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=550&amp;fansRow=2&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=1&amp;isWeibo=1&amp;isFans=0&amp;uid=1655302624&amp;verifier=92dd58d1&amp;dpc=1"></iframe>
     </section>
     <section>
       <h4>发布日期</h4>
-      <div class="date"> <span>{{ page.date | date :"%Y年%m月%d日" }}</span> </div>
+      <div class="date"><span>{{ page.date | date :"%Y年%m月%d日" }}</span></div>
     </section>
     {% if page.category %}
       <section>
@@ -113,30 +100,36 @@
 </div>
 
 
-
-
+<!-- JiaThis Button BEGIN -->
+<div class="jiathis_streak_share_24x24" id="jiathis_streak_share" style="display:none">
+<span class="streak_share_jiao"></span>
+<div class="jiathis_streak_goshare" id="jiathis_streak_goshare"><span class="jiathis_streak_txt">分享到</span>  <span style="" title="隐藏分享框" onclick="JIATHIS_STREAK.hideShare()" class="jiathis_streak_close">X</span></div>
+<div class="jiathis_style_24x24" >
+<a class="jiathis_button_tsina"></a>
+<a class="jiathis_button_tqq"></a>
+<a class="jiathis_button_renren"></a>
+<a class="jiathis_button_qzone"></a>
+<a class="jiathis_button_kaixin001"></a>
+<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+<script type="text/javascript">
+var jiathis_config = {data_track_clickback:'true'};
+</script>
+<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1369026054788331" charset="utf-8"></script> 
+<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_streak.js" charset="utf-8"></script>
+</div></div>
+<!-- JiaThis Button END -->
 
 
 <!-- 将此代码放在适当的位置，建议在body结束前 -->
-<script id="bdlike_shell"></script>
+<script id="bdimgshare_shell"></script>
 <script>
-var bdShare_config = {
-  "type":"small",
-  "color":"orange",
-  "uid":"6754193"
+var bdShare_config_imgshare = {
+  "type":"list"
+  ,"size":"small"
+  ,"pos":"top"
+  ,"color":"black"
+  ,"list":["qzone","tsina","tqq","renren","t163"]
+  ,"uid":"6754193"
 };
-document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
-</script>
-<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=6754193" > </script>
-<script type="text/javascript" id="bdshell_js"> </script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
-</script>
-  </div>
-</div>
-
-<script type="text/javascript">
-    var now=new Date();
-    var clock = $('#clock').FlipClock(3600*now.getHours()+60*now.getMinutes()+now.getSeconds(),
-            {clockFace: 'TwentyFourHourClock'});
+document.getElementById("bdimgshare_shell").src="http://bdimg.share.baidu.com/static/js/imgshare_shell.js?cdnversion=" + Math.ceil(new Date()/3600000);
 </script>
