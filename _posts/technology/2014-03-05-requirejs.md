@@ -53,7 +53,24 @@ requirejs(["foo","bar"],function(foo,bar){});
 
 在需要使用requirejs的地方可以用上面的代码来配置requirejs。首先加载requirejs模块，命名为`requirejs`（可以为其他命名）。然后对`requirejs`进行配置。配置的方法和参数可以参照浏览器版本的requirejs的[配置说明](http://requirejs.org/docs/node.html#2)。不过有一点不同，如代码所示，我们需要把node的`require`方法引进来。最后一行是简单地加载模块的示例，requirejs会尝试把`foo`和`bar`两个模块当成AMD模块来加载，如果失败，则会调用node的`requie`方法来把它们当作commonjs模块加载。为了实现这样的适应性，所以我们需要配置node的`require`方法。但实际测试并不尽如人意，保险起见，还是对AMD模块使用`requirejs`加载，对commonjs模块使用`require`加载。
 
-原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。
+<div style="text-decoration:line-through">
+<h2>构造AMD格式的node模块</h2>
+<p>在node中定义的模块是commonjs模块，如果想要构造AMD模块，我们需要<a target="_blank" href="https://github.com/jrburke/amdefine">amdefine</a>这个包。</p>
+<h3> 安装amdefine</h3>
+<p>同样，可以使用npm进行安装，在项目目录下执行：</p>
+<pre>    npm install amdefine</pre>
+<p>在windows下也存在无法全局安装的问题，需要对项目单独安装。</p>
+<h3> 定义define方法</h3>
+<pre>
+if(typeof define !== 'function'){
+    var define=require('amdefine')(module);
+}
+</pre>
+<p>amdefine提供了包装AMD模块的<code>define</code>方法。不过上面代码中对于node中是否包含define方法的检测判断请保留，最好原封不动地将这几行拷贝到自己的项目中。这样，我们就可以像使用前端requirejs一样，定义和使用AMD模块。</p>
+<h3>将node自己的common模块转换为AMD模块</h3>
+</div>
+
+<p>原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。</p>
 
 <script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shCore.js"> </script>
 <script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushCss.js"> </script>
