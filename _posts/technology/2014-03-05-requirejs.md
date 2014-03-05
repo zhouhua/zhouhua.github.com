@@ -7,6 +7,8 @@ abstract: node.js本身支持基于commonjs的javascript模块化，并且由于
 ---
 
 {% include JB/setup %}
+<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
+<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
 
 node.js本身支持基于commonjs的javascript模块化，并且由于node.js环境下模块加载以同步为主，没有浏览器端异步加载的需求，所以node.js不支持AMD的异步模块化格式。在Lizard框架中的代码模块化采用的是requirejs这个加载器，支持AMD模块。本文档介绍了node端版本的requirejs的用法，使得AMD模块也能在node端使用。
 
@@ -74,3 +76,13 @@ if(typeof define !== 'function'){
 ### ~~将node自己的common模块转换为AMD模块~~
 
 原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。
+
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shCore.js"> </script>
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushCss.js"> </script>
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushXml.js"> </script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['smart-tabs'] = true;
+    SyntaxHighlighter.defaults['tab-size'] = 4;
+    SyntaxHighlighter.defaults['toolbar']=false;
+    SyntaxHighlighter.all();
+</script>
