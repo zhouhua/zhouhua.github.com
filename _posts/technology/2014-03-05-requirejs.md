@@ -69,12 +69,11 @@ if(typeof define !== 'function'){
 <p>amdefine提供了包装AMD模块的<code>define</code>方法。不过上面代码中对于node中是否包含define方法的检测判断请保留，最好原封不动地将这几行拷贝到自己的项目中。这样，我们就可以像使用前端requirejs一样，定义和使用AMD模块。</p>
 <h3>将node自己的common模块转换为AMD模块</h3>
 </div>
-
 <p>原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。</p>
 
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shCore.js"> </script>
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushCss.js"> </script>
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushXml.js"> </script>
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shCore.js"></script>
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushCss.js"></script>
+<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushXml.js"></script>
 <script type="text/javascript">
     SyntaxHighlighter.defaults['smart-tabs'] = true;
     SyntaxHighlighter.defaults['tab-size'] = 4;
