@@ -55,27 +55,27 @@ requirejs(["foo","bar"],function(foo,bar){});
 
 <div style="text-decoration:line-through">
 
-## 构造AMD格式的node模块
+<h2>构造AMD格式的node模块</h2>
 
-在node中定义的模块是commonjs模块，如果想要构造AMD模块，我们需要[amdefine](https://github.com/jrburke/amdefine)这个包。
+<p>在node中定义的模块是commonjs模块，如果想要构造AMD模块，我们需要<a target="_blank" href="https://github.com/jrburke/amdefine">amdefine</a>这个包。</p>
 
-### 安装amdefine
+<h3> 安装amdefine</h3>
 
-同样，可以使用npm进行安装，在项目目录下执行：
+<p>同样，可以使用npm进行安装，在项目目录下执行：</p>
 
-    npm install amdefine
+<pre>    npm install amdefine</pre>
 
-在windows下也存在无法全局安装的问题，需要对项目单独安装。
+<p>在windows下也存在无法全局安装的问题，需要对项目单独安装。</p>
 
-### 定义define方法
-```javascript
+<h3> 定义define方法</h3>
+<pre>
 if(typeof define !== 'function'){
     var define=require('amdefine')(module);
 }
-```
-~~amdefine提供了包装AMD模块的`define`方法。不过上面代码中对于node中是否包含define方法的检测判断请保留，最好原封不动地将这几行拷贝到自己的项目中。这样，我们就可以像使用前端requirejs一样，定义和使用AMD模块。~~
+</pre>
+<p>amdefine提供了包装AMD模块的<code>define</code>方法。不过上面代码中对于node中是否包含define方法的检测判断请保留，最好原封不动地将这几行拷贝到自己的项目中。这样，我们就可以像使用前端requirejs一样，定义和使用AMD模块。</pre>
 
-### 将node自己的common模块转换为AMD模块
+<h3>将node自己的common模块转换为AMD模块</h3>
 
 </div>
 
