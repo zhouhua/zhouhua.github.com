@@ -97,12 +97,4 @@ console.log(++a - 1);
 </pre>
 <p>读者再点击<a href="javascript:void(window.open('about:blank'))">链接</a>，就不会再有上面的bug了。</p>
 
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shCore.js"> </script>
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushJScript.js"> </script>
-<script src="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/scripts/shBrushXml.js"> </script>
-<script type="text/javascript">
-    SyntaxHighlighter.defaults['smart-tabs'] = true;
-    SyntaxHighlighter.defaults['tab-size'] = 4;
-    SyntaxHighlighter.defaults['toolbar']=false;
-    SyntaxHighlighter.all();
-</script>
+{% include {{COMMON_SCRIPT_PATH}}/code.js %}

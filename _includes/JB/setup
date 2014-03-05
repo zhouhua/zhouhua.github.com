@@ -19,6 +19,7 @@
       {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}{% endcapture %}
     {% endif %} 
     {% capture PIC_PATH %}{{ BASE_PATH }}/assets/pictures/post{% endcapture %}
+    {% capture COMMON_SCRIPT_PATH %}{{ BASE_PATH }}/assets/scripts/common{% endcapture %}
 
   {% endif %}
 {% endcapture %}{% assign jbcache = nil %}
