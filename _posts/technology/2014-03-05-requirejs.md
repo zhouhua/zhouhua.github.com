@@ -71,4 +71,6 @@ if(typeof define !== 'function'){
 </div>
 <p>原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。</p>
 
-{% include {{COMMON_SCRIPT_PATH}}/code.js %}
+
+{% capture CODE_HIGHLIGHT %}{{ COMMON_SCRIPT_PATH }}/code.html{% endcapture %}
+{% include {{CODE_HIGHLIGHT}} %}

@@ -97,4 +97,5 @@ console.log(++a - 1);
 </pre>
 <p>读者再点击<a href="javascript:void(window.open('about:blank'))">链接</a>，就不会再有上面的bug了。</p>
 
-{% include {{COMMON_SCRIPT_PATH}}/code.js %}
+{% capture CODE_HIGHLIGHT %}{{ COMMON_SCRIPT_PATH }}/code.html{% endcapture %}
+{% include {{CODE_HIGHLIGHT}} %}
