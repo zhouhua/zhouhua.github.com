@@ -53,7 +53,7 @@
     <div class="link" id="mainContent">{{ content }}</div>
     <hr>
     {% for p in page.plugin %}
-      <% include scripts/common/{{p}} %>
+      {% include scripts/common/{{p}} %}
     {% endfor %}
     {% if page.zzurl & page.zzurl != '' %}
       <div id="license" class="panel link">
