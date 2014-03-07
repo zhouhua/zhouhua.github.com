@@ -7,10 +7,6 @@ plugin: [syntaxhighlighter]
 abstract: node.js本身支持基于commonjs的javascript模块化，并且由于node.js环境下模块加载以同步为主，没有浏览器端异步加载的需求，所以node.js不支持AMD的异步模块化格式。在Lizard框架（公司使用的）中的代码模块化采用的是requirejs这个加载器，支持AMD模块。本文档介绍了node端版本的requirejs的用法，使得AMD模块也能在node端使用。
 ---
 
-{% include JB/setup %}
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
-
 node.js本身支持基于commonjs的javascript模块化，并且由于node.js环境下模块加载以同步为主，没有浏览器端异步加载的需求，所以node.js不支持AMD的异步模块化格式。在Lizard框架中的代码模块化采用的是requirejs这个加载器，支持AMD模块。本文档介绍了node端版本的requirejs的用法，使得AMD模块也能在node端使用。
 
 ## 安装

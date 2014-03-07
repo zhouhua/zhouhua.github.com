@@ -7,10 +7,6 @@ plugin: [syntaxhighlighter]
 abstract: 在node端模拟localStorage时，发现它与session有一些共同点：用户敏感、数据量小等。于是决定使用session来模拟。
 ---
 
-{% include JB/setup %}
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
-
 在node端模拟localStorage时，发现它与session有一些共同点：用户敏感、数据量小等。于是决定使用session来模拟。
 
 `express`框架继承了`connect`，`connect`实现了session，并允许对session的存储（store）进行一些定制，通常有三种实现，一是默认的方式，直接存储于内存；二是使用mongodb，借助`connect-mongodb`库；三是使用redis，借助`connect-redis`库。考虑到session内容不太需要持久化，且读写比较频繁，所以本文档中采用了redis方案。

@@ -8,8 +8,6 @@ abstract: Javascript中有一些一元操作符往往被我们所忽略，本文
 ---
 {% include JB/setup %}
 {% capture POST_PIC_PATH %}{{ PIC_PATH }}/technology/operator/{% endcapture %}
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shCoreRDark.css" rel="stylesheet" type="text/css" />
-<link href="{{BASE_PATH}}/assets/themes/zhouhua/plugins/syntaxhighlighter/styles/shThemeRDark.css" rel="stylesheet" type="text/css" />
 
 在偶然打开[d3](http://d3js.org) 的源代码的时候，我看到了这样一段代码。
 
