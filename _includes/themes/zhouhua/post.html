@@ -52,7 +52,7 @@
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
     <hr>
-    {% for p in post.plugin %}
+    {% for p in page.plugin %}
       <% include scripts/common/p %>
     {% endfor %}
     {% if page.zzurl & page.zzurl != '' %}
