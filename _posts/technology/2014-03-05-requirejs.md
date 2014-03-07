@@ -3,6 +3,7 @@ layout: post
 category : 技术
 tags : [requirejs, AMD, 前端模块化, node.js, commonjs, javascript]
 title: 如何在node.js中使用requirejs
+plugin: [syntaxhighlighter]
 abstract: node.js本身支持基于commonjs的javascript模块化，并且由于node.js环境下模块加载以同步为主，没有浏览器端异步加载的需求，所以node.js不支持AMD的异步模块化格式。在Lizard框架（公司使用的）中的代码模块化采用的是requirejs这个加载器，支持AMD模块。本文档介绍了node端版本的requirejs的用法，使得AMD模块也能在node端使用。
 ---
 
@@ -71,5 +72,3 @@ if(typeof define !== 'function'){
 </div>
 <p>原本想通过引用`amdefine`包来实现node端AMD模块的定义，不过requirejs本身定义了`define`方法，不必额外引入其他包。</p>
 
-
-{% include scripts/common/code.html %}

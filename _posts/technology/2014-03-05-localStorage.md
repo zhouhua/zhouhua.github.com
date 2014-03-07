@@ -3,6 +3,7 @@ layout: post
 category : 技术
 tags : [node, javascript, redis, localStorage]
 title: 在node中使用localStorage
+plugin: [syntaxhighlighter]
 abstract: 在node端模拟localStorage时，发现它与session有一些共同点：用户敏感、数据量小等。于是决定使用session来模拟。
 ---
 
@@ -117,6 +118,3 @@ app.get("/time/:set", function (req, res) {
 > 2014年3月3日更新
 
 对`node-XMLHttpRequest`和`w3c-xmlhttpquest`分别做了测试，后者能正常支撑`$.ajax`，前者无法正常运作，在`xhr.send()`阶段抛出协议错误。
-
-
-{% include scripts/common/code.html %}

@@ -49,7 +49,9 @@
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
     <hr>
-
+    {% for p in post.plugin %}
+      <% include scripts/common/p %>
+    {% endfor %}
     {% if page.zzurl & page.zzurl != '' %}
       <div id="license" class="panel link">
         <p>本文转自<a href="{{page.zzurl}}" target="_blank">{{page.zztitle}}</a> </p>

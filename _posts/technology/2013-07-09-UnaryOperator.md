@@ -3,6 +3,7 @@ layout: post
 category : 技术
 tags : [Javascript, 一元操作符, ECMAScript]
 title: 从 +new Date 说起，Javascript的一元操作符
+plugin: [syntaxhighlighter]
 abstract: Javascript中有一些一元操作符往往被我们所忽略，本文介绍几个有用的一元操作符。
 ---
 {% include JB/setup %}
@@ -97,5 +98,3 @@ console.log(++a - 1);
 </pre>
 <p>读者再点击<a href="javascript:void(window.open('about:blank'))">链接</a>，就不会再有上面的bug了。</p>
 
-
-{% include scripts/common/code.html %}
