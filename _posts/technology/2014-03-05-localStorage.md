@@ -118,5 +118,5 @@ app.get("/time/:set", function (req, res) {
 
 对`node-XMLHttpRequest`和`w3c-xmlhttpquest`分别做了测试，后者能正常支撑`$.ajax`，前者无法正常运作，在`xhr.send()`阶段抛出协议错误。
 
-{% capture CODE_HIGHLIGHT %}{{ COMMON_SCRIPT_PATH }}/code.html{% endcapture %}
-{% include {{CODE_HIGHLIGHT}} %}
+
+{% include scripts/common/code.html %}
