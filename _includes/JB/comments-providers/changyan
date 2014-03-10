@@ -1,0 +1,15 @@
+<div id="SOHUCS"></div>
+<script>
+  (function(){
+    var appid = 'cyr3voLzx',
+    conf = 'prod_9ec1994bb176cb0b7a2cec414fe8ffb2';
+    var doc = document,
+    s = doc.createElement('script'),
+    h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
+    s.type = 'text/javascript';
+    s.charset = 'utf-8';
+    s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
+    h.insertBefore(s,h.firstChild);
+    window.SCS_NO_IFRAME = true;
+  })()
+</script>  

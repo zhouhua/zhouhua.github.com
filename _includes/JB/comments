@@ -11,6 +11,8 @@
   {% include JB/comments-providers/facebook %}
 {% when "uyan" %}
   {% include JB/comments-providers/uyan %}
+{% when "changyan" %}
+  {% include JB/comments-providers/changyan %}
 {% when "custom" %}
   {% include custom/comments %}
 {% endcase %}
