@@ -25,7 +25,7 @@ npm install connect-redis
 
 ### 开启express session功能
 
-```
+<pre class="brush: javascript">
 var expree = require('express');
 var app = express();
 ......
@@ -42,7 +42,7 @@ app.use(express.session({
 ......
 
 require('./routers');
-```
+</pre>
 
 由于node的session是的session_id是通过cookie来维护，所以一定需要`app.use(express.cookieParser('Michael'))`这句，参数可以为任意字符串，cookie中`secret`字段值为此参数时才会进行session的处理。初始化session的时候，创建一个`RedisStore`对象传递给session，并由`RedisStore`接管session的读写。
 
@@ -50,7 +50,7 @@ require('./routers');
 
 ### 使用session模拟localStorage
 
-```
+<pre class="brush: javascript">
 var localStorage = module.exports = function localStorage(session) {
     this.session = session;
 };
@@ -81,13 +81,13 @@ localStorage.prototype.clear = function () {
         this.prototype.removeItem(i);
     }
 };
-```
+</pre>
 
 以上代码模拟了一个localStorage，模拟了`getItem()`、`setItem()`、`clear()`、`remove()`方法和`length`属性。
 
 ### 使用node端localStorage
 
-```
+<pre class="brush: javascript">
 app.get("/time/:set", function (req, res) {
     var localStorage = new (require("./routers/utils/localStorage"))(req.session);
     var doc = "";
@@ -101,7 +101,7 @@ app.get("/time/:set", function (req, res) {
     res.write(doc);
     res.end();
 });
-```
+</pre>
 
 必须注意一个问题，与浏览器的localStorage不同，node端的localStorage为了满足用户敏感性，没有办法做成全局对象，必须依赖`HTTPRequest`对象，因此，我们只能在controllor内部初始化localStorage。其实在使用的时候，与前端代码无异。
 

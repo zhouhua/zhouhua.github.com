@@ -37,7 +37,7 @@ windows环境下安装需要注意不要加上`-g`全局开关，否则不能正
 
 ### 配置requirejs
 
-```javascript
+<pre class="brush: javascript">
 var requirejs=require('requirejs');
 
 requirejs.config({
@@ -46,7 +46,7 @@ requirejs.config({
 });
 
 requirejs(["foo","bar"],function(foo,bar){});
-```
+</pre>
 
 在需要使用requirejs的地方可以用上面的代码来配置requirejs。首先加载requirejs模块，命名为`requirejs`（可以为其他命名）。然后对`requirejs`进行配置。配置的方法和参数可以参照浏览器版本的requirejs的[配置说明](http://requirejs.org/docs/node.html#2)。不过有一点不同，如代码所示，我们需要把node的`require`方法引进来。最后一行是简单地加载模块的示例，requirejs会尝试把`foo`和`bar`两个模块当成AMD模块来加载，如果失败，则会调用node的`requie`方法来把它们当作commonjs模块加载。为了实现这样的适应性，所以我们需要配置node的`require`方法。但实际测试并不尽如人意，保险起见，还是对AMD模块使用`requirejs`加载，对commonjs模块使用`require`加载。
 
@@ -58,7 +58,7 @@ requirejs(["foo","bar"],function(foo,bar){});
 <pre>    npm install amdefine</pre>
 <p>在windows下也存在无法全局安装的问题，需要对项目单独安装。</p>
 <h3> 定义define方法</h3>
-<pre>
+<pre class="brush: javascript">
 if(typeof define !== 'function'){
     var define=require('amdefine')(module);
 }
