@@ -460,3 +460,7 @@ blockquote {
 .button-group{
   padding:0;
 }
+
+#comments *{
+  box-sizing: initial;
+}
