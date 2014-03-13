@@ -40,14 +40,15 @@
   <div class="large-8 small-12 columns">
     <div class="row" style="padding:0px 20px 0px 20px;">
   <!-- Baidu Button BEGIN -->
-      <!-- Baidu Button BEGIN -->
-<div id="bdshare" class="bdshare_b left" style="line-height: 12px;">
-<img src="http://bdimg.share.baidu.com/static/images/type-button-1.jpg?cdnversion=20120831" />
-<a class="shareCount"> </a>
+<div class="bdsharebuttonbox" data-tag="share_1">
+  <a class="bds_mshare" data-cmd="mshare"></a>
+  <a class="bds_tsina" data-cmd="tsina"></a>
+  <a class="bds_qzone" data-cmd="qzone" href="#"></a>
+  <a class="bds_renren" data-cmd="renren"></a>
+  <a class="bds_tqq" data-cmd="tqq"></a>
+  <a class="bds_more" data-cmd="more">更多</a>
+  <a class="bds_count" data-cmd="count"></a>
 </div>
-<!-- Baidu Button END -->
-<!-- 将此标记放在您希望显示like按钮的位置 -->
-<div class="bdlikebutton right"></div>
 
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
@@ -120,19 +121,27 @@
   </div>
 </div>
 <!-- 将此代码放在适当的位置，建议在body结束前 -->
-<script id="bdlike_shell"></script>
 <script>
 var bdShare_config = {
   "type":"small",
   "color":"orange",
   "uid":"6754193"
 };
-document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
-</script>
-<script type="text/javascript" id="bdshare_js" data="type=button&amp;uid=6754193" > </script>
-<script type="text/javascript" id="bdshell_js"> </script>
-<script type="text/javascript">
-document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+  window._bd_share_config = {
+    common : {
+      bdText:"{{ page.title }}",
+      bdDesc:"{{ page.abstract }}",
+      bdUrl:"{{ page.url }}",
+      bdSign: "normal"
+    },
+    share : [
+      {
+        "tag":"share_1",
+        "bdSize":16
+      }
+    ]
+  };
+with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
 </script>
   </div>
 </div>
