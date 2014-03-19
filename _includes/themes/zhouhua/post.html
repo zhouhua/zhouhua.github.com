@@ -53,15 +53,6 @@
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
 
-    
-<script>
-    $("pre").each(function(){
-        var $this=$(this);
-        if(!$this.hasClass("brush:")){
-            $this.addClass('brush: javascript');
-        }
-    });
-</script>
 
     <hr>
     {% for p in page.plugin %}

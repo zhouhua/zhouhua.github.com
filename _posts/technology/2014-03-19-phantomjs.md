@@ -19,7 +19,7 @@ phantomjs实现了一个无界面的webkit浏览器。虽然没有界面，但do
 
 ### 简单示例
 
-```
+<pre class="brush: javascript">
 // test.js
 var page = require('webpage').create(),
     system = require('system'),
@@ -33,13 +33,13 @@ if (system.args.length === 1) {
         phantom.exit();
     });
 }
-```
+</pre>
 
 运行：
 
-```
+<pre class="brush: javascript">
 phantomjs ./test.js http://baidu.com
-```
+</pre>
 
 这个例子简单地展示了通过phanton访问baidu.com，并输入html内容。使用方式就像使用node运行js代码一样。在phantom运行时，它会向当前代码运行环境注入phantom对象。如上面代码中，通过phantom对象控制程序终结。示例中其他代码的含义以及更多深入的用法，将在下文中展开。
 
@@ -49,17 +49,17 @@ phantomjs ./test.js http://baidu.com
 
 在使用phantom时，我首先关注的是DOM和BOM接口。不过这不是一个问题，看了下面的代码就能了解：
 
-```
+<pre class="brush: javascript">
 // test.js
 console.log(window === this);
 phantom.exit();
-```
+</pre>
 
 运行：
 
-```
+<pre class="brush: javascript">
 phantomjs ./test.js
-```
+</pre>
 
 结果为`true`。也就是说，就像浏览器环境一样，我们的代码运行在window环境下，可以很方便地进行DOM方面的操作。
 
@@ -95,7 +95,7 @@ phantomjs ./test.js
 
     当页面存在js错误，且没有被`page.onError`处理，则会被此handler捕获。下面是使用此API的一个例子。由于phantom环境下代码调试很困难，了解这些错误捕获的API也许会对我们的实际使用有所帮助。
     
-    ```
+    <pre class="brush: javascript">
     phantom.onError = function(msg, trace) {
       var msgStack = ['PHANTOM ERROR: ' + msg];
       if (trace && trace.length) {
@@ -107,7 +107,7 @@ phantomjs ./test.js
       console.error(msgStack.join('\n'));
       phantom.exit(1);
     };
-    ```
+    </pre>
     
 5. `phantom.exit(returnValue)`
 
@@ -119,10 +119,10 @@ phantomjs ./test.js
 
 web page模块的功能是处理具体的页面。使用时需要引入模块，并创建实例：
 
-```
+<pre class="brush: javascript">
 var webPage = require('webpage');
 var page = webPage.create();
-```
+</pre>
 
 > 本文中不经说明，`page`指代`require("webpage").create()`的实例。
 
@@ -161,12 +161,12 @@ var page = webPage.create();
 
     phantom允许在请求时在http请求头部添加额外信息，此设置项对这个page里面所有的请求都生效（包含页面和其他资源的请求）。添加的信息并没有限制，但如果设置`User-Agent`的值，那么这个值会覆盖掉`page.settings`里的设置值。示例：
     
-    ```
+    <pre class="brush: javascript">
     page.customHeaders = {
       "X-Test": "foo",
       "DNT": "1"
     };
-    ```
+    </pre>
     
 5. `page.libraryPath` String
 
@@ -196,7 +196,7 @@ var page = webPage.create();
 
     对于page打开的页面，往往需要与其进行一些交互。`page.evaluate()`提供了在page打开页面的上下文（下文直接用page上下文指代）执行function的功能（类比Chrome开发者工具的控制台）。如下例：
     
-    ```
+    <pre class="brush: javascript">
     page.open('http://m.bing.com', function(status) {
       var title = page.evaluate(function(s) {
         return document.querySelector(s).innerText;
@@ -204,7 +204,7 @@ var page = webPage.create();
       console.log(title);
       phantom.exit();
     });
-    ```
+    </pre>
     
     在这个例子中，`page.evaluate()`接受两个参数，第一个是必需的，表示需要在page上下文运行的函数`fn`；第二个是可选的，表示需要传给`fn`的参数`param`。`fn`允许有一个返回值`return`，并且此返回值最终作为`page.evaluate()`的返回值。这边对于刚刚命名的`param`和`return`有一些额外的说明和注意事项。对于整个phantom进程而言，`page.evaluate()`是跑在一个沙盒中，`fn`无法访问一切phantom域中的变量；同样`page.evaluate()`方法外部也不应该尝试访问page上下文中的内容。那么如果两个作用域需要交换一些数据，只能依靠`param`和`return`。不过限制很大，`param`和`return`必须为能够转化为JSON字符串，换言之，只能是基本数据类型或者简单对象，像DOM 节点、$对象、function、闭包等就无能为力了。
     
@@ -214,13 +214,13 @@ var page = webPage.create();
 
     `page.render()`能够把当前页面渲染成图片并输出到指定文件中。输出的文件格式由传入的文件扩展名决定，目前支持`PNG`、`JPEG`、`GIF`、`PDF`。
     
-    ```
+    <pre class="brush: javascript">
     var page = require('webpage').create();
     page.open('http://github.com/', function() {
       page.render('github.png');
       phantom.exit();
     });
-    ```
+    </pre>
     
     还有其他一些API会对`page.render()`产生影响，如：
     
@@ -228,14 +228,14 @@ var page = webPage.create();
     
     * `page.clipRect` Object：设置输出的矩形区域，例如：
     
-        ```
+        <pre class="brush: javascript">
         page.clipRect = {
           top: 14,
           left: 3,
           width: 400,
           height: 300
         };
-        ```
+        </pre>
         
     还有一些页面设置参数，如果纸张大小，侧边距等，在此不详述。web page也支持输出图片base64格式的字符串，API为`page.renderBase64()`，也不再详述。
     
@@ -263,9 +263,9 @@ var page = webPage.create();
     
     看一个示例：
     
-    ```
+    <pre class="brush: javascript">
     page.sendEvent('keypress', page.event.key.A, null, null, 0x02000000 | 0x08000000);
-    ```
+    </pre>
     
 0. `page.switchToFrame(frameName/framePosition)`
 
@@ -275,9 +275,9 @@ var page = webPage.create();
 
     页面中常常会有上传文件的操作，但phantom没有界面，因而也就没有办法选择文件上传，通过此方法可以模拟文件上传操作。示例如下：
     
-    ```
+    <pre class="brush: javascript">
     page.uploadFile('input[name=image]', '/path/to/some/photo.jpg');
-    ```
+    </pre>
     
 14. 一些事件处理接口
 
@@ -289,7 +289,7 @@ var page = webPage.create();
     
     * `page.onConsoleMessage`：类似的，phantom不能显示console窗口，通过这个接口可以捕获console消息。
         
-        ```
+        <pre class="brush: javascript">
         var webPage = require('webpage');
         var page = webPage.create();
         page.onAlert = function(msg) {
@@ -310,7 +310,7 @@ var page = webPage.create();
         page.onConsoleMessage = function(msg, lineNum, sourceId) {
           console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
         };
-        ```
+        </pre>
     
     * `page.onInitialized`：在page创建后触发。
     
@@ -318,14 +318,14 @@ var page = webPage.create();
     
     * `page.onNavigationRequested`：如果在`page.navigationLocked`中允许页面跳转，此接口才会有意义（参见`page.navigationLocked`）。它接受4个参数，先看示例：
     
-        ```
+        <pre class="brush: javascript">
         page.onNavigationRequested = function(url, type, willNavigate, main) {
           console.log('Trying to navigate to: ' + url);
           console.log('Caused by: ' + type);
           console.log('Will actually navigate: ' + willNavigate);
           console.log('Sent from the page\'s main frame: ' + main);
         }
-        ```
+        </pre>
         
         * `url`表示要跳转到的url
         * `type`表示产生跳转的原因，可能值有`'Undefined'`、`'LinkClicked'`、`'FormSubmitted'`、`'BackOrForward'`、`'Reload'`、`'FormResubmitted'`、`'Other'`
@@ -378,12 +378,12 @@ var page = webPage.create();
     
     可参考如下示例：
     
-    ```
+    <pre class="brush: javascript">
     page.onResourceError = function(resourceError) {
       console.log('Unable to load resource (#' + resourceError.id + 'URL:' + resourceError.url + ')');
       console.log('Error code: ' + resourceError.errorCode + '. Description: ' + resourceError.errorString);
     };
-    ```
+    </pre>
     
     * `page.onResourceTimeout`：在讲`page.settings`时曾经提到过这个事件。如果设置了`page.settings.resourceTimeout`，并且资源在这个时间内没有载入完成，则会触发此事件，它接受一个`request`对象，这个对象包含如下属性：
     
@@ -411,7 +411,7 @@ var page = webPage.create();
     
     最基本的创建进程的方法。前两个参数比较重要，例如现在想从phantom进程中运行一段nodejs脚本，脚本路径为`“main.js”`，这个脚本接受一个参数，假定为`“helloworld”`，那么如果想得到这段脚本的运行结果应该怎么做呢？参考下面的脚本：
 
-    ```
+    <pre class="brush: javascript">
     var spawn = require("child_process").spawn;
     child = spawn('node', ['main.js', 'helloworld']);
     child.stdout.on("data", function (data) {
@@ -426,7 +426,7 @@ var page = webPage.create();
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
-    ```
+    </pre>
 
     其实`spawn()`方法没什么神秘的，它就是运行第一个参数表示的命令，第二个参数就是这个命令的参数列表。所以如果要开启一个新的phantom进程，第一个参数为`phantom`就行。同样的道理，指定好程序的路径或者是脚本语言解释器的路径，通过这个方法可以做的事情很多。
     比较不方便的是，进程间的通信只能通过`stdin`、`stdout`、`stderr`来完成，调用`spawn()`方法后，还需要对这些交互信息进行监听，上面的例子中演示了监听`stdout`和`stderr`的方法。
@@ -435,7 +435,7 @@ var page = webPage.create();
 
     就像刚刚说的，`spawn()`方法稍微感觉有点麻烦，使用`execFile()`能够稍稍简化上面的代码。`execFile()`的前三个参数与`spawn()`的三个参数完全一样，不同的是它多了一个`cb`回调函数，看一个例子就知道这个回调函数有什么用了：
     
-    ```
+    <pre class="brush: javascript">
     var execFile = require("child_process").execFile;
     child = execFile('node', ['main.js', 'helloworld'], null,
         function (err, stdout, stderr) {
@@ -445,7 +445,7 @@ var page = webPage.create();
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
-    ```
+    </pre>
     
     在`execFile()`中，对`stdout`、`stderr`的监听做了封装，简化了我们的代码，不过功能上与`spawn()`并无区别。
     
@@ -459,7 +459,7 @@ var page = webPage.create();
 
     `open()`方法接受两个参数，第一个参数是要打开的文件路径，第二个参数后面还会见到，这里统一说明。如果是字符串，则代表文件打开的模式，可选的有`'r'`、`'w'`、`'a/+'`、`'b'`（read时仅支持`'b'`）；如果是一个对象，则表示配置项，一共有两个配置项，分别是`mode`和`charset`，`mode`就是刚刚提到的打开模式，`charset`表示文件的编码类型。参阅下面的示例：
 
-    ```
+    <pre class="brush: javascript">
     var fs = require("fs");
     var file = fs.open("main.js", 'r');
     console.log(file.read());
@@ -470,7 +470,7 @@ var page = webPage.create();
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
-    ```
+    </pre>
     
     对打开的文件，我们可以进行读写操作（具体使用与打开模式有关）。如果对一个文件执行了open，请别忘了在文件使用完成后，再对其执行close。
     
@@ -524,7 +524,7 @@ var page = webPage.create();
 
     获取当前的环境信息。包含操作系统信息、环境变量信息等等。通过下面的代码来查看一下吧：
 
-    ```
+    <pre class="brush: javascript">
     var system = require('system');
     var env = system.env;
     Object.keys(env).forEach(function (key) {
@@ -533,7 +533,7 @@ var page = webPage.create();
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
-    ```
+    </pre>
     
 3. `system.os` Object
 
@@ -555,15 +555,15 @@ phantomjs支持一个简单的web server模块，`require('webserver')`即可引
 
 看一个简单的例子吧：
 
-```
+<pre class="brush: javascript">
 var webserver = require('webserver');
 var server = webserver.create();
 var service = server.listen(8080, function(request, response) {
   response.statusCode = 200;
-  response.write('<html><body>Hello!</body></html>');
+  response.write('&lt;html>&lt;body>Hello!&lt;/body>&lt;/html>');
   response.close();
 });
-```
+</pre>
 
 首先需要创建服务器实例，然后调用`listen()`方法监听，`listen()`方法的第一个参数可以为一个端口号，也可以中`ip:port`这样的ip+port组合方式。第二个参数是处理请求的回调方法。下面描述一下`request`和`response`两个对象。
 
