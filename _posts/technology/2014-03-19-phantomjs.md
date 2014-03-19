@@ -1,10 +1,10 @@
 --- 
-layout: post 
-category : 技术 
-tags : [nodejs, phantomjs, phantom, 无头测试, 多线程] 
-title: phantomjs使用说明 
-plugin: [syntaxhighlighter] 
-abstract: phantomjs实现了一个无界面的webkit浏览器。虽然没有界面，但dom渲染、js运行、网络访问、canvas/svg绘制等功能都很完备，在页面抓取、页面输出、自动化测试等方面有广泛的应用。 
+layout: post
+category : 技术
+tags : [nodejs, phantomjs, phantom, 无头测试, 多线程]
+title: phantomjs使用说明
+plugin: [syntaxhighlighter]
+abstract: phantomjs实现了一个无界面的webkit浏览器。虽然没有界面，但dom渲染、js运行、网络访问、canvas/svg绘制等功能都很完备，在页面抓取、页面输出、自动化测试等方面有广泛的应用。
 ---
 
 phantomjs实现了一个无界面的webkit浏览器。虽然没有界面，但dom渲染、js运行、网络访问、canvas/svg绘制等功能都很完备，在页面抓取、页面输出、自动化测试等方面有广泛的应用。
