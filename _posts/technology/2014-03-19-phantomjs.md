@@ -458,7 +458,7 @@ var page = webPage.create();
 1. `fs.open(path, mode/opts)` File
 
     `open()`方法接受两个参数，第一个参数是要打开的文件路径，第二个参数后面还会见到，这里统一说明。如果是字符串，则代表文件打开的模式，可选的有`'r'`、`'w'`、`'a/+'`、`'b'`（read时仅支持`'b'`）；如果是一个对象，则表示配置项，一共有两个配置项，分别是`mode`和`charset`，`mode`就是刚刚提到的打开模式，`charset`表示文件的编码类型。参阅下面的示例：
-    
+
     ```
     var fs = require("fs");
     var file = fs.open("main.js", 'r');
@@ -523,7 +523,7 @@ var page = webPage.create();
 2. `system.env` Object
 
     获取当前的环境信息。包含操作系统信息、环境变量信息等等。通过下面的代码来查看一下吧：
-    
+
     ```
     var system = require('system');
     var env = system.env;
