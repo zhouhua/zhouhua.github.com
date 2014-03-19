@@ -292,11 +292,9 @@ var page = webPage.create();
         ```
         var webPage = require('webpage');
         var page = webPage.create();
-        
         page.onAlert = function(msg) {
           console.log('ALERT: ' + msg);
         };
-        
         page.onPrompt = function(msg, defaultVal) {
           if (msg === "What's your name?") {
             return 'PhantomJS';
@@ -304,13 +302,11 @@ var page = webPage.create();
           // 返回值就是prompt得到的值
           return defaultVal;
         };
-        
         page.onConfirm = function(msg) {
           console.log('CONFIRM: ' + msg);
           // 返回true相当于点击“确定”，返回false相当于点击“取消”
           return true;
         };
-        
         page.onConsoleMessage = function(msg, lineNum, sourceId) {
           console.log('CONSOLE: ' + msg + ' (from line #' + lineNum + ' in "' + sourceId + '")');
         };
@@ -417,21 +413,16 @@ var page = webPage.create();
 
     ```
     var spawn = require("child_process").spawn;
-
     child = spawn('node', ['main.js', 'helloworld']);
-    
     child.stdout.on("data", function (data) {
         console.log("spawnSTDOUT:", JSON.stringify(data))
     });
-    
     child.stderr.on("data", function (data) {
         console.log("spawnSTDERR:", JSON.stringify(data))
     });
-    
     child.on("exit", function (code) {
         console.log("spawnEXIT:", code)
     });
-    
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
@@ -446,7 +437,6 @@ var page = webPage.create();
     
     ```
     var execFile = require("child_process").execFile;
-
     child = execFile('node', ['main.js', 'helloworld'], null,
         function (err, stdout, stderr) {
             console.log("execFileSTDOUT:", JSON.stringify(stdout))
@@ -474,11 +464,9 @@ var page = webPage.create();
     var file = fs.open("main.js", 'r');
     console.log(file.read());
     file.close();
-    
     file = fs.open("main.js", 'a');
     file.write("123");
     file.close();
-    
     setTimeout(function () {
         phantom.exit(0)
     }, 2000);
@@ -539,7 +527,6 @@ var page = webPage.create();
     ```
     var system = require('system');
     var env = system.env;
-    
     Object.keys(env).forEach(function (key) {
         console.log(key + '=' + env[key]);
     });
