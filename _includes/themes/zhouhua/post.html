@@ -52,12 +52,12 @@
 
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
-    
+
     
 <script>
     $("pre").each(function(){
         var $this=$(this);
-        if(!$this.is(".brush:")){
+        if(!$this.hasClass("brush:")){
             $this.addClass('blush: javascript');
         }
     });
