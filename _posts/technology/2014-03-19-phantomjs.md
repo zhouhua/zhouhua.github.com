@@ -98,7 +98,7 @@ phantomjs ./test.js
     <pre class="brush: javascript">
     phantom.onError = function(msg, trace) {
       var msgStack = ['PHANTOM ERROR: ' + msg];
-      if (trace && trace.length) {
+      if (trace &amp;&amp; trace.length) {
         msgStack.push('TRACE:');
         trace.forEach(function(t) {
           msgStack.push(' -> ' + (t.file || t.sourceURL) + ': ' + t.line + (t.function ? ' (in function ' + t.function +')' : ''));
