@@ -615,12 +615,3 @@ var service = server.listen(8080, function(request, response) {
         * 为了避免客户端检测到连接中断，记得最后再用`write()`方法发送一个空字符串（如：`response.write("")`）。
         
     * `closeGracefully()`：功能与`close()`一样，不过更安全可靠，它能保证响应头部先发送，并自动在响应最后加上`response.write("")`
-
-<script>
-    $("pre").each(function(){
-        var $this=$(this);
-        if(!$this.is(".brush:")){
-            $this.addClass('blush: javascript');
-        }
-    });
-</script>
