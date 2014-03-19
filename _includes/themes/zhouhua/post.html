@@ -52,6 +52,17 @@
 
 </div>
     <div class="link" id="mainContent">{{ content }}</div>
+    
+    
+<script>
+    $("pre").each(function(){
+        var $this=$(this);
+        if(!$this.is(".brush:")){
+            $this.addClass('blush: javascript');
+        }
+    });
+</script>
+
     <hr>
     {% for p in page.plugin %}
       {% capture p_path %}/scripts/common/{{p}}{% endcapture %}
