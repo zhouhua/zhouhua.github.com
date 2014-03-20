@@ -16,7 +16,7 @@ abstract: Application Cache是HTML5为web应用离线使用而增加的api，虽
 
 ### 过程与原理
 
-Application Cache的使用要做两个方面的工作，浏览器端和服务器端。在服务器端需要维护一个缓存清单*manifest*文件，这个文件里面记录了需要缓存的请求、不需要加入缓存的请求等内容。具体的manifest文件的语法及示例参见<http://www.w3school.com.cn/html5/html_5_app_cache.asp>。需要注意的是，manifest文件的文件名及路径没有特别要求，但对于它的MIME-type必须设置为**“text/cache-manifest”**。
+Application Cache的使用要做两个方面的工作，浏览器端和服务器端。在服务器端需要维护一个缓存清单*manifest*文件，这个文件里面记录了需要缓存的请求、不需要加入缓存的请求等内容。具体的manifest文件的语法及示例参见<http://www.w3school.com.cn/html5/html_5_app_cache.asp>。浏览器通过请求这个manifest文件来判断是否可以使用application cache，以及application cache是否需要更新等。浏览器对于manifest文件的新旧判断依据很简单，就是是否一样，只要有一点区别，浏览器就认为manifest文件有更新，需要重新缓存所有数据。所以我们常常通过更改manifest注释的方式来提醒浏览器要更新缓存。需要注意的是，manifest文件的文件名及路径没有特别要求，但对于它的*MIME-type*必须设置为`text/cache-manifest`。
 
 在浏览器端的设置很容易，只需要在HTML标签上添加manifest属性即可，类似：
 
