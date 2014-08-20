@@ -32,9 +32,7 @@ abstract:先说一个需求，我想给一个元素应用另外一个指定元�
 
 这是在chrome的开发者工具中，通过element选项卡可以查看dom节点样式的截图，红框中的就是这个节点最终样式的计算结果。而`window.getComputedStyle()`就是BOM提供给大家得到这样一个计算结果的接口。那么剩下的就好理解的，通过`window.getComputedStyle()`方法拿到指定元素的最终样式集，这个结果呢又正好是一个`$.css()`方法能接受的对象（这个对象下面会讲）。于是上述代码中，我们通过`$.css()`方法直接将样式覆盖给了目标元素。当然，如果不想用jquery，我们也可以通过遍历这个对象，并操作目标元素的style属性达到目的，代码就不贴了。
 
-## 知识点
-
-### window.getComputedStyle()
+## window.getComputedStyle()
 
 知道了这种做法，我们再来好好研究一下`window.getComputedStyle()`这个方法。
 
@@ -97,6 +95,8 @@ abstract:先说一个需求，我想给一个元素应用另外一个指定元�
 更详细的内容有兴趣的朋友可以参考：
 * [jquery #14150](http://bugs.jquery.com/ticket/14150)
 * [jquery #15098](http://bugs.jquery.com/ticket/15098)
+
+## `CSSStyleDeclaration`
 
 再来说说`window.getComputedStyle()`的返回值。`window.getComputedStyle()`会返回一个`CSSStyleDeclaration`对象。这个对象是只读的，意味着我们只能取其值，不能为其赋值。所以上面的示例代码中我们采用`$.css()`方法来设置css样式。这个对象应该如何用，这篇文章里面我不想赘述，有兴趣的可以参考[MDN的文档](https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleDeclaration)。想直观了解这个对象长什么样子的同学请点击F12键，我在浏览器的console里输出了一个`CSSStyleDeclaration`对象。
 
