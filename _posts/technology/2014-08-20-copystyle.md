@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: post
 category : 技术
-tags : [css, javascript, jquery]
-title: 另辟蹊径复制样式
+tags : [CSS, 水平居中]
+title: 网页中元素实现水平居中的方法
 plugin: [syntaxhighlighter]
-abstract:先说一个需求，我想给一个元素应用另外一个指定元素的样式，应该怎么做？对于一个特定的项目，我想通常做法是规范代码风格，直接把class复制过来就可以了。但现实情况可能并不会如此简单。比如我们假定这个指定元素是不可预测的，它的样式可能由class控制，也可能由更复杂的选择器控制，甚至可能写在style属性里。这该怎么办呢？
+abstract: 网页中元素居中的需求很普遍，今天就要谈谈相对比较简单，使用场合更多的水平居中。
 ---
 
 {% include JB/setup %}
