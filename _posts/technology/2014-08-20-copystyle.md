@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 category : 技术
 tags : [css, javascript, jquery]
 title: 另辟蹊径复制样式
