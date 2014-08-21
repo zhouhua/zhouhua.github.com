@@ -80,17 +80,19 @@ abstract: 先说一个需求，我想给一个元素应用另外一个指定元�
 
 很多地方（例如以前的Jquery）在使用`window.getComputedStyle()`时并没有直接在`window`上调用，而是使用的`window.defaultView.getComputedStyle()`。事实上现在我们可以认识`window.defaultView`就是`window`。Jquery也将这部分代码修改了，见[jquery #10373](https://github.com/jquery/jquery/pull/524)。可能会在IE的弹出窗口和低版本Firefox的frames中使用会有一些异常。Jquery认为在IE弹出窗口中使用必须加`defaultView`，而Firefox的情况则不可以加`defailtView`，于是做了一个shim，可以排除两种异常。可以参考下：
 
-    define(function() {
-        return function( elem ) {
-            // Support: IE<=11+, Firefox<=30+ (#15098, #14150)
-            // IE throws on elements created in popups
-            // FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
-            if ( elem.ownerDocument.defaultView.opener ) {
-                return elem.ownerDocument.defaultView.getComputedStyle( elem, null );
-            }
-            return window.getComputedStyle( elem, null );
-        };
-    });
+<pre>
+define(function() {
+    return function( elem ) {
+        // Support: IE less than 11+, Firefox less than 30+ (#15098, #14150)
+        // IE throws on elements created in popups
+        // FF meanwhile throws on frame elements through "defaultView.getComputedStyle"
+        if ( elem.ownerDocument.defaultView.opener ) {
+            return elem.ownerDocument.defaultView.getComputedStyle( elem, null );
+        }
+        return window.getComputedStyle( elem, null );
+    };
+});
+</pre>
 
 更详细的内容有兴趣的朋友可以参考：
 
