@@ -38,7 +38,9 @@
         "url":"new_page_1.html"}]},
   "globalVariables":{
     "onloadvariable":"",
-    "m":""},
+    "mousex":"",
+    "mousey":"",
+    "drag":"false"},
   "defaultAdaptiveView":{
     "name":"",
     "size":{

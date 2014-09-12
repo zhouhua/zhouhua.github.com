@@ -1,9 +1,11 @@
 ﻿$axure.loadCurrentPage({
   "url":"登录.html",
-  "generationDate":new Date(1410492377934.56),
+  "generationDate":new Date(1410514722910.32),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"m"],
+"mouseX",
+"mouseY",
+"drag"],
   "page":{
     "packageId":"c230d57ff50c4533a16eeadb6e75a90a",
     "type":"Axure:Page",
@@ -34,24 +36,6 @@
             "description":"用例 1",
             "isNewIfGroup":false,
             "actions":[{
-                "action":"setFunction",
-                "description":"设置 部件文字 ITCODE = &quot;IT code&quot;",
-                "expr":{
-                  "exprType":"block",
-                  "subExprs":[{
-                      "exprType":"fcall",
-                      "functionName":"SetWidgetFormText",
-                      "arguments":[{
-                          "exprType":"pathLiteral",
-                          "isThis":false,
-                          "isFocused":false,
-                          "isTarget":false,
-                          "value":["bc909856877b485d975081b2382ec49c"]},
-{
-                          "exprType":"stringLiteral",
-                          "value":"IT code",
-                          "stos":[]}]}]}},
-{
                 "action":"fadeWidget",
                 "description":"隐藏 2,<br>2,<br>重试,<br>ts",
                 "objectsToFades":[{
@@ -76,6 +60,15 @@
                     "objectPath":["c7bea1e09064410db59877dc4808aa63"],
                     "fadeInfo":{
                       "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}}]},
+{
+                "action":"fadeWidget",
+                "description":"显示 ITCODE",
+                "objectsToFades":[{
+                    "objectPath":["bc909856877b485d975081b2382ec49c"],
+                    "fadeInfo":{
+                      "fadeType":"show",
                       "options":{
                         "showType":"none"}}}]}]}]}},
     "diagram":{
@@ -102,16 +95,16 @@
             "fontName":"'微软雅黑 Regular', '微软雅黑'",
             "fill":{
               "fillType":"solid",
-              "color":0xFFFC4118},
+              "color":0xFFFFFFFF},
             "location":{
-              "x":430,
+              "x":430.000030517578,
               "y":278},
             "size":{
               "width":240,
               "height":162},
             "borderFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF}},
+              "color":0xFFFFFF}},
           "adaptiveStyles":{
 },
           "objects":[{
@@ -125,16 +118,16 @@
                 "fontName":"'微软雅黑 Regular', '微软雅黑'",
                 "fill":{
                   "fillType":"solid",
-                  "color":0xFFFC4118},
+                  "color":0xFFFFFFFF},
                 "location":{
-                  "x":430,
+                  "x":430.000030517578,
                   "y":278},
                 "size":{
                   "width":240,
                   "height":162},
                 "borderFill":{
                   "fillType":"solid",
-                  "color":0xFFFFFFFF}},
+                  "color":0xFFFFFF}},
               "adaptiveStyles":{
 }}],
           "images":{
@@ -147,14 +140,14 @@
           "visible":true,
           "style":{
             "location":{
-              "x":430,
+              "x":430.000030517578,
               "y":389},
             "size":{
               "width":240,
               "height":10},
             "borderFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF}},
+              "color":0xFF5ABAA3}},
           "adaptiveStyles":{
 },
           "images":{
@@ -174,7 +167,7 @@
             "horizontalAlignment":"center",
             "foreGroundFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF,
+              "color":0xFF5ABAA3,
               "opacity":1},
             "location":{
               "x":532,
@@ -198,7 +191,7 @@
                 "horizontalAlignment":"center",
                 "foreGroundFill":{
                   "fillType":"solid",
-                  "color":0xFFFFFFFF,
+                  "color":0xFF5ABAA3,
                   "opacity":1},
                 "location":{
                   "x":532,
@@ -212,11 +205,27 @@
             "onClick":{
               "description":"OnClick",
               "cases":[{
-                  "description":"用例 1",
+                  "description":"用例 1<br> (If 部件文字 ITCODE = &quot;&quot;)",
                   "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"==",
+                    "leftExpr":{
+                      "exprType":"fcall",
+                      "functionName":"GetWidgetText",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["bc909856877b485d975081b2382ec49c"]}]},
+                    "rightExpr":{
+                      "exprType":"stringLiteral",
+                      "value":"",
+                      "stos":[]}},
                   "actions":[{
                       "action":"fadeWidget",
-                      "description":"显示 ITCODE,<br>密码,<br>1,<br>1,<br>登录",
+                      "description":"显示 ITCODE,<br>密码,<br>1,<br>1,<br>登录,<br>IT",
                       "objectsToFades":[{
                           "objectPath":["bc909856877b485d975081b2382ec49c"],
                           "fadeInfo":{
@@ -237,6 +246,75 @@
                               "showType":"none"}}},
 {
                           "objectPath":["8eb967d2bb174ac8a59aaf6e2b794733"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["2364e36c197140f29ed8a02489c6e488"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["62b5e752f50f4d26b55af26fa6059159"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 2,<br>2,<br>重试,<br>ts",
+                      "objectsToFades":[{
+                          "objectPath":["bbf2511065f6493c86df907c2bd5133a"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["42f3c68fcefb45c180f42dda5388195b"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["60a1864cab6d45339c3787c8d8bd9464"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["c7bea1e09064410db59877dc4808aa63"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]}]},
+{
+                  "description":"用例 2<br> (Else If True)",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"显示 ITCODE,<br>密码,<br>1,<br>1,<br>登录",
+                      "objectsToFades":[{
+                          "objectPath":["bc909856877b485d975081b2382ec49c"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["87530bc13cfa4bc7996165b0a1342b7a"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["8eb967d2bb174ac8a59aaf6e2b794733"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["5d769c6c6fc54df8b6c8c9bce683542a"],
                           "fadeInfo":{
                             "fadeType":"show",
                             "options":{
@@ -287,7 +365,7 @@
             "fontName":"'微软雅黑 Regular', '微软雅黑'",
             "fill":{
               "fillType":"solid",
-              "color":0xFFFC4118},
+              "color":0xFFFFFFFF},
             "location":{
               "x":430,
               "y":278},
@@ -296,7 +374,7 @@
               "height":162},
             "borderFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF}},
+              "color":0xFFFFFF}},
           "adaptiveStyles":{
 },
           "objects":[{
@@ -310,7 +388,7 @@
                 "fontName":"'微软雅黑 Regular', '微软雅黑'",
                 "fill":{
                   "fillType":"solid",
-                  "color":0xFFFC4118},
+                  "color":0xFFFFFFFF},
                 "location":{
                   "x":430,
                   "y":278},
@@ -319,7 +397,7 @@
                   "height":162},
                 "borderFill":{
                   "fillType":"solid",
-                  "color":0xFFFFFFFF}},
+                  "color":0xFFFFFF}},
               "adaptiveStyles":{
 }}],
           "images":{
@@ -333,6 +411,9 @@
           "style":{
             "fontName":"'微软雅黑 Regular', '微软雅黑'",
             "horizontalAlignment":"center",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFF2F2F2},
             "location":{
               "x":447,
               "y":298},
@@ -348,23 +429,14 @@
                   "description":"用例 1",
                   "isNewIfGroup":false,
                   "actions":[{
-                      "action":"setFunction",
-                      "description":"设置 部件文字 ITCODE = &quot;&quot;",
-                      "expr":{
-                        "exprType":"block",
-                        "subExprs":[{
-                            "exprType":"fcall",
-                            "functionName":"SetWidgetFormText",
-                            "arguments":[{
-                                "exprType":"pathLiteral",
-                                "isThis":false,
-                                "isFocused":false,
-                                "isTarget":false,
-                                "value":["bc909856877b485d975081b2382ec49c"]},
-{
-                                "exprType":"stringLiteral",
-                                "value":"",
-                                "stos":[]}]}]}}]}]},
+                      "action":"fadeWidget",
+                      "description":"隐藏 IT",
+                      "objectsToFades":[{
+                          "objectPath":["62b5e752f50f4d26b55af26fa6059159"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]}]}]},
             "onLostFocus":{
               "description":"OnLostFocus",
               "cases":[{
@@ -386,23 +458,14 @@
                       "value":"",
                       "stos":[]}},
                   "actions":[{
-                      "action":"setFunction",
-                      "description":"设置 部件文字 ITCODE = &quot;IT code&quot;",
-                      "expr":{
-                        "exprType":"block",
-                        "subExprs":[{
-                            "exprType":"fcall",
-                            "functionName":"SetWidgetFormText",
-                            "arguments":[{
-                                "exprType":"pathLiteral",
-                                "isThis":false,
-                                "isFocused":false,
-                                "isTarget":false,
-                                "value":["bc909856877b485d975081b2382ec49c"]},
-{
-                                "exprType":"stringLiteral",
-                                "value":"IT code",
-                                "stos":[]}]}]}}]}]}},
+                      "action":"fadeWidget",
+                      "description":"显示 IT",
+                      "objectsToFades":[{
+                          "objectPath":["62b5e752f50f4d26b55af26fa6059159"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]}]}]}},
           "tabbable":true},
 {
           "id":"87530bc13cfa4bc7996165b0a1342b7a",
@@ -413,6 +476,9 @@
           "style":{
             "fontName":"'微软雅黑 Regular', '微软雅黑'",
             "horizontalAlignment":"center",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFF2F2F2},
             "location":{
               "x":447,
               "y":348},
@@ -436,7 +502,7 @@
               "height":10},
             "borderFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF}},
+              "color":0xFF5ABAA3}},
           "adaptiveStyles":{
 },
           "images":{
@@ -456,11 +522,11 @@
             "horizontalAlignment":"center",
             "foreGroundFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF,
+              "color":0xFF5ABAA3,
               "opacity":1},
             "fill":{
               "fillType":"solid",
-              "color":0xFFFC4118},
+              "color":0xFFFFFFFF},
             "location":{
               "x":532,
               "y":407},
@@ -486,11 +552,11 @@
                 "horizontalAlignment":"center",
                 "foreGroundFill":{
                   "fillType":"solid",
-                  "color":0xFFFFFFFF,
+                  "color":0xFF5ABAA3,
                   "opacity":1},
                 "fill":{
                   "fillType":"solid",
-                  "color":0xFFFC4118},
+                  "color":0xFFFFFFFF},
                 "location":{
                   "x":532,
                   "y":407},
@@ -545,7 +611,7 @@
                         "stos":[]}}},
                   "actions":[{
                       "action":"fadeWidget",
-                      "description":"隐藏 1,<br>ITCODE,<br>密码,<br>1,<br>登录",
+                      "description":"隐藏 1,<br>ITCODE,<br>密码,<br>1,<br>登录,<br>IT",
                       "objectsToFades":[{
                           "objectPath":["5d769c6c6fc54df8b6c8c9bce683542a"],
                           "fadeInfo":{
@@ -572,6 +638,12 @@
                               "showType":"none"}}},
 {
                           "objectPath":["2364e36c197140f29ed8a02489c6e488"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["62b5e752f50f4d26b55af26fa6059159"],
                           "fadeInfo":{
                             "fadeType":"hide",
                             "options":{
@@ -628,11 +700,11 @@
             "horizontalAlignment":"center",
             "foreGroundFill":{
               "fillType":"solid",
-              "color":0xFFFFFFFF,
+              "color":0xFF666666,
               "opacity":1},
             "lineSpacing":"28px",
             "location":{
-              "x":445,
+              "x":445.000030517578,
               "y":314},
             "size":{
               "width":209,
@@ -651,15 +723,56 @@
                 "horizontalAlignment":"center",
                 "foreGroundFill":{
                   "fillType":"solid",
-                  "color":0xFFFFFFFF,
+                  "color":0xFF666666,
                   "opacity":1},
                 "lineSpacing":"28px",
                 "location":{
-                  "x":445,
+                  "x":445.000030517578,
                   "y":314},
                 "size":{
                   "width":209,
                   "height":56}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"62b5e752f50f4d26b55af26fa6059159",
+          "label":"IT",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF999999,
+              "opacity":1},
+            "location":{
+              "x":524,
+              "y":308},
+            "size":{
+              "width":51,
+              "height":15}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"b39deb35c41a4a9fbc720f329eef4780",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999,
+                  "opacity":1},
+                "location":{
+                  "x":524,
+                  "y":308},
+                "size":{
+                  "width":51,
+                  "height":15}},
               "adaptiveStyles":{
 }}],
           "images":{
@@ -770,4 +883,8 @@
     "c7bea1e09064410db59877dc4808aa63":{
       "scriptId":"u15"},
     "dcf6611a12fc4edea8dd2d7442f6a149":{
-      "scriptId":"u16"}}});
+      "scriptId":"u16"},
+    "62b5e752f50f4d26b55af26fa6059159":{
+      "scriptId":"u17"},
+    "b39deb35c41a4a9fbc720f329eef4780":{
+      "scriptId":"u18"}}});

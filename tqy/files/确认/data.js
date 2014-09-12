@@ -1,9 +1,11 @@
 ﻿$axure.loadCurrentPage({
   "url":"确认.html",
-  "generationDate":new Date(1410492378202.73),
+  "generationDate":new Date(1410514723347.61),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"m"],
+"mouseX",
+"mouseY",
+"drag"],
   "page":{
     "packageId":"ce551e750b88442fb889471afba34ad7",
     "type":"Axure:Page",
@@ -182,7 +184,7 @@
           "visible":true,
           "style":{
             "fontName":"'微软雅黑 Bold', '微软雅黑'",
-            "fontSize":"20px",
+            "fontSize":"18px",
             "horizontalAlignment":"center",
             "verticalAlignment":"middle",
             "foreGroundFill":{
@@ -194,10 +196,10 @@
               "fillType":"solid",
               "color":0xFFFFFFFF},
             "location":{
-              "x":454,
-              "y":325},
+              "x":478.5,
+              "y":327.5},
             "size":{
-              "width":194,
+              "width":146,
               "height":58}},
           "adaptiveStyles":{
 },
@@ -210,7 +212,7 @@
               "visible":true,
               "style":{
                 "fontName":"'微软雅黑 Bold', '微软雅黑'",
-                "fontSize":"20px",
+                "fontSize":"18px",
                 "horizontalAlignment":"center",
                 "verticalAlignment":"middle",
                 "foreGroundFill":{
@@ -222,10 +224,10 @@
                   "fillType":"solid",
                   "color":0xFFFFFFFF},
                 "location":{
-                  "x":454,
-                  "y":325},
+                  "x":478.5,
+                  "y":327.5},
                 "size":{
-                  "width":194,
+                  "width":146,
                   "height":58}},
               "adaptiveStyles":{
 }}],

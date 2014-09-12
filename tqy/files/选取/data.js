@@ -1,9 +1,11 @@
 ﻿$axure.loadCurrentPage({
   "url":"选取.html",
-  "generationDate":new Date(1410492378132.69),
+  "generationDate":new Date(1410514723214.52),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"m"],
+"mouseX",
+"mouseY",
+"drag"],
   "page":{
     "packageId":"062e7fce8d5e45e892572756361f60b4",
     "type":"Axure:Page",

@@ -1,9 +1,11 @@
 ﻿$axure.loadCurrentPage({
   "url":"头像.html",
-  "generationDate":new Date(1410492378045.63),
+  "generationDate":new Date(1410514723060.42),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"m"],
+"mouseX",
+"mouseY",
+"drag"],
   "page":{
     "packageId":"7699e6c2f6c94a7698746017e2cacd1a",
     "type":"Axure:Page",
@@ -186,7 +188,7 @@
             "verticalAlignment":"middle",
             "foreGroundFill":{
               "fillType":"solid",
-              "color":0xFF868686,
+              "color":0xFF666666,
               "opacity":1},
             "lineSpacing":"28px",
             "fill":{
@@ -213,7 +215,7 @@
                 "verticalAlignment":"middle",
                 "foreGroundFill":{
                   "fillType":"solid",
-                  "color":0xFF868686,
+                  "color":0xFF666666,
                   "opacity":1},
                 "lineSpacing":"28px",
                 "fill":{
@@ -407,10 +409,9 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页",
+                      "description":"在 当前窗口 打开 链接",
                       "target":{
                         "targetType":"page",
-                        "url":"首页.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
