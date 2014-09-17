@@ -1,17 +1,17 @@
 ﻿$axure.loadCurrentPage({
   "url":"确认.html",
-  "generationDate":new Date(1410514723347.61),
+  "generationDate":new Date(1410945747772.71),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"mouseX",
-"mouseY",
-"drag"],
+"number",
+"movepanel",
+"upown"],
   "page":{
     "packageId":"ce551e750b88442fb889471afba34ad7",
     "type":"Axure:Page",
     "name":"确认",
     "notes":{
-},
+      "操作任务":"<p><span>1.确认该头像</span></p><p><span>&nbsp;</span></p>"},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",
@@ -239,10 +239,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 首页",
+                      "description":"在 当前窗口 打开 我的单据",
                       "target":{
                         "targetType":"page",
-                        "url":"首页.html",
+                        "url":"我的单据.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,

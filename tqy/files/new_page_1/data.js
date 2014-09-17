@@ -1,11 +1,11 @@
 ﻿$axure.loadCurrentPage({
   "url":"new_page_1.html",
-  "generationDate":new Date(1410514723854.95),
+  "generationDate":new Date(1410945750058.23),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"mouseX",
-"mouseY",
-"drag"],
+"number",
+"movepanel",
+"upown"],
   "page":{
     "packageId":"4383454ee4a94afe86c5bb18c739297c",
     "type":"Axure:Page",

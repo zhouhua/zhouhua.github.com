@@ -29,18 +29,34 @@
             "type":"Wireframe",
             "url":"确认.html"}]},
 {
-        "pageName":"首页",
+        "pageName":"我的单据",
         "type":"Wireframe",
-        "url":"首页.html"},
+        "url":"我的单据.html"},
+{
+        "pageName":"我的考勤",
+        "type":"Wireframe",
+        "url":"我的考勤.html"},
+{
+        "pageName":"关于我",
+        "type":"Wireframe",
+        "url":"关于我.html"},
+{
+        "pageName":"我的单据的副本",
+        "type":"Wireframe",
+        "url":"我的单据的副本.html"},
+{
+        "pageName":"我的单据2",
+        "type":"Wireframe",
+        "url":"我的单据2.html"},
 {
         "pageName":"New Page 1",
         "type":"Wireframe",
         "url":"new_page_1.html"}]},
   "globalVariables":{
     "onloadvariable":"",
-    "mousex":"",
-    "mousey":"",
-    "drag":"false"},
+    "number":"",
+    "movepanel":"",
+    "upown":""},
   "defaultAdaptiveView":{
     "name":"",
     "size":{

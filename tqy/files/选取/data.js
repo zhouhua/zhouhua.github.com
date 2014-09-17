@@ -1,17 +1,17 @@
 ﻿$axure.loadCurrentPage({
   "url":"选取.html",
-  "generationDate":new Date(1410514723214.52),
+  "generationDate":new Date(1410945747692.66),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"mouseX",
-"mouseY",
-"drag"],
+"number",
+"movepanel",
+"upown"],
   "page":{
     "packageId":"062e7fce8d5e45e892572756361f60b4",
     "type":"Axure:Page",
     "name":"选取",
     "notes":{
-},
+      "操作任务":"<p><span>第一次进入</span></p><p><span>1.取消选取该头像</span></p><p><span>&nbsp;</span></p><p><span>第二次进入</span></p><p><span>1.接受该头像</span></p>"},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",

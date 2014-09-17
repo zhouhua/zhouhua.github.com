@@ -1,17 +1,17 @@
 ﻿$axure.loadCurrentPage({
   "url":"登录.html",
-  "generationDate":new Date(1410514722910.32),
+  "generationDate":new Date(1410945747393.46),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"mouseX",
-"mouseY",
-"drag"],
+"number",
+"movepanel",
+"upown"],
   "page":{
     "packageId":"c230d57ff50c4533a16eeadb6e75a90a",
     "type":"Axure:Page",
     "name":"登录",
     "notes":{
-},
+      "操作任务":"<p><span>1.只输入ITCODE进行登录</span></p><p><span>2.只输入密码进行登录</span></p><p><span>3.输入ITCODE和密码进行登录</span></p>"},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",
@@ -367,7 +367,7 @@
               "fillType":"solid",
               "color":0xFFFFFFFF},
             "location":{
-              "x":430,
+              "x":429.999969482422,
               "y":278},
             "size":{
               "width":240,
@@ -390,7 +390,7 @@
                   "fillType":"solid",
                   "color":0xFFFFFFFF},
                 "location":{
-                  "x":430,
+                  "x":429.999969482422,
                   "y":278},
                 "size":{
                   "width":240,
@@ -415,7 +415,7 @@
               "fillType":"solid",
               "color":0xFFF2F2F2},
             "location":{
-              "x":447,
+              "x":446.999969482422,
               "y":298},
             "size":{
               "width":205,
@@ -480,7 +480,7 @@
               "fillType":"solid",
               "color":0xFFF2F2F2},
             "location":{
-              "x":447,
+              "x":446.999969482422,
               "y":348},
             "size":{
               "width":205,
@@ -495,7 +495,7 @@
           "visible":true,
           "style":{
             "location":{
-              "x":430,
+              "x":429.999969482422,
               "y":390},
             "size":{
               "width":240,

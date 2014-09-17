@@ -1,0 +1,12421 @@
+﻿$axure.loadCurrentPage({
+  "url":"我的考勤.html",
+  "generationDate":new Date(1410945748911.47),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable",
+"number",
+"movepanel",
+"upown"],
+  "page":{
+    "packageId":"d1a9f07549b3449c98592cc6010e39c1",
+    "type":"Axure:Page",
+    "name":"我的考勤",
+    "notes":{
+      "画面印象":"<p><span>1.解释各个颜色表示的含义，以及接收到的信息有哪些</span></p>",
+      "操作任务":"<p><span>1.任意点击本月的日期，查看目前的考勤情况</span></p><p><span>2.同步数据，查看最新的考勤情况</span></p><p><span>4.查看9月9日~9月12日中任意一天查看考勤情况</span></p><p><span>5</span><span>.9月9日请</span><span>年</span><span>假</span></p><p><span>6</span><span>.9月10日及9月11日洽公</span></p><p><span>7</span><span>.9月12日补考勤</span></p><p><span>（</span><span>5</span><span>~</span><span>7</span><span>任务顺序任选）</span></p><p><span>8</span><span>.再次查看考勤情况，说出操作中的想法</span></p>"},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+      "onLoad":{
+        "description":"OnLoad",
+        "cases":[{
+            "description":"用例 1",
+            "isNewIfGroup":false,
+            "actions":[{
+                "action":"setFunction",
+                "description":"设置 选中状态值 我的考勤 = &quot;true&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetCheckState",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["5b53017b7fad444290270627f014f34d"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"true",
+                          "stos":[]}]}]}},
+{
+                "action":"setFunction",
+                "description":"设置 选中状态值 我的单据 = &quot;false&quot;, 且<br> 选中状态值 关于我 = &quot;false&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetCheckState",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["854cef656da74db2a3d1ff49db2921d3"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"false",
+                          "stos":[]}]},
+{
+                      "exprType":"fcall",
+                      "functionName":"SetCheckState",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["6162d058c03a47d3b55ff95d5b7a9396"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"false",
+                          "stos":[]}]}]}},
+{
+                "action":"fadeWidget",
+                "description":"隐藏 洽,<br>假,<br>补",
+                "objectsToFades":[{
+                    "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}}]},
+{
+                "action":"setFunction",
+                "description":"设置 选中状态值 23 = &quot;true&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetCheckState",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"true",
+                          "stos":[]}]}]}},
+{
+                "action":"setFunction",
+                "description":"设置 部件文字 情况 = &quot;当日尚未记录&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                "expr":{
+                  "exprType":"block",
+                  "subExprs":[{
+                      "exprType":"fcall",
+                      "functionName":"SetWidgetRichText",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"当日尚未记录",
+                          "stos":[]},
+{
+                          "exprType":"booleanLiteral",
+                          "value":true}]},
+{
+                      "exprType":"fcall",
+                      "functionName":"SetWidgetRichText",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                          "exprType":"stringLiteral",
+                          "value":"无",
+                          "stos":[]},
+{
+                          "exprType":"booleanLiteral",
+                          "value":true}]}]}},
+{
+                "action":"fadeWidget",
+                "description":"隐藏 原因,<br>确认,<br>线,<br>框,<br>绿12,<br>绿11,<br>绿10,<br>绿9,<br>提示,<br>(下拉列表框),<br>没带卡,<br>忘打卡,<br>同步,<br>黑19",
+                "objectsToFades":[{
+                    "objectPath":["84897c4f5edf4abe86e50a9eb682fc02"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["f560609236be4a80bfc81ee043469401"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["6402db67935d4abba001c7a18703e80c"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["5b69f035920c4164bd144b17cda3cb80"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["6ecce6a9bc584d26a746a75cafd7b545"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["39ad42073d5e411ea79d52ed2bb38b50"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["cf8a753857a74782b8d062e5bcd8c194"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["6d38c920857e48aa9aaa1bd629e3e4d2"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["a5c17be1b2a0418699f9c651cdec4b2a"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}},
+{
+                    "objectPath":["d8a786678e3c4d699da698ec6a1111a3"],
+                    "fadeInfo":{
+                      "fadeType":"hide",
+                      "options":{
+                        "showType":"none"}}}]}]}]}},
+    "diagram":{
+      "objects":[{
+          "id":"5d421b40164b48f0bf434e450f58ab10",
+          "label":"",
+          "type":"referenceDiagramObject",
+          "styleType":"referenceDiagramObject",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":400,
+              "y":51}},
+          "adaptiveStyles":{
+},
+          "masterId":"dc48e400b7474dc59356ab65988cb125"},
+{
+          "id":"19942652098a4b959ce2d4a452339e26",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":400,
+              "y":120},
+            "size":{
+              "width":300,
+              "height":464},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ab5dc7dce46644499e4378f32aff9f61",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":400,
+                  "y":120},
+                "size":{
+                  "width":300,
+                  "height":464},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/u3.png"}},
+{
+          "id":"ce5d8984751d4da5bd19cf574687382a",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF666666,
+              "opacity":1},
+            "location":{
+              "x":412,
+              "y":418},
+            "size":{
+              "width":52,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"813be424ddc04d749ed17c846e65a3be",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF666666,
+                  "opacity":1},
+                "location":{
+                  "x":412,
+                  "y":418},
+                "size":{
+                  "width":52,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"478afdbd9b284747aa8b1f43b70f7307",
+          "label":"num",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontWeight":"700",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "location":{
+              "x":464,
+              "y":418},
+            "size":{
+              "width":25,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ba8f95a2c2f849d6863f0f85eaa76264",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontWeight":"700",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "location":{
+                  "x":464,
+                  "y":418},
+                "size":{
+                  "width":25,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"b56734fe922c4f0089e40340fda58904",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF666666,
+              "opacity":1},
+            "location":{
+              "x":491,
+              "y":418},
+            "size":{
+              "width":14,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"cc3f451e46714dcca5d1a17e04c77751",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF666666,
+                  "opacity":1},
+                "location":{
+                  "x":491,
+                  "y":418},
+                "size":{
+                  "width":14,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"854cef656da74db2a3d1ff49db2921d3",
+          "label":"我的单据",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "stateStyles":{
+              "selected":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":412,
+              "y":545},
+            "size":{
+              "width":92,
+              "height":30},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a89d2e4c86544c91a2f681790dbef3d8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "stateStyles":{
+                  "selected":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":412,
+                  "y":545},
+                "size":{
+                  "width":92,
+                  "height":30},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的单据/我的单据_u77.png",
+            "selected~":"images/我的单据/我的单据_u77_selected.png"}},
+{
+          "id":"5b53017b7fad444290270627f014f34d",
+          "label":"我的考勤",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "stateStyles":{
+              "selected":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":504,
+              "y":545},
+            "size":{
+              "width":92,
+              "height":30},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"63596dc4c31e4fd1aa39558624d11009",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "stateStyles":{
+                  "selected":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":504,
+                  "y":545},
+                "size":{
+                  "width":92,
+                  "height":30},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的单据/我的考勤_u79.png",
+            "selected~":"images/我的单据/我的考勤_u79_selected.png"}},
+{
+          "id":"6162d058c03a47d3b55ff95d5b7a9396",
+          "label":"关于我",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "stateStyles":{
+              "selected":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":597,
+              "y":545},
+            "size":{
+              "width":92,
+              "height":30},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"45e8f0b4648342b8a681cab5e163141c",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "stateStyles":{
+                  "selected":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":597,
+                  "y":545},
+                "size":{
+                  "width":92,
+                  "height":30},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"linkWindow",
+                      "description":"在 当前窗口 打开 关于我",
+                      "target":{
+                        "targetType":"page",
+                        "url":"关于我.html",
+                        "includeVariables":true},
+                      "linkType":"current"}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的单据/关于我_u81.png",
+            "selected~":"images/我的单据/关于我_u81_selected.png"}},
+{
+          "id":"646ff2db676240a993308e87b5e4b1b8",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"16px",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "location":{
+              "x":512,
+              "y":64},
+            "size":{
+              "width":81,
+              "height":22}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"9f7147338fe642b7a56ed915eb50e136",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"16px",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "location":{
+                  "x":512,
+                  "y":64},
+                "size":{
+                  "width":81,
+                  "height":22}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"87e0dc37731842a59b9360618520da43",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontWeight":"700",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "location":{
+              "x":488,
+              "y":67},
+            "size":{
+              "width":24,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"aa67cd5e8fa945868c9c5ec7a345abf3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontWeight":"700",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "location":{
+                  "x":488,
+                  "y":67},
+                "size":{
+                  "width":24,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"53f8a10f942447e8a78aaa918955a5a1",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontWeight":"700",
+            "horizontalAlignment":"center",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "location":{
+              "x":593,
+              "y":67},
+            "size":{
+              "width":24,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a7369f159d5a47359449c14dec5b86a2",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontWeight":"700",
+                "horizontalAlignment":"center",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "location":{
+                  "x":593,
+                  "y":67},
+                "size":{
+                  "width":24,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"f5f7cc6e4b7f4da2898b15fd839277f2",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFF2F2F2},
+            "location":{
+              "x":400,
+              "y":368},
+            "size":{
+              "width":300,
+              "height":41},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d04aa12f526c4826b55dda1192a4dc2f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFF2F2F2},
+                "location":{
+                  "x":400,
+                  "y":368},
+                "size":{
+                  "width":300,
+                  "height":41},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/u23.png"}},
+{
+          "id":"b5ba772f15374b9e84024ab92e22bc82",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFEE6363},
+            "location":{
+              "x":412,
+              "y":381},
+            "size":{
+              "width":15,
+              "height":15},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFEE6363}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"4c3ad1359e5b4f21a380bb323230f453",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFEE6363},
+                "location":{
+                  "x":412,
+                  "y":381},
+                "size":{
+                  "width":15,
+                  "height":15},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFEE6363}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/u25.png"}},
+{
+          "id":"d3cb1aed6d0c480384ac2bcfffc667a2",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"12px",
+            "location":{
+              "x":434,
+              "y":381},
+            "size":{
+              "width":25,
+              "height":16}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d6d980f1d5944a4191aa5d205a8880f9",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"12px",
+                "location":{
+                  "x":434,
+                  "y":381},
+                "size":{
+                  "width":25,
+                  "height":16}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"a776f616cf2e4eb5ac8706b70fdbda84",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "location":{
+              "x":481,
+              "y":381},
+            "size":{
+              "width":15,
+              "height":15},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6737ab1e3de149b6abc793107508df91",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "location":{
+                  "x":481,
+                  "y":381},
+                "size":{
+                  "width":15,
+                  "height":15},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/u29.png"}},
+{
+          "id":"90dd5a4d4038410d85a94a201cdfdfed",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"12px",
+            "location":{
+              "x":503,
+              "y":381},
+            "size":{
+              "width":37,
+              "height":16}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"89bc10482a17422aaf84642a23c892c3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"12px",
+                "location":{
+                  "x":503,
+                  "y":381},
+                "size":{
+                  "width":37,
+                  "height":16}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"ad8f98a26b434fd39565ad01cab2ddba",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF000000},
+            "location":{
+              "x":560,
+              "y":381},
+            "size":{
+              "width":15,
+              "height":15},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF000000}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"9e8e01b8782b42be9aa18b5eea2b91dc",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF000000},
+                "location":{
+                  "x":560,
+                  "y":381},
+                "size":{
+                  "width":15,
+                  "height":15},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF000000}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/u33.png"}},
+{
+          "id":"9bbfb28e027745928a9009286511aacb",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"12px",
+            "location":{
+              "x":582,
+              "y":381},
+            "size":{
+              "width":49,
+              "height":16}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"e7a28199d7604fe99c71fe690e44433a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"12px",
+                "location":{
+                  "x":582,
+                  "y":381},
+                "size":{
+                  "width":49,
+                  "height":16}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"d893600085e142caa8d7b837d5f92882",
+          "label":"",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":400,
+              "y":440},
+            "size":{
+              "width":300,
+              "height":10},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFE4E4E4}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/u37_line.png"}},
+{
+          "id":"9d872f0aebdf47b9850039e7c21c4f26",
+          "label":"情况",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":477.000030517578,
+              "y":454},
+            "size":{
+              "width":123,
+              "height":16}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"9f08638211f34b289a0495ba31554012",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":477.000030517578,
+                  "y":454},
+                "size":{
+                  "width":123,
+                  "height":16}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"8097379f2a2d497d85e99c57125636ae",
+          "label":"流程",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":477,
+              "y":489},
+            "size":{
+              "width":174,
+              "height":16}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"70bbd8f7af8944358a26176bc0c99d1d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":477,
+                  "y":489},
+                "size":{
+                  "width":174,
+                  "height":16}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"c5890d675f6e4dcc9e5625a26cf365fd",
+          "label":"",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":400,
+              "y":475.440002441406},
+            "size":{
+              "width":300,
+              "height":10},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFE4E4E4}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/u37_line.png"}},
+{
+          "id":"129f182e61564dbeab333b2cea8aae4a",
+          "label":"1",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":402,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"565c02d59f8c41e287e5b50219d740a3",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":402,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 1 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["129f182e61564dbeab333b2cea8aae4a"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/1_u43.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"9528c18556804efd9b20b76c9bba6731",
+          "label":"2",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":444,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"61bfbf57346842339a08bb030c520228",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":444,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 2 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9528c18556804efd9b20b76c9bba6731"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"4e1708124cd64217af1a2eb5c99ce808",
+          "label":"3",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":486,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"09580cce76fb45e482a4cf02fb43cc9f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":486,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 3 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["4e1708124cd64217af1a2eb5c99ce808"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"92bd6f6b2fc14753af57847b0cf105d9",
+          "label":"7",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"b40ec1fd1bdb4bdb98287dc924e5a98e",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 7 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["92bd6f6b2fc14753af57847b0cf105d9"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"4828f172cc0041e89acdea6872a1c34f",
+          "label":"5",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":570,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c88492f5145a4ccca1bd487b41a9af34",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":570,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 5 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["4828f172cc0041e89acdea6872a1c34f"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"795a666b17824f9e8f85d543c5656d6e",
+          "label":"6",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":612,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"f21c042a778c4e089a26974270d17393",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":612,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 6 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["795a666b17824f9e8f85d543c5656d6e"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"c6ab4ffea148448cb478bb08953aed71",
+          "label":"8",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":402,
+              "y":203},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"64f65a2808d84df99b6008eb978bc69f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":402,
+                  "y":203},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 8 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["c6ab4ffea148448cb478bb08953aed71"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;中秋节放假&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"中秋节放假",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"bed7ac126d274992bb69de32f4616054",
+          "label":"15",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":402,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c4bb55eb401d46568a0fac63460597b6",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":402,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 15 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["bed7ac126d274992bb69de32f4616054"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常（请假1天）&quot;, 且<br> 部件文字 流程 = &quot;已完成&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常（请假1天）",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"已完成",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/1_u43.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"ef57677023b8481bb3883ad957f897fc",
+          "label":"22",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":402,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c152f69b308c4a74bdc46cf8a3da63a8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":402,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 22 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["ef57677023b8481bb3883ad957f897fc"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"735a4458ff8f48179603b30ad6a3e18f",
+          "label":"9",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":444,
+              "y":203},
+            "size":{
+              "width":10,
+              "height":10}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 可见性 绿9 = 真 和 动态面板状态 9 = 状态1)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["6ecce6a9bc584d26a746a75cafd7b545"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetPanelState",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["735a4458ff8f48179603b30ad6a3e18f"]}]},
+                      "rightExpr":{
+                        "exprType":"panelDiagramLiteral",
+                        "panelPath":["735a4458ff8f48179603b30ad6a3e18f"],
+                        "panelIndex":0}}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 9 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["735a4458ff8f48179603b30ad6a3e18f"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;请假1天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"请假1天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"0d1ada5af7c2407cab6506485c393b43",
+              "label":"状态1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"aeb9bf2f4e1048629d9f5cbcd1634765",
+                  "label":"9",
+                  "parentDynamicPanel":"735a4458ff8f48179603b30ad6a3e18f",
+                  "panelIndex":0,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "stateStyles":{
+                      "mouseDown":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFE4E4E4}},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFF},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"97ef1f5cbb384596946114e73de117c7",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"735a4458ff8f48179603b30ad6a3e18f",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "stateStyles":{
+                          "mouseDown":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFE4E4E4}},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFF},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 可见性 绿9 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetWidgetVisibility",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["6ecce6a9bc584d26a746a75cafd7b545"]}]},
+                            "rightExpr":{
+                              "exprType":"booleanLiteral",
+                              "value":false}},
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 9 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["aeb9bf2f4e1048629d9f5cbcd1634765"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 23 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 可见性 绿9 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetWidgetVisibility",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["6ecce6a9bc584d26a746a75cafd7b545"]}]},
+                            "rightExpr":{
+                              "exprType":"booleanLiteral",
+                              "value":false}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 9 到 状态2",
+                              "panelsToStates":[{
+                                  "panelPath":["735a4458ff8f48179603b30ad6a3e18f"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 23 = &quot;false&quot;, 且<br> 选中状态值 10 = &quot;false&quot;, 且<br> 选中状态值 11 = &quot;false&quot;, 且<br> 选中状态值 12 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["af8e832d228049b3bbfb4a5b0e4418f0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["88d2346132f2418d8bc48d4f9102f9db"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ebe8d6e08b41490a88bc5b381c9ba798"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 假 = &quot;true&quot;, 且<br> 选中状态值 补 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["aef6dacb4a4b469095f06f9c84b4ef4b"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ef353532af2d4b149a4219237fa02b7d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 我的单据 向下滑动 500 毫秒,<br>我的考勤 向下滑动 500 毫秒,<br>关于我 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 洽 向上滑动 500 毫秒,<br>假 向上滑动 500 毫秒,<br>补 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/2_u45.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"c0911063daef48c3a1bedfa063e7836d",
+              "label":"状态2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"273911dc7b1442c7b70da8444d7a6141",
+                  "label":"9",
+                  "parentDynamicPanel":"735a4458ff8f48179603b30ad6a3e18f",
+                  "panelIndex":1,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "stateStyles":{
+                      "mouseDown":{
+},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"52337a010fb546e2b2b62fe7d246dfea",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"735a4458ff8f48179603b30ad6a3e18f",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "stateStyles":{
+                          "mouseDown":{
+},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 2",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 9 到 状态1",
+                              "panelsToStates":[{
+                                  "panelPath":["735a4458ff8f48179603b30ad6a3e18f"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 9 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["735a4458ff8f48179603b30ad6a3e18f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 变量 未指定 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":""},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 9",
+                              "pathToInfo":[{
+                                  "objectPath":["273911dc7b1442c7b70da8444d7a6141"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 假 = &quot;true&quot;, 且<br> 选中状态值 补 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["aef6dacb4a4b469095f06f9c84b4ef4b"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ef353532af2d4b149a4219237fa02b7d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 变量 未指定 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":""},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 我的单据 向下滑动 500 毫秒,<br>我的考勤 向下滑动 500 毫秒,<br>关于我 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 洽 向上滑动 500 毫秒,<br>假 向上滑动 500 毫秒,<br>补 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"启用 9",
+                              "pathToInfo":[{
+                                  "objectPath":["273911dc7b1442c7b70da8444d7a6141"],
+                                  "enableDisableInfo":{
+                                    "enable":true}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/1_u43_disabled.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"0df9d7a3570d43c896868fde878be9c1",
+          "label":"16",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":444,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"063b71b7025b422f8ffcf81276876635",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":444,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 16 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["0df9d7a3570d43c896868fde878be9c1"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常（请假1天）&quot;, 且<br> 部件文字 流程 = &quot;已完成&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常（请假1天）",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"已完成",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"2cca8dd0817b45338de9d84e662d6ce0",
+          "label":"23",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontWeight":"700",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "location":{
+              "x":444,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"a58f30efa88c4a88a831132bc840092f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontWeight":"700",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "location":{
+                  "x":444,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 23 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;当日尚未记录&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"当日尚未记录",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/1_u43.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"af8e832d228049b3bbfb4a5b0e4418f0",
+          "label":"10",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":486,
+              "y":203},
+            "size":{
+              "width":10,
+              "height":10}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 动态面板状态 10 = 状态1 和 可见性 绿10 = 真)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetPanelState",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["af8e832d228049b3bbfb4a5b0e4418f0"]}]},
+                      "rightExpr":{
+                        "exprType":"panelDiagramLiteral",
+                        "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                        "panelIndex":0}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["5b69f035920c4164bd144b17cda3cb80"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 10 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["af8e832d228049b3bbfb4a5b0e4418f0"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;洽公1天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"洽公1天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"3744e27da684452390aec00d1d7e0883",
+              "label":"状态1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"6e937b53ea6049179fd7bd84eeb10e2b",
+                  "label":"10",
+                  "parentDynamicPanel":"af8e832d228049b3bbfb4a5b0e4418f0",
+                  "panelIndex":0,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "stateStyles":{
+                      "mouseDown":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFE4E4E4}},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"c7cf1f68ab8e4239afa12b3700191ef1",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"af8e832d228049b3bbfb4a5b0e4418f0",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "stateStyles":{
+                          "mouseDown":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFE4E4E4}},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 动态面板状态 10 = 状态1 和 可见性 绿10 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"&&",
+                            "leftExpr":{
+                              "exprType":"binaryOp",
+                              "op":"==",
+                              "leftExpr":{
+                                "exprType":"fcall",
+                                "functionName":"GetPanelState",
+                                "arguments":[{
+                                    "exprType":"pathLiteral",
+                                    "isThis":false,
+                                    "isFocused":false,
+                                    "isTarget":false,
+                                    "value":["af8e832d228049b3bbfb4a5b0e4418f0"]}]},
+                              "rightExpr":{
+                                "exprType":"panelDiagramLiteral",
+                                "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                                "panelIndex":0}},
+                            "rightExpr":{
+                              "exprType":"binaryOp",
+                              "op":"==",
+                              "leftExpr":{
+                                "exprType":"fcall",
+                                "functionName":"GetWidgetVisibility",
+                                "arguments":[{
+                                    "exprType":"pathLiteral",
+                                    "isThis":false,
+                                    "isFocused":false,
+                                    "isTarget":false,
+                                    "value":["5b69f035920c4164bd144b17cda3cb80"]}]},
+                              "rightExpr":{
+                                "exprType":"booleanLiteral",
+                                "value":false}}},
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 10 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["6e937b53ea6049179fd7bd84eeb10e2b"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 可见性 绿10 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetWidgetVisibility",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["5b69f035920c4164bd144b17cda3cb80"]}]},
+                            "rightExpr":{
+                              "exprType":"booleanLiteral",
+                              "value":false}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 10 到 状态2",
+                              "panelsToStates":[{
+                                  "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 9 = &quot;false&quot;, 且<br> 选中状态值 23 = &quot;false&quot;, 且<br> 选中状态值 11 = &quot;false&quot;, 且<br> 选中状态值 12 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["735a4458ff8f48179603b30ad6a3e18f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["88d2346132f2418d8bc48d4f9102f9db"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ebe8d6e08b41490a88bc5b381c9ba798"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 我的单据 向下滑动 500 毫秒,<br>我的考勤 向下滑动 500 毫秒,<br>关于我 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 洽 向上滑动 500 毫秒,<br>假 向上滑动 500 毫秒,<br>补 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 假 = &quot;true&quot;, 且<br> 选中状态值 补 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["aef6dacb4a4b469095f06f9c84b4ef4b"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ef353532af2d4b149a4219237fa02b7d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/1_u43.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"7c33bf2d28614799be82a627d25c79fc",
+              "label":"状态2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"2c82f822cfb149f2bd69d265b4f26cd5",
+                  "label":"10",
+                  "parentDynamicPanel":"af8e832d228049b3bbfb4a5b0e4418f0",
+                  "panelIndex":1,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "stateStyles":{
+                      "mouseDown":{
+},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"53e7e1909b774e9d8e13bc0763959c41",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"af8e832d228049b3bbfb4a5b0e4418f0",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "stateStyles":{
+                          "mouseDown":{
+},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 2",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 10 到 状态1",
+                              "panelsToStates":[{
+                                  "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 10 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["af8e832d228049b3bbfb4a5b0e4418f0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/1_u43_disabled.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"1bd862b5357d460095d765935823c31b",
+          "label":"4",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":528,
+              "y":162},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ab7d77921fc54dac867df6711fc2194a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":528,
+                  "y":162},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 4 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["1bd862b5357d460095d765935823c31b"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"88d2346132f2418d8bc48d4f9102f9db",
+          "label":"11",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":528,
+              "y":203},
+            "size":{
+              "width":10,
+              "height":10}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 可见性 绿11 = 真 和 动态面板状态 11 = 状态1)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["6402db67935d4abba001c7a18703e80c"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetPanelState",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["88d2346132f2418d8bc48d4f9102f9db"]}]},
+                      "rightExpr":{
+                        "exprType":"panelDiagramLiteral",
+                        "panelPath":["88d2346132f2418d8bc48d4f9102f9db"],
+                        "panelIndex":0}}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 11 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["88d2346132f2418d8bc48d4f9102f9db"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;洽公1天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"洽公1天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"3d8bdc15fb254a07b3c636f48d9a84b9",
+              "label":"状态1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"eb02359f3e864d2594d0e09b98e55411",
+                  "label":"11",
+                  "parentDynamicPanel":"88d2346132f2418d8bc48d4f9102f9db",
+                  "panelIndex":0,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "stateStyles":{
+                      "mouseDown":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFE4E4E4}},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFF},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"a64f7cb381dd4af487fb3ec1456489e1",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"88d2346132f2418d8bc48d4f9102f9db",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "stateStyles":{
+                          "mouseDown":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFE4E4E4}},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFF},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 动态面板状态 10 = 状态1 和 可见性 绿11 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"&&",
+                            "leftExpr":{
+                              "exprType":"binaryOp",
+                              "op":"==",
+                              "leftExpr":{
+                                "exprType":"fcall",
+                                "functionName":"GetPanelState",
+                                "arguments":[{
+                                    "exprType":"pathLiteral",
+                                    "isThis":false,
+                                    "isFocused":false,
+                                    "isTarget":false,
+                                    "value":["af8e832d228049b3bbfb4a5b0e4418f0"]}]},
+                              "rightExpr":{
+                                "exprType":"panelDiagramLiteral",
+                                "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                                "panelIndex":0}},
+                            "rightExpr":{
+                              "exprType":"binaryOp",
+                              "op":"==",
+                              "leftExpr":{
+                                "exprType":"fcall",
+                                "functionName":"GetWidgetVisibility",
+                                "arguments":[{
+                                    "exprType":"pathLiteral",
+                                    "isThis":false,
+                                    "isFocused":false,
+                                    "isTarget":false,
+                                    "value":["6402db67935d4abba001c7a18703e80c"]}]},
+                              "rightExpr":{
+                                "exprType":"booleanLiteral",
+                                "value":false}}},
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 11 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["eb02359f3e864d2594d0e09b98e55411"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}}]},
+{
+                          "description":"用例 2<br> (Else If 动态面板状态 10 = 状态2)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetPanelState",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["af8e832d228049b3bbfb4a5b0e4418f0"]}]},
+                            "rightExpr":{
+                              "exprType":"panelDiagramLiteral",
+                              "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                              "panelIndex":1}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 11 到 状态2",
+                              "panelsToStates":[{
+                                  "panelPath":["88d2346132f2418d8bc48d4f9102f9db"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤2天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤2天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"启用 洽,<br>假",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":true}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "enableDisableInfo":{
+                                    "enable":true}}]},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 补",
+                              "pathToInfo":[{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/2_u45.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"ef55a0621642417e8fce41f7914316d6",
+              "label":"状态2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"b7ea94cdcf8641b09c965e3200847105",
+                  "label":"11",
+                  "parentDynamicPanel":"88d2346132f2418d8bc48d4f9102f9db",
+                  "panelIndex":1,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "stateStyles":{
+                      "mouseDown":{
+},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"ed9f1f4364ac434ab2e21fa451acfe6e",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"88d2346132f2418d8bc48d4f9102f9db",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "stateStyles":{
+                          "mouseDown":{
+},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 2",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 11 到 状态1",
+                              "panelsToStates":[{
+                                  "panelPath":["88d2346132f2418d8bc48d4f9102f9db"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"启用 假,<br>补",
+                              "pathToInfo":[{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "enableDisableInfo":{
+                                    "enable":true}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "enableDisableInfo":{
+                                    "enable":true}}]},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/1_u43_disabled.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"ebe8d6e08b41490a88bc5b381c9ba798",
+          "label":"12",
+          "type":"dynamicPanel",
+          "styleType":"dynamicPanel",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":570,
+              "y":203},
+            "size":{
+              "width":10,
+              "height":10}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 可见性 绿12 = 真 和 动态面板状态 12 = 状态1)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["f560609236be4a80bfc81ee043469401"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetPanelState",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["ebe8d6e08b41490a88bc5b381c9ba798"]}]},
+                      "rightExpr":{
+                        "exprType":"panelDiagramLiteral",
+                        "panelPath":["ebe8d6e08b41490a88bc5b381c9ba798"],
+                        "panelIndex":0}}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 12 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["ebe8d6e08b41490a88bc5b381c9ba798"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;补考勤0.5天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"补考勤0.5天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "scrollbars":"none",
+          "fitToContent":true,
+          "propagate":false,
+          "diagrams":[{
+              "id":"2d16731aeac84c02a3653b904604d209",
+              "label":"状态1",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"739957b115874fbbb35744422dfa2787",
+                  "label":"12",
+                  "parentDynamicPanel":"ebe8d6e08b41490a88bc5b381c9ba798",
+                  "panelIndex":0,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "stateStyles":{
+                      "mouseDown":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFE4E4E4}},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFF},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"707e32d6e8a44441b0adf820fd9ccbc7",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"ebe8d6e08b41490a88bc5b381c9ba798",
+                      "panelIndex":0,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "stateStyles":{
+                          "mouseDown":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFE4E4E4}},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFF},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 可见性 绿12 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetWidgetVisibility",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["f560609236be4a80bfc81ee043469401"]}]},
+                            "rightExpr":{
+                              "exprType":"booleanLiteral",
+                              "value":false}},
+                          "actions":[{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 12 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["739957b115874fbbb35744422dfa2787"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤0.5天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤0.5天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"用例 1<br> (If 可见性 绿12 = 假)",
+                          "isNewIfGroup":false,
+                          "condition":{
+                            "exprType":"binaryOp",
+                            "op":"==",
+                            "leftExpr":{
+                              "exprType":"fcall",
+                              "functionName":"GetWidgetVisibility",
+                              "arguments":[{
+                                  "exprType":"pathLiteral",
+                                  "isThis":false,
+                                  "isFocused":false,
+                                  "isTarget":false,
+                                  "value":["f560609236be4a80bfc81ee043469401"]}]},
+                            "rightExpr":{
+                              "exprType":"booleanLiteral",
+                              "value":false}},
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 12 到 状态2",
+                              "panelsToStates":[{
+                                  "panelPath":["ebe8d6e08b41490a88bc5b381c9ba798"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":2,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 9 = &quot;false&quot;, 且<br> 选中状态值 23 = &quot;false&quot;, 且<br> 选中状态值 10 = &quot;false&quot;, 且<br> 选中状态值 11 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["735a4458ff8f48179603b30ad6a3e18f"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["2cca8dd0817b45338de9d84e662d6ce0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["af8e832d228049b3bbfb4a5b0e4418f0"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["88d2346132f2418d8bc48d4f9102f9db"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤0.5天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤0.5天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"启用 假,<br>补",
+                              "pathToInfo":[{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "enableDisableInfo":{
+                                    "enable":true}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "enableDisableInfo":{
+                                    "enable":true}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 我的单据 向下滑动 500 毫秒,<br>我的考勤 向下滑动 500 毫秒,<br>关于我 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 洽 向上滑动 500 毫秒,<br>假 向上滑动 500 毫秒,<br>补 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/2_u45.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}},
+{
+              "id":"347492ba2c804e309f9c67c122bcf4af",
+              "label":"状态2",
+              "type":"Axure:PanelDiagram",
+              "objects":[{
+                  "id":"bd2d9170444b493999d594b9dd30fc75",
+                  "label":"12",
+                  "parentDynamicPanel":"ebe8d6e08b41490a88bc5b381c9ba798",
+                  "panelIndex":1,
+                  "type":"buttonShape",
+                  "styleType":"buttonShape",
+                  "visible":true,
+                  "style":{
+                    "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "stateStyles":{
+                      "mouseDown":{
+},
+                      "selected":{
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFCC}},
+                      "disabled":{
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3}}},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3},
+                    "size":{
+                      "width":43,
+                      "height":42},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0x7F5ABAA3}},
+                  "adaptiveStyles":{
+},
+                  "objects":[{
+                      "id":"a46997d0f0c545d194eeed862b967fdb",
+                      "label":"",
+                      "isContained":true,
+                      "parentDynamicPanel":"ebe8d6e08b41490a88bc5b381c9ba798",
+                      "panelIndex":1,
+                      "type":"richTextPanel",
+                      "styleType":"paragraph",
+                      "visible":true,
+                      "style":{
+                        "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                        "foreGroundFill":{
+                          "fillType":"solid",
+                          "color":0xFFFFFFFF,
+                          "opacity":1},
+                        "stateStyles":{
+                          "mouseDown":{
+},
+                          "selected":{
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFCC}},
+                          "disabled":{
+                            "foreGroundFill":{
+                              "fillType":"solid",
+                              "color":0xFFFFFFFF,
+                              "opacity":1},
+                            "fill":{
+                              "fillType":"solid",
+                              "color":0xFF5ABAA3}}},
+                        "fill":{
+                          "fillType":"solid",
+                          "color":0xFF5ABAA3},
+                        "size":{
+                          "width":43,
+                          "height":42},
+                        "borderFill":{
+                          "fillType":"solid",
+                          "color":0x7F5ABAA3}},
+                      "adaptiveStyles":{
+}}],
+                  "interactionMap":{
+                    "onClick":{
+                      "description":"OnClick",
+                      "cases":[{
+                          "description":"用例 2",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"setPanelState",
+                              "description":"设置 12 到 状态1",
+                              "panelsToStates":[{
+                                  "panelPath":["ebe8d6e08b41490a88bc5b381c9ba798"],
+                                  "stateInfo":{
+                                    "setStateType":"diagram",
+                                    "stateNumber":1,
+                                    "stateValue":{
+                                      "exprType":"stringLiteral",
+                                      "value":"1",
+                                      "stos":[]},
+                                    "loop":false,
+                                    "showWhenSet":false,
+                                    "options":{
+                                      "compress":false}}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 12 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ebe8d6e08b41490a88bc5b381c9ba798"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]}]}]},
+                    "onLongClick":{
+                      "description":"OnLongClick",
+                      "cases":[{
+                          "description":"用例 1",
+                          "isNewIfGroup":false,
+                          "actions":[{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 12",
+                              "pathToInfo":[{
+                                  "objectPath":["bd2d9170444b493999d594b9dd30fc75"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 部件文字 情况 = &quot;缺勤1天&quot;, 且<br> 部件文字 流程 = &quot;未填单&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"缺勤1天",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetWidgetRichText",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"未填单",
+                                        "stos":[]},
+{
+                                        "exprType":"booleanLiteral",
+                                        "value":true}]}]}},
+{
+                              "action":"setFunction",
+                              "description":"设置 选中状态值 假 = &quot;true&quot;, 且<br> 选中状态值 补 = &quot;true&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["aef6dacb4a4b469095f06f9c84b4ef4b"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]},
+{
+                                    "exprType":"fcall",
+                                    "functionName":"SetCheckState",
+                                    "arguments":[{
+                                        "exprType":"pathLiteral",
+                                        "isThis":false,
+                                        "isFocused":false,
+                                        "isTarget":false,
+                                        "value":["ef353532af2d4b149a4219237fa02b7d"]},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"true",
+                                        "stos":[]}]}]}},
+{
+                              "action":"enableDisableWidgets",
+                              "description":"禁用 洽",
+                              "pathToInfo":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "enableDisableInfo":{
+                                    "enable":false}}]},
+{
+                              "action":"setFunction",
+                              "description":"设置 变量 未指定 = &quot;false&quot;",
+                              "expr":{
+                                "exprType":"block",
+                                "subExprs":[{
+                                    "exprType":"fcall",
+                                    "functionName":"SetGlobalVariableValue",
+                                    "arguments":[{
+                                        "exprType":"globalVariableLiteral",
+                                        "variableName":""},
+{
+                                        "exprType":"stringLiteral",
+                                        "value":"false",
+                                        "stos":[]}]}]}},
+{
+                              "action":"fadeWidget",
+                              "description":"隐藏 我的单据 向下滑动 500 毫秒,<br>我的考勤 向下滑动 500 毫秒,<br>关于我 向下滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["5b53017b7fad444290270627f014f34d"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                                  "fadeInfo":{
+                                    "fadeType":"hide",
+                                    "options":{
+                                      "easing":"slideDown",
+                                      "duration":500,
+                                      "showType":"none"}}}]},
+{
+                              "action":"fadeWidget",
+                              "description":"显示 洽 向上滑动 500 毫秒,<br>假 向上滑动 500 毫秒,<br>补 向上滑动 500 毫秒",
+                              "objectsToFades":[{
+                                  "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}},
+{
+                                  "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                                  "fadeInfo":{
+                                    "fadeType":"show",
+                                    "options":{
+                                      "easing":"slideUp",
+                                      "duration":500,
+                                      "showType":"none"}}}]}]}]}},
+                  "tabbable":true,
+                  "images":{
+                    "normal~":"images/我的考勤/1_u43_disabled.png",
+                    "selected~":"images/我的考勤/1_u43_selected.png",
+                    "disabled~":"images/我的考勤/1_u43_disabled.png"}}],
+              "style":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "image":null,
+                "imageHorizontalAlignment":"near",
+                "imageVerticalAlignment":"near",
+                "imageRepeat":"auto"},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"8d816ed6a4374fac9b2b84e57e41c98b",
+          "label":"13",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":612,
+              "y":203},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"95c653ebc2344ee08e660d6497674652",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":612,
+                  "y":203},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 13 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["8d816ed6a4374fac9b2b84e57e41c98b"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"250f58debb48422389553abc3746787c",
+          "label":"14",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":203},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6bc836ba81af45d285b3ae4d9533103b",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":203},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 14 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["250f58debb48422389553abc3746787c"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"80ca63d66a6d476bb9345c906f7d493e",
+          "label":"21",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"92987d1befeb4aedb16f4e3c09d689e6",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 21 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["80ca63d66a6d476bb9345c906f7d493e"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"ceffeaa3f6b045678682172134330d3b",
+          "label":"17",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":486,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"956623f56939492e9759f4ef5e0976e7",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":486,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 17 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["ceffeaa3f6b045678682172134330d3b"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"b2742aa9487b4c09a9d424035a8be0c8",
+          "label":"18",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":529,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"b6b36503e6bf4204af98c5fc08f99866",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":529,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 18 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["b2742aa9487b4c09a9d424035a8be0c8"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"48cda365b88d46e49241e979994d7970",
+          "label":"19",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":571,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"4e7c23fe5653422faac90b15dcdd4ddf",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":571,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 可见性 黑19 = 假)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"==",
+                    "leftExpr":{
+                      "exprType":"fcall",
+                      "functionName":"GetWidgetVisibility",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["d8a786678e3c4d699da698ec6a1111a3"]}]},
+                    "rightExpr":{
+                      "exprType":"booleanLiteral",
+                      "value":false}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 19 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["48cda365b88d46e49241e979994d7970"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;补考勤0.5天&quot;, 且<br> 部件文字 流程 = &quot;9/22李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"补考勤0.5天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/22李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]},
+{
+                  "description":"用例 2<br> (Else If 可见性 黑19 = 真)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"==",
+                    "leftExpr":{
+                      "exprType":"fcall",
+                      "functionName":"GetWidgetVisibility",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["d8a786678e3c4d699da698ec6a1111a3"]}]},
+                    "rightExpr":{
+                      "exprType":"booleanLiteral",
+                      "value":true}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 19 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["48cda365b88d46e49241e979994d7970"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;正常（补考勤0.5天）&quot;, 且<br> 部件文字 流程 = &quot;已完成&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正常（补考勤0.5天）",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"已完成",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"2af89569124c42d28402a08b8d8b15d3",
+          "label":"20",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":613,
+              "y":244},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"4fb8c69bdddc493a9f7d973c7a3b9a55",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":613,
+                  "y":244},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 20 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["2af89569124c42d28402a08b8d8b15d3"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;无&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"54c99a9a39c941dbab16f7485b6435b9",
+          "label":"24",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":486,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"f31e3a8775464d4e8af2b0786bfcefec",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":486,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 24 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["54c99a9a39c941dbab16f7485b6435b9"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"e6448ee9db5d4458adef0f60cc25c2fb",
+          "label":"25",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":528,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c4b975dd039e4648bb83dcd510cd9a42",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":528,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 25 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["e6448ee9db5d4458adef0f60cc25c2fb"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"673e84f302754d05882b5b50f889cb71",
+          "label":"26",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":570,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"9c8c03610ea44eaab272c06084d1e65a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":570,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 26 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["673e84f302754d05882b5b50f889cb71"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"dd94ede4e7a14baaa7009e43c12e2501",
+          "label":"27",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":612,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"958444c7c5ee4b1b95dd2598e4968b45",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":612,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 27 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["dd94ede4e7a14baaa7009e43c12e2501"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"2c5848a1c0ed4a85b40d0212f7c717ad",
+          "label":"28",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":285},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"bbaea2895ee74d339ac2bc975686c4fa",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":285},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 28 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["2c5848a1c0ed4a85b40d0212f7c717ad"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"9c648ca85b20420db675de319e2ecb3e",
+          "label":"29",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":402,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"172e7529addd4835997e2e138d6f52fc",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":402,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 28 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["2c5848a1c0ed4a85b40d0212f7c717ad"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"e93cb5217f63415ea753b113ef18eca3",
+          "label":"30",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":444,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"64f1a6b1f1e7443d86da97b0f2696984",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":444,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 30 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["e93cb5217f63415ea753b113ef18eca3"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;日期尚未到达&quot;, 且<br> 部件文字 流程 = &quot;无&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"日期尚未到达",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"无",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"f42d687d7744436caf336c64fa5b62bf",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":402,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"43f6432f688546b3be30c2ecc3ac1ef8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":402,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"9b509f4bdd4f4a938f9a7720dcc55161",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":444,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"21ed87c1c8cd48468bdeaa5fb8e6e62d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":444,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"6bbf5d9b39ef4031b97976d69f2987ff",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":486,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"71f37df056354552bfaa2ea14a348f28",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":486,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"cc06fbe01efc483b905ce86a0d1aed4a",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"c50952910ec04f6f9ac7b78416fd073f",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"63a4348f433f4f74a89abbd95378f50e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":570,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"105bd5a9d96e46eead483629dc749c7e",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":570,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"49d369e372d743ae87c214845dadf10c",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":612,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d0146a41b9ef4d92ac20e4c84f3b4590",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":612,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"b4904388b45f4b66abb6d2757ad7a61e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":528,
+              "y":121},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"bdc05faee72042de921a27759b10cc83",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":528,
+                  "y":121},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"f24b4c78e344483594aa09db484d699e",
+          "label":"红9",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":446,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFEE6363}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/红9_u129_line.png"}},
+{
+          "id":"757fd273ede04d43bf1803a3ac5dbaf1",
+          "label":"红10",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":488,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFEE6363}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/红9_u129_line.png"}},
+{
+          "id":"74f5efc8266747baa33d01e4b9e1db7d",
+          "label":"红11",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":530,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFEE6363}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/红9_u129_line.png"}},
+{
+          "id":"959c2b0cbf354e508baf70fa298373d8",
+          "label":"红12",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":572,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFEE6363}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/红9_u129_line.png"}},
+{
+          "id":"1efb5011516e4ca7b2b9bdbaf0fc2a9e",
+          "label":"",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":403,
+              "y":280},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3"},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/u133_line.png"}},
+{
+          "id":"3c0c51fd20954956bcd8c46f2fb05559",
+          "label":"",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":445,
+              "y":280},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3"},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/u133_line.png"}},
+{
+          "id":"4ba33b275dc84f72a15f973398674e4b",
+          "label":"绿19",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":571,
+              "y":280},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/绿19_u135_line.png"}},
+{
+          "id":"9dc424783ddf4528b96842e14cb7d7c7",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":486,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6af22bc387e14d558870dfc0e80cc0a1",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":486,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"3f270adc63b34555bce3139c679be969",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":528,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"967b1bdb4fe4422baf76a781efc92460",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":528,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"61648cd6aa7e4eadb2fd71e68a715718",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":570,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"85630501918b4ec685e9fab094d4ee1d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":570,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"e954f2230c994271bae7b703b41f3d81",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":612,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"21efc956465c435682d6f4be9a0b2f80",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":612,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"7306dad5643f4a8bae9f15192f582604",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFC9C9C9,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFCC}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":654,
+              "y":326},
+            "size":{
+              "width":43,
+              "height":42},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0x7F5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"af129da5aeca42fc80712b17f2627468",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFC9C9C9,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFCC}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":654,
+                  "y":326},
+                "size":{
+                  "width":43,
+                  "height":42},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0x7F5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/2_u45.png",
+            "selected~":"images/我的考勤/1_u43_selected.png",
+            "mouseDown~":"images/我的考勤/1_u43_mouseDown.png",
+            "disabled~":"images/我的考勤/1_u43_disabled.png"}},
+{
+          "id":"fb44e3216166439f8f8b5fef73312f5c",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":403,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"12068e2ab93a49a78f9c5b1b08a08bdd",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":403,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"7ee2442232f94348834d155d726e0e92",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":445,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"527b8fd13dfa494aa4f8dfbdfb901658",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":445,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"4895c958deea48b7b7d96e21ad6dff30",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":487,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"644e3c9a7ff748d4ba9d5509f0b69838",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":487,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"36e4bdf6ec05458299dfd5f3bbe254d0",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":655,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"2f57a990c39748eaa75a8e9c8e4c56e0",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":655,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"ccc78b3708d6426ba3e00dff17e27d73",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":571,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"8604aab424db479d88b7837931eb14b2",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":571,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"e23bc7caf23a4c2392e036e50156b0d3",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":613,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d25b9765a63c47cdb1373cdb44a1c91a",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":613,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"82ed3d158b50406cacc3199b2dfc541f",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "selected":{
+                "fontWeight":"bold"},
+              "disabled":{
+                "fontWeight":"bold",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFF},
+            "location":{
+              "x":529,
+              "y":96},
+            "size":{
+              "width":43,
+              "height":26},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"ad6467a6d8bf4fcbb0b36790aa8b4932",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "selected":{
+                    "fontWeight":"bold"},
+                  "disabled":{
+                    "fontWeight":"bold",
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFF5ABAA3,
+                      "opacity":1}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF},
+                "location":{
+                  "x":529,
+                  "y":96},
+                "size":{
+                  "width":43,
+                  "height":26},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif",
+            "selected~":"resources/images/transparent.gif",
+            "mouseDown~":"images/我的考勤/u146_mouseDown.png",
+            "disabled~":"resources/images/transparent.gif"}},
+{
+          "id":"59e69eca38134647a76e46944f7960f5",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":412,
+              "y":455},
+            "size":{
+              "width":65,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"eb329759f4024247bfc2e4612e3b4cb7",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":412,
+                  "y":455},
+                "size":{
+                  "width":65,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"a0223b03b84446f386a736bef0086148",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":412,
+              "y":490},
+            "size":{
+              "width":65,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"97fd0da824b647a0ab2f0f556f71fa43",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":412,
+                  "y":490},
+                "size":{
+                  "width":65,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"1f71182af0c142b39ebdc62b23b01f3e",
+          "label":"",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":554,
+              "y":419},
+            "size":{
+              "width":135,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"6ca3e0533f054f249a8f2548fd9ad381",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":554,
+                  "y":419},
+                "size":{
+                  "width":135,
+                  "height":17}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"27173b33411e4dc3ac3ead10596b1538",
+          "label":"洽",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontSize":"20px",
+            "fontWeight":"700",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF999999},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "location":{
+              "x":433,
+              "y":525},
+            "size":{
+              "width":50,
+              "height":50},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"2f95cc01aad4493a82b852c2ef36ede8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontSize":"20px",
+                "fontWeight":"700",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF999999},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFF999999}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "location":{
+                  "x":433,
+                  "y":525},
+                "size":{
+                  "width":50,
+                  "height":50},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"显示 框 遮罩效果,<br>线 置于顶层,<br>原因 置于顶层,<br>确认 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"lightbox",
+                              "lightbox":{
+                                "r":0,
+                                "g":0,
+                                "b":0,
+                                "a":127}}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["84897c4f5edf4abe86e50a9eb682fc02"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}}]}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/洽_u166.png",
+            "mouseDown~":"images/我的考勤/洽_u166_mouseDown.png",
+            "disabled~":"images/我的考勤/洽_u166_disabled.png"}},
+{
+          "id":"aef6dacb4a4b469095f06f9c84b4ef4b",
+          "label":"假",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontSize":"20px",
+            "fontWeight":"700",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF999999},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "location":{
+              "x":525,
+              "y":525},
+            "size":{
+              "width":50,
+              "height":50},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"d31ff7ecc670481b83847f46938cc95d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontSize":"20px",
+                "fontWeight":"700",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF999999},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFF999999}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "location":{
+                  "x":525,
+                  "y":525},
+                "size":{
+                  "width":50,
+                  "height":50},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"显示 框 遮罩效果,<br>线 置于顶层,<br>确认 置于顶层,<br>(下拉列表框) 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"lightbox",
+                              "lightbox":{
+                                "r":0,
+                                "g":0,
+                                "b":0,
+                                "a":127}}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["39ad42073d5e411ea79d52ed2bb38b50"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}}]}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/洽_u166.png",
+            "mouseDown~":"images/我的考勤/洽_u166_mouseDown.png",
+            "disabled~":"images/我的考勤/洽_u166_disabled.png"}},
+{
+          "id":"ef353532af2d4b149a4219237fa02b7d",
+          "label":"补",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Bold', '微软雅黑'",
+            "fontSize":"20px",
+            "fontWeight":"700",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "stateStyles":{
+              "mouseDown":{
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFE4E4E4}},
+              "disabled":{
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF999999},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF999999}}},
+            "fill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "location":{
+              "x":617,
+              "y":525},
+            "size":{
+              "width":50,
+              "height":50},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"b1023c885899484fa031acec73f692cb",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Bold', '微软雅黑'",
+                "fontSize":"20px",
+                "fontWeight":"700",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "stateStyles":{
+                  "mouseDown":{
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFFE4E4E4}},
+                  "disabled":{
+                    "foreGroundFill":{
+                      "fillType":"solid",
+                      "color":0xFFFFFFFF,
+                      "opacity":1},
+                    "fill":{
+                      "fillType":"solid",
+                      "color":0xFF999999},
+                    "borderFill":{
+                      "fillType":"solid",
+                      "color":0xFF999999}}},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "location":{
+                  "x":617,
+                  "y":525},
+                "size":{
+                  "width":50,
+                  "height":50},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"显示 框 遮罩效果,<br>线 置于顶层,<br>没带卡 置于顶层,<br>确认 置于顶层,<br>忘打卡 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"lightbox",
+                              "lightbox":{
+                                "r":0,
+                                "g":0,
+                                "b":0,
+                                "a":127}}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["cf8a753857a74782b8d062e5bcd8c194"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}},
+{
+                          "objectPath":["6d38c920857e48aa9aaa1bd629e3e4d2"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"front"}}}]}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的考勤/洽_u166.png",
+            "mouseDown~":"images/我的考勤/洽_u166_mouseDown.png",
+            "disabled~":"images/我的考勤/洽_u166_disabled.png"}},
+{
+          "id":"bcb761df65fe4af09580e04fa97dd9ff",
+          "label":"框",
+          "type":"flowShape",
+          "styleType":"flowShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF},
+            "location":{
+              "x":445,
+              "y":270},
+            "size":{
+              "width":210,
+              "height":119},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"063e6f9a2cc54114995c0f52d24c65f4",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF},
+                "location":{
+                  "x":445,
+                  "y":270},
+                "size":{
+                  "width":210,
+                  "height":119},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的考勤/框_u172.png"}},
+{
+          "id":"690b7889c920412da26bdd027ee9c032",
+          "label":"线",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":445,
+              "y":349},
+            "size":{
+              "width":210,
+              "height":10},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/线_u174_line.png"}},
+{
+          "id":"84897c4f5edf4abe86e50a9eb682fc02",
+          "label":"原因",
+          "type":"textBox",
+          "styleType":"textBox",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":450,
+              "y":283},
+            "size":{
+              "width":200,
+              "height":56}},
+          "adaptiveStyles":{
+},
+          "interactionMap":{
+            "onFocus":{
+              "description":"OnFocus",
+              "cases":[{
+                  "description":"用例 1<br> (If 部件文字 原因 = &quot;洽公原因&quot;)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"==",
+                    "leftExpr":{
+                      "exprType":"fcall",
+                      "functionName":"GetWidgetText",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["84897c4f5edf4abe86e50a9eb682fc02"]}]},
+                    "rightExpr":{
+                      "exprType":"stringLiteral",
+                      "value":"洽公原因",
+                      "stos":[]}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 原因 = &quot;&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetFormText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["84897c4f5edf4abe86e50a9eb682fc02"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"",
+                                "stos":[]}]}]}}]}]},
+            "onLostFocus":{
+              "description":"OnLostFocus",
+              "cases":[{
+                  "description":"用例 1<br> (If 部件文字 原因 = &quot;&quot;)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"==",
+                    "leftExpr":{
+                      "exprType":"fcall",
+                      "functionName":"GetWidgetText",
+                      "arguments":[{
+                          "exprType":"pathLiteral",
+                          "isThis":false,
+                          "isFocused":false,
+                          "isTarget":false,
+                          "value":["84897c4f5edf4abe86e50a9eb682fc02"]}]},
+                    "rightExpr":{
+                      "exprType":"stringLiteral",
+                      "value":"",
+                      "stos":[]}},
+                  "actions":[{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 原因 = &quot;洽公原因&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetFormText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["84897c4f5edf4abe86e50a9eb682fc02"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"洽公原因",
+                                "stos":[]}]}]}}]}]}},
+          "tabbable":true},
+{
+          "id":"f68829f4111f4313bbbcd15eca6aceaf",
+          "label":"确认",
+          "type":"buttonShape",
+          "styleType":"paragraph",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"16px",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "location":{
+              "x":533,
+              "y":362},
+            "size":{
+              "width":33,
+              "height":22}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"eebea53322b34c7bad230860c1828192",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"16px",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "location":{
+                  "x":533,
+                  "y":362},
+                "size":{
+                  "width":33,
+                  "height":22}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1<br> (If 可见性 (下拉列表框) = 假 和 可见性 没带卡 = 假)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["39ad42073d5e411ea79d52ed2bb38b50"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":false}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["cf8a753857a74782b8d062e5bcd8c194"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":false}}},
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"隐藏 框,<br>线,<br>原因,<br>确认",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["84897c4f5edf4abe86e50a9eb682fc02"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["5b53017b7fad444290270627f014f34d"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 提示 = &quot;洽公成功&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["af70148155104d4ab9aa1207a210e165"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"洽公成功",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 提示 淡入淡出 500 毫秒 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"front"}}}]},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 提示 淡入淡出 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 红10,<br>红11",
+                      "objectsToFades":[{
+                          "objectPath":["757fd273ede04d43bf1803a3ac5dbaf1"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["74f5efc8266747baa33d01e4b9e1db7d"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 绿10,<br>绿11",
+                      "objectsToFades":[{
+                          "objectPath":["5b69f035920c4164bd144b17cda3cb80"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["6402db67935d4abba001c7a18703e80c"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"setPanelState",
+                      "description":"设置 10 到 状态1,<br>11 到 状态1",
+                      "panelsToStates":[{
+                          "panelPath":["af8e832d228049b3bbfb4a5b0e4418f0"],
+                          "stateInfo":{
+                            "setStateType":"diagram",
+                            "stateNumber":1,
+                            "stateValue":{
+                              "exprType":"stringLiteral",
+                              "value":"1",
+                              "stos":[]},
+                            "loop":false,
+                            "showWhenSet":false,
+                            "options":{
+                              "compress":false}}},
+{
+                          "panelPath":["88d2346132f2418d8bc48d4f9102f9db"],
+                          "stateInfo":{
+                            "setStateType":"diagram",
+                            "stateNumber":1,
+                            "stateValue":{
+                              "exprType":"stringLiteral",
+                              "value":"1",
+                              "stos":[]},
+                            "loop":false,
+                            "showWhenSet":false,
+                            "options":{
+                              "compress":false}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 10 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["af8e832d228049b3bbfb4a5b0e4418f0"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;洽公1天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"洽公1天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]},
+{
+                  "description":"用例 1<br> (Else If 可见性 (下拉列表框) = 真 和 可见性 没带卡 = 假)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["39ad42073d5e411ea79d52ed2bb38b50"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["cf8a753857a74782b8d062e5bcd8c194"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":false}}},
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"隐藏 框,<br>线,<br>(下拉列表框),<br>确认",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["39ad42073d5e411ea79d52ed2bb38b50"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["5b53017b7fad444290270627f014f34d"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 提示 = &quot;请假成功&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["af70148155104d4ab9aa1207a210e165"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"请假成功",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 提示 淡入淡出 500 毫秒 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"front"}}}]},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 提示 淡入淡出 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 红9",
+                      "objectsToFades":[{
+                          "objectPath":["f24b4c78e344483594aa09db484d699e"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 绿9",
+                      "objectsToFades":[{
+                          "objectPath":["6ecce6a9bc584d26a746a75cafd7b545"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"setPanelState",
+                      "description":"设置 9 到 状态1",
+                      "panelsToStates":[{
+                          "panelPath":["735a4458ff8f48179603b30ad6a3e18f"],
+                          "stateInfo":{
+                            "setStateType":"diagram",
+                            "stateNumber":1,
+                            "stateValue":{
+                              "exprType":"stringLiteral",
+                              "value":"1",
+                              "stos":[]},
+                            "loop":false,
+                            "showWhenSet":false,
+                            "options":{
+                              "compress":false}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 9 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["735a4458ff8f48179603b30ad6a3e18f"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;请假1天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"请假1天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 num = &quot;2&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["ba8f95a2c2f849d6863f0f85eaa76264"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"2",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]},
+{
+                  "description":"用例 1<br> (Else If 可见性 (下拉列表框) = 假 和 可见性 没带卡 = 真)",
+                  "isNewIfGroup":false,
+                  "condition":{
+                    "exprType":"binaryOp",
+                    "op":"&&",
+                    "leftExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["39ad42073d5e411ea79d52ed2bb38b50"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":false}},
+                    "rightExpr":{
+                      "exprType":"binaryOp",
+                      "op":"==",
+                      "leftExpr":{
+                        "exprType":"fcall",
+                        "functionName":"GetWidgetVisibility",
+                        "arguments":[{
+                            "exprType":"pathLiteral",
+                            "isThis":false,
+                            "isFocused":false,
+                            "isTarget":false,
+                            "value":["cf8a753857a74782b8d062e5bcd8c194"]}]},
+                      "rightExpr":{
+                        "exprType":"booleanLiteral",
+                        "value":true}}},
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"隐藏 框,<br>线,<br>没带卡,<br>确认,<br>忘打卡",
+                      "objectsToFades":[{
+                          "objectPath":["bcb761df65fe4af09580e04fa97dd9ff"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["690b7889c920412da26bdd027ee9c032"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["cf8a753857a74782b8d062e5bcd8c194"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["f68829f4111f4313bbbcd15eca6aceaf"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["6d38c920857e48aa9aaa1bd629e3e4d2"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 洽 向下滑动 500 毫秒,<br>假 向下滑动 500 毫秒,<br>补 向下滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["27173b33411e4dc3ac3ead10596b1538"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["aef6dacb4a4b469095f06f9c84b4ef4b"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["ef353532af2d4b149a4219237fa02b7d"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"slideDown",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 我的单据 向上滑动 500 毫秒,<br>我的考勤 向上滑动 500 毫秒,<br>关于我 向上滑动 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["854cef656da74db2a3d1ff49db2921d3"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["5b53017b7fad444290270627f014f34d"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}},
+{
+                          "objectPath":["6162d058c03a47d3b55ff95d5b7a9396"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"slideUp",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 提示 = &quot;补考勤成功&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["af70148155104d4ab9aa1207a210e165"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"补考勤成功",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 提示 淡入淡出 500 毫秒 置于顶层",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"front"}}}]},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 提示 淡入淡出 500 毫秒",
+                      "objectsToFades":[{
+                          "objectPath":["6529c2ea03f64387aa438fc3b101a7db"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "easing":"fade",
+                              "duration":500,
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 红12",
+                      "objectsToFades":[{
+                          "objectPath":["959c2b0cbf354e508baf70fa298373d8"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 绿12",
+                      "objectsToFades":[{
+                          "objectPath":["f560609236be4a80bfc81ee043469401"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"setPanelState",
+                      "description":"设置 12 到 状态1",
+                      "panelsToStates":[{
+                          "panelPath":["ebe8d6e08b41490a88bc5b381c9ba798"],
+                          "stateInfo":{
+                            "setStateType":"diagram",
+                            "stateNumber":1,
+                            "stateValue":{
+                              "exprType":"stringLiteral",
+                              "value":"1",
+                              "stos":[]},
+                            "loop":false,
+                            "showWhenSet":false,
+                            "options":{
+                              "compress":false}}}]},
+{
+                      "action":"setFunction",
+                      "description":"设置 选中状态值 12 = &quot;true&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetCheckState",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["ebe8d6e08b41490a88bc5b381c9ba798"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"true",
+                                "stos":[]}]}]}},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 情况 = &quot;补考勤0.5天&quot;, 且<br> 部件文字 流程 = &quot;9/23李清华审批中&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["9f08638211f34b289a0495ba31554012"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"补考勤0.5天",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]},
+{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["70bbd8f7af8944358a26176bc0c99d1d"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"9/23李清华审批中",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"resources/images/transparent.gif"}},
+{
+          "id":"f560609236be4a80bfc81ee043469401",
+          "label":"绿12",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":571,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/绿19_u135_line.png"}},
+{
+          "id":"6402db67935d4abba001c7a18703e80c",
+          "label":"绿11",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":529,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/绿19_u135_line.png"}},
+{
+          "id":"5b69f035920c4164bd144b17cda3cb80",
+          "label":"绿10",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":487,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/绿19_u135_line.png"}},
+{
+          "id":"6ecce6a9bc584d26a746a75cafd7b545",
+          "label":"绿9",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":444,
+              "y":239},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3",
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3}},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/绿19_u135_line.png"}},
+{
+          "id":"6529c2ea03f64387aa438fc3b101a7db",
+          "label":"提示",
+          "type":"flowShape",
+          "styleType":"flowShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFFFFFFFF,
+              "opacity":1},
+            "fill":{
+              "fillType":"solid",
+              "color":0x7F000000},
+            "location":{
+              "x":500,
+              "y":123},
+            "size":{
+              "width":100,
+              "height":32},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFFFFFF}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"af70148155104d4ab9aa1207a210e165",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFFFF,
+                  "opacity":1},
+                "fill":{
+                  "fillType":"solid",
+                  "color":0x7F000000},
+                "location":{
+                  "x":500,
+                  "y":123},
+                "size":{
+                  "width":100,
+                  "height":32},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFFFFFF}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的单据/提示_u91.png"}},
+{
+          "id":"39ad42073d5e411ea79d52ed2bb38b50",
+          "label":"",
+          "type":"comboBox",
+          "styleType":"comboBox",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fill":{
+              "fillType":"solid",
+              "color":0xFFFFFFCC},
+            "location":{
+              "x":509,
+              "y":304},
+            "size":{
+              "width":93,
+              "height":22}},
+          "adaptiveStyles":{
+}},
+{
+          "id":"cf8a753857a74782b8d062e5bcd8c194",
+          "label":"没带卡",
+          "type":"radioButton",
+          "styleType":"radioButton",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "horizontalAlignment":"center",
+            "location":{
+              "x":510,
+              "y":289},
+            "size":{
+              "width":87,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"2e7345d314ac4bd98e36aa7b97e5da65",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "horizontalAlignment":"center",
+                "location":{
+                  "x":510,
+                  "y":289},
+                "size":{
+                  "width":87,
+                  "height":17}},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"6d38c920857e48aa9aaa1bd629e3e4d2",
+          "label":"忘打卡",
+          "type":"radioButton",
+          "styleType":"radioButton",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "horizontalAlignment":"center",
+            "location":{
+              "x":510,
+              "y":326},
+            "size":{
+              "width":87,
+              "height":17}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"8d2eefeb19b44cbdb1a6496e1af7df68",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "horizontalAlignment":"center",
+                "location":{
+                  "x":510,
+                  "y":326},
+                "size":{
+                  "width":87,
+                  "height":17}},
+              "adaptiveStyles":{
+}}]},
+{
+          "id":"da281bab7e3c493d991dfa958fa5992b",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "location":{
+              "x":659,
+              "y":62},
+            "size":{
+              "width":29,
+              "height":28}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"fd924d53d54e4a92886269c9f56e176d",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "location":{
+                  "x":659,
+                  "y":62},
+                "size":{
+                  "width":29,
+                  "height":28}},
+              "adaptiveStyles":{
+}}],
+          "interactionMap":{
+            "onClick":{
+              "description":"OnClick",
+              "cases":[{
+                  "description":"用例 1",
+                  "isNewIfGroup":false,
+                  "actions":[{
+                      "action":"fadeWidget",
+                      "description":"显示 同步 遮罩效果",
+                      "objectsToFades":[{
+                          "objectPath":["a5c17be1b2a0418699f9c651cdec4b2a"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"lightbox",
+                              "lightbox":{
+                                "r":0,
+                                "g":0,
+                                "b":0,
+                                "a":127}}}}]},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 同步 = &quot;正在同步……（2/3）&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["02254dd9335b4e3ba1df8e58be46bfe8"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正在同步……（2/3）",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"setFunction",
+                      "description":"设置 部件文字 同步 = &quot;正在同步……（3/3）&quot;",
+                      "expr":{
+                        "exprType":"block",
+                        "subExprs":[{
+                            "exprType":"fcall",
+                            "functionName":"SetWidgetRichText",
+                            "arguments":[{
+                                "exprType":"pathLiteral",
+                                "isThis":false,
+                                "isFocused":false,
+                                "isTarget":false,
+                                "value":["02254dd9335b4e3ba1df8e58be46bfe8"]},
+{
+                                "exprType":"stringLiteral",
+                                "value":"正在同步……（3/3）",
+                                "stos":[]},
+{
+                                "exprType":"booleanLiteral",
+                                "value":true}]}]}},
+{
+                      "action":"wait",
+                      "description":"等待1000毫秒",
+                      "waitTime":1000},
+{
+                      "action":"fadeWidget",
+                      "description":"隐藏 同步,<br>绿19",
+                      "objectsToFades":[{
+                          "objectPath":["a5c17be1b2a0418699f9c651cdec4b2a"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}},
+{
+                          "objectPath":["4ba33b275dc84f72a15f973398674e4b"],
+                          "fadeInfo":{
+                            "fadeType":"hide",
+                            "options":{
+                              "showType":"none"}}}]},
+{
+                      "action":"fadeWidget",
+                      "description":"显示 黑19",
+                      "objectsToFades":[{
+                          "objectPath":["d8a786678e3c4d699da698ec6a1111a3"],
+                          "fadeInfo":{
+                            "fadeType":"show",
+                            "options":{
+                              "showType":"none"}}}]}]}]}},
+          "tabbable":true,
+          "images":{
+            "normal~":"images/我的单据/u11.png"}},
+{
+          "id":"a5c17be1b2a0418699f9c651cdec4b2a",
+          "label":"同步",
+          "type":"buttonShape",
+          "styleType":"buttonShape",
+          "visible":true,
+          "style":{
+            "fontName":"'微软雅黑 Regular', '微软雅黑'",
+            "fontSize":"16px",
+            "foreGroundFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3,
+              "opacity":1},
+            "location":{
+              "x":458,
+              "y":298},
+            "size":{
+              "width":184,
+              "height":33},
+            "borderFill":{
+              "fillType":"solid",
+              "color":0xFF5ABAA3},
+            "cornerRadiusTopLeft":"5"},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"02254dd9335b4e3ba1df8e58be46bfe8",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "fontName":"'微软雅黑 Regular', '微软雅黑'",
+                "fontSize":"16px",
+                "foreGroundFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3,
+                  "opacity":1},
+                "location":{
+                  "x":458,
+                  "y":298},
+                "size":{
+                  "width":184,
+                  "height":33},
+                "borderFill":{
+                  "fillType":"solid",
+                  "color":0xFF5ABAA3},
+                "cornerRadiusTopLeft":"5"},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/我的单据/同步_u13.png"}},
+{
+          "id":"d8a786678e3c4d699da698ec6a1111a3",
+          "label":"黑19",
+          "type":"horizontalLine",
+          "styleType":"horizontalLine",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":570,
+              "y":280},
+            "size":{
+              "width":42,
+              "height":10},
+            "borderWidth":"3"},
+          "adaptiveStyles":{
+},
+          "images":{
+            "start~":"resources/images/transparent.gif",
+            "end~":"resources/images/transparent.gif",
+            "line~":"images/我的考勤/u133_line.png"}}]}},
+  "masters":{
+    "dc48e400b7474dc59356ab65988cb125":{
+      "packageId":"dc48e400b7474dc59356ab65988cb125",
+      "type":"Axure:Master",
+      "name":"新母版 1",
+      "notes":{
+},
+      "style":{
+        "baseStyle":"627587b6038d43cca051c114ac41ad32",
+        "pageAlignment":"near",
+        "fill":{
+          "fillType":"solid",
+          "color":0xFFFFFFFF},
+        "image":null,
+        "imageHorizontalAlignment":"near",
+        "imageVerticalAlignment":"near",
+        "imageRepeat":"auto",
+        "favicon":null,
+        "sketchFactor":"0",
+        "colorStyle":"appliedColor",
+        "fontName":"应用字体",
+        "borderWidth":"0"},
+      "adaptiveStyles":{
+},
+      "interactionMap":{
+},
+      "diagram":{
+        "objects":[{
+            "id":"c4ef72fe76d544d2883990933f53d373",
+            "label":"",
+            "type":"buttonShape",
+            "styleType":"buttonShape",
+            "visible":true,
+            "style":{
+              "fill":{
+                "fillType":"solid",
+                "color":0xFF37C8AB},
+              "location":{
+                "x":400,
+                "y":50},
+              "size":{
+                "width":300,
+                "height":533},
+              "borderFill":{
+                "fillType":"solid",
+                "color":0xFFFFFF}},
+            "adaptiveStyles":{
+},
+            "objects":[{
+                "id":"b4da05b8ffe24b9f8fbd120919ef033a",
+                "label":"",
+                "isContained":true,
+                "type":"richTextPanel",
+                "styleType":"paragraph",
+                "visible":true,
+                "style":{
+                  "fill":{
+                    "fillType":"solid",
+                    "color":0xFF37C8AB},
+                  "location":{
+                    "x":400,
+                    "y":50},
+                  "size":{
+                    "width":300,
+                    "height":533},
+                  "borderFill":{
+                    "fillType":"solid",
+                    "color":0xFFFFFF}},
+                "adaptiveStyles":{
+}}],
+            "images":{
+              "normal~":"images/登录/u1.png"}}]}}},
+  "objectPaths":{
+    "5d421b40164b48f0bf434e450f58ab10":{
+      "scriptId":"u0",
+      "c4ef72fe76d544d2883990933f53d373":{
+        "scriptId":"u1"},
+      "b4da05b8ffe24b9f8fbd120919ef033a":{
+        "scriptId":"u2"}},
+    "19942652098a4b959ce2d4a452339e26":{
+      "scriptId":"u3"},
+    "ab5dc7dce46644499e4378f32aff9f61":{
+      "scriptId":"u4"},
+    "ce5d8984751d4da5bd19cf574687382a":{
+      "scriptId":"u5"},
+    "813be424ddc04d749ed17c846e65a3be":{
+      "scriptId":"u6"},
+    "478afdbd9b284747aa8b1f43b70f7307":{
+      "scriptId":"u7"},
+    "ba8f95a2c2f849d6863f0f85eaa76264":{
+      "scriptId":"u8"},
+    "b56734fe922c4f0089e40340fda58904":{
+      "scriptId":"u9"},
+    "cc3f451e46714dcca5d1a17e04c77751":{
+      "scriptId":"u10"},
+    "854cef656da74db2a3d1ff49db2921d3":{
+      "scriptId":"u11"},
+    "a89d2e4c86544c91a2f681790dbef3d8":{
+      "scriptId":"u12"},
+    "5b53017b7fad444290270627f014f34d":{
+      "scriptId":"u13"},
+    "63596dc4c31e4fd1aa39558624d11009":{
+      "scriptId":"u14"},
+    "6162d058c03a47d3b55ff95d5b7a9396":{
+      "scriptId":"u15"},
+    "45e8f0b4648342b8a681cab5e163141c":{
+      "scriptId":"u16"},
+    "646ff2db676240a993308e87b5e4b1b8":{
+      "scriptId":"u17"},
+    "9f7147338fe642b7a56ed915eb50e136":{
+      "scriptId":"u18"},
+    "87e0dc37731842a59b9360618520da43":{
+      "scriptId":"u19"},
+    "aa67cd5e8fa945868c9c5ec7a345abf3":{
+      "scriptId":"u20"},
+    "53f8a10f942447e8a78aaa918955a5a1":{
+      "scriptId":"u21"},
+    "a7369f159d5a47359449c14dec5b86a2":{
+      "scriptId":"u22"},
+    "f5f7cc6e4b7f4da2898b15fd839277f2":{
+      "scriptId":"u23"},
+    "d04aa12f526c4826b55dda1192a4dc2f":{
+      "scriptId":"u24"},
+    "b5ba772f15374b9e84024ab92e22bc82":{
+      "scriptId":"u25"},
+    "4c3ad1359e5b4f21a380bb323230f453":{
+      "scriptId":"u26"},
+    "d3cb1aed6d0c480384ac2bcfffc667a2":{
+      "scriptId":"u27"},
+    "d6d980f1d5944a4191aa5d205a8880f9":{
+      "scriptId":"u28"},
+    "a776f616cf2e4eb5ac8706b70fdbda84":{
+      "scriptId":"u29"},
+    "6737ab1e3de149b6abc793107508df91":{
+      "scriptId":"u30"},
+    "90dd5a4d4038410d85a94a201cdfdfed":{
+      "scriptId":"u31"},
+    "89bc10482a17422aaf84642a23c892c3":{
+      "scriptId":"u32"},
+    "ad8f98a26b434fd39565ad01cab2ddba":{
+      "scriptId":"u33"},
+    "9e8e01b8782b42be9aa18b5eea2b91dc":{
+      "scriptId":"u34"},
+    "9bbfb28e027745928a9009286511aacb":{
+      "scriptId":"u35"},
+    "e7a28199d7604fe99c71fe690e44433a":{
+      "scriptId":"u36"},
+    "d893600085e142caa8d7b837d5f92882":{
+      "scriptId":"u37"},
+    "9d872f0aebdf47b9850039e7c21c4f26":{
+      "scriptId":"u38"},
+    "9f08638211f34b289a0495ba31554012":{
+      "scriptId":"u39"},
+    "8097379f2a2d497d85e99c57125636ae":{
+      "scriptId":"u40"},
+    "70bbd8f7af8944358a26176bc0c99d1d":{
+      "scriptId":"u41"},
+    "c5890d675f6e4dcc9e5625a26cf365fd":{
+      "scriptId":"u42"},
+    "129f182e61564dbeab333b2cea8aae4a":{
+      "scriptId":"u43"},
+    "565c02d59f8c41e287e5b50219d740a3":{
+      "scriptId":"u44"},
+    "9528c18556804efd9b20b76c9bba6731":{
+      "scriptId":"u45"},
+    "61bfbf57346842339a08bb030c520228":{
+      "scriptId":"u46"},
+    "4e1708124cd64217af1a2eb5c99ce808":{
+      "scriptId":"u47"},
+    "09580cce76fb45e482a4cf02fb43cc9f":{
+      "scriptId":"u48"},
+    "92bd6f6b2fc14753af57847b0cf105d9":{
+      "scriptId":"u49"},
+    "b40ec1fd1bdb4bdb98287dc924e5a98e":{
+      "scriptId":"u50"},
+    "4828f172cc0041e89acdea6872a1c34f":{
+      "scriptId":"u51"},
+    "c88492f5145a4ccca1bd487b41a9af34":{
+      "scriptId":"u52"},
+    "795a666b17824f9e8f85d543c5656d6e":{
+      "scriptId":"u53"},
+    "f21c042a778c4e089a26974270d17393":{
+      "scriptId":"u54"},
+    "c6ab4ffea148448cb478bb08953aed71":{
+      "scriptId":"u55"},
+    "64f65a2808d84df99b6008eb978bc69f":{
+      "scriptId":"u56"},
+    "bed7ac126d274992bb69de32f4616054":{
+      "scriptId":"u57"},
+    "c4bb55eb401d46568a0fac63460597b6":{
+      "scriptId":"u58"},
+    "ef57677023b8481bb3883ad957f897fc":{
+      "scriptId":"u59"},
+    "c152f69b308c4a74bdc46cf8a3da63a8":{
+      "scriptId":"u60"},
+    "735a4458ff8f48179603b30ad6a3e18f":{
+      "scriptId":"u61"},
+    "aeb9bf2f4e1048629d9f5cbcd1634765":{
+      "scriptId":"u62"},
+    "97ef1f5cbb384596946114e73de117c7":{
+      "scriptId":"u63"},
+    "273911dc7b1442c7b70da8444d7a6141":{
+      "scriptId":"u64"},
+    "52337a010fb546e2b2b62fe7d246dfea":{
+      "scriptId":"u65"},
+    "0df9d7a3570d43c896868fde878be9c1":{
+      "scriptId":"u66"},
+    "063b71b7025b422f8ffcf81276876635":{
+      "scriptId":"u67"},
+    "2cca8dd0817b45338de9d84e662d6ce0":{
+      "scriptId":"u68"},
+    "a58f30efa88c4a88a831132bc840092f":{
+      "scriptId":"u69"},
+    "af8e832d228049b3bbfb4a5b0e4418f0":{
+      "scriptId":"u70"},
+    "6e937b53ea6049179fd7bd84eeb10e2b":{
+      "scriptId":"u71"},
+    "c7cf1f68ab8e4239afa12b3700191ef1":{
+      "scriptId":"u72"},
+    "2c82f822cfb149f2bd69d265b4f26cd5":{
+      "scriptId":"u73"},
+    "53e7e1909b774e9d8e13bc0763959c41":{
+      "scriptId":"u74"},
+    "1bd862b5357d460095d765935823c31b":{
+      "scriptId":"u75"},
+    "ab7d77921fc54dac867df6711fc2194a":{
+      "scriptId":"u76"},
+    "88d2346132f2418d8bc48d4f9102f9db":{
+      "scriptId":"u77"},
+    "eb02359f3e864d2594d0e09b98e55411":{
+      "scriptId":"u78"},
+    "a64f7cb381dd4af487fb3ec1456489e1":{
+      "scriptId":"u79"},
+    "b7ea94cdcf8641b09c965e3200847105":{
+      "scriptId":"u80"},
+    "ed9f1f4364ac434ab2e21fa451acfe6e":{
+      "scriptId":"u81"},
+    "ebe8d6e08b41490a88bc5b381c9ba798":{
+      "scriptId":"u82"},
+    "739957b115874fbbb35744422dfa2787":{
+      "scriptId":"u83"},
+    "707e32d6e8a44441b0adf820fd9ccbc7":{
+      "scriptId":"u84"},
+    "bd2d9170444b493999d594b9dd30fc75":{
+      "scriptId":"u85"},
+    "a46997d0f0c545d194eeed862b967fdb":{
+      "scriptId":"u86"},
+    "8d816ed6a4374fac9b2b84e57e41c98b":{
+      "scriptId":"u87"},
+    "95c653ebc2344ee08e660d6497674652":{
+      "scriptId":"u88"},
+    "250f58debb48422389553abc3746787c":{
+      "scriptId":"u89"},
+    "6bc836ba81af45d285b3ae4d9533103b":{
+      "scriptId":"u90"},
+    "80ca63d66a6d476bb9345c906f7d493e":{
+      "scriptId":"u91"},
+    "92987d1befeb4aedb16f4e3c09d689e6":{
+      "scriptId":"u92"},
+    "ceffeaa3f6b045678682172134330d3b":{
+      "scriptId":"u93"},
+    "956623f56939492e9759f4ef5e0976e7":{
+      "scriptId":"u94"},
+    "b2742aa9487b4c09a9d424035a8be0c8":{
+      "scriptId":"u95"},
+    "b6b36503e6bf4204af98c5fc08f99866":{
+      "scriptId":"u96"},
+    "48cda365b88d46e49241e979994d7970":{
+      "scriptId":"u97"},
+    "4e7c23fe5653422faac90b15dcdd4ddf":{
+      "scriptId":"u98"},
+    "2af89569124c42d28402a08b8d8b15d3":{
+      "scriptId":"u99"},
+    "4fb8c69bdddc493a9f7d973c7a3b9a55":{
+      "scriptId":"u100"},
+    "54c99a9a39c941dbab16f7485b6435b9":{
+      "scriptId":"u101"},
+    "f31e3a8775464d4e8af2b0786bfcefec":{
+      "scriptId":"u102"},
+    "e6448ee9db5d4458adef0f60cc25c2fb":{
+      "scriptId":"u103"},
+    "c4b975dd039e4648bb83dcd510cd9a42":{
+      "scriptId":"u104"},
+    "673e84f302754d05882b5b50f889cb71":{
+      "scriptId":"u105"},
+    "9c8c03610ea44eaab272c06084d1e65a":{
+      "scriptId":"u106"},
+    "dd94ede4e7a14baaa7009e43c12e2501":{
+      "scriptId":"u107"},
+    "958444c7c5ee4b1b95dd2598e4968b45":{
+      "scriptId":"u108"},
+    "2c5848a1c0ed4a85b40d0212f7c717ad":{
+      "scriptId":"u109"},
+    "bbaea2895ee74d339ac2bc975686c4fa":{
+      "scriptId":"u110"},
+    "9c648ca85b20420db675de319e2ecb3e":{
+      "scriptId":"u111"},
+    "172e7529addd4835997e2e138d6f52fc":{
+      "scriptId":"u112"},
+    "e93cb5217f63415ea753b113ef18eca3":{
+      "scriptId":"u113"},
+    "64f1a6b1f1e7443d86da97b0f2696984":{
+      "scriptId":"u114"},
+    "f42d687d7744436caf336c64fa5b62bf":{
+      "scriptId":"u115"},
+    "43f6432f688546b3be30c2ecc3ac1ef8":{
+      "scriptId":"u116"},
+    "9b509f4bdd4f4a938f9a7720dcc55161":{
+      "scriptId":"u117"},
+    "21ed87c1c8cd48468bdeaa5fb8e6e62d":{
+      "scriptId":"u118"},
+    "6bbf5d9b39ef4031b97976d69f2987ff":{
+      "scriptId":"u119"},
+    "71f37df056354552bfaa2ea14a348f28":{
+      "scriptId":"u120"},
+    "cc06fbe01efc483b905ce86a0d1aed4a":{
+      "scriptId":"u121"},
+    "c50952910ec04f6f9ac7b78416fd073f":{
+      "scriptId":"u122"},
+    "63a4348f433f4f74a89abbd95378f50e":{
+      "scriptId":"u123"},
+    "105bd5a9d96e46eead483629dc749c7e":{
+      "scriptId":"u124"},
+    "49d369e372d743ae87c214845dadf10c":{
+      "scriptId":"u125"},
+    "d0146a41b9ef4d92ac20e4c84f3b4590":{
+      "scriptId":"u126"},
+    "b4904388b45f4b66abb6d2757ad7a61e":{
+      "scriptId":"u127"},
+    "bdc05faee72042de921a27759b10cc83":{
+      "scriptId":"u128"},
+    "f24b4c78e344483594aa09db484d699e":{
+      "scriptId":"u129"},
+    "757fd273ede04d43bf1803a3ac5dbaf1":{
+      "scriptId":"u130"},
+    "74f5efc8266747baa33d01e4b9e1db7d":{
+      "scriptId":"u131"},
+    "959c2b0cbf354e508baf70fa298373d8":{
+      "scriptId":"u132"},
+    "1efb5011516e4ca7b2b9bdbaf0fc2a9e":{
+      "scriptId":"u133"},
+    "3c0c51fd20954956bcd8c46f2fb05559":{
+      "scriptId":"u134"},
+    "4ba33b275dc84f72a15f973398674e4b":{
+      "scriptId":"u135"},
+    "9dc424783ddf4528b96842e14cb7d7c7":{
+      "scriptId":"u136"},
+    "6af22bc387e14d558870dfc0e80cc0a1":{
+      "scriptId":"u137"},
+    "3f270adc63b34555bce3139c679be969":{
+      "scriptId":"u138"},
+    "967b1bdb4fe4422baf76a781efc92460":{
+      "scriptId":"u139"},
+    "61648cd6aa7e4eadb2fd71e68a715718":{
+      "scriptId":"u140"},
+    "85630501918b4ec685e9fab094d4ee1d":{
+      "scriptId":"u141"},
+    "e954f2230c994271bae7b703b41f3d81":{
+      "scriptId":"u142"},
+    "21efc956465c435682d6f4be9a0b2f80":{
+      "scriptId":"u143"},
+    "7306dad5643f4a8bae9f15192f582604":{
+      "scriptId":"u144"},
+    "af129da5aeca42fc80712b17f2627468":{
+      "scriptId":"u145"},
+    "fb44e3216166439f8f8b5fef73312f5c":{
+      "scriptId":"u146"},
+    "12068e2ab93a49a78f9c5b1b08a08bdd":{
+      "scriptId":"u147"},
+    "7ee2442232f94348834d155d726e0e92":{
+      "scriptId":"u148"},
+    "527b8fd13dfa494aa4f8dfbdfb901658":{
+      "scriptId":"u149"},
+    "4895c958deea48b7b7d96e21ad6dff30":{
+      "scriptId":"u150"},
+    "644e3c9a7ff748d4ba9d5509f0b69838":{
+      "scriptId":"u151"},
+    "36e4bdf6ec05458299dfd5f3bbe254d0":{
+      "scriptId":"u152"},
+    "2f57a990c39748eaa75a8e9c8e4c56e0":{
+      "scriptId":"u153"},
+    "ccc78b3708d6426ba3e00dff17e27d73":{
+      "scriptId":"u154"},
+    "8604aab424db479d88b7837931eb14b2":{
+      "scriptId":"u155"},
+    "e23bc7caf23a4c2392e036e50156b0d3":{
+      "scriptId":"u156"},
+    "d25b9765a63c47cdb1373cdb44a1c91a":{
+      "scriptId":"u157"},
+    "82ed3d158b50406cacc3199b2dfc541f":{
+      "scriptId":"u158"},
+    "ad6467a6d8bf4fcbb0b36790aa8b4932":{
+      "scriptId":"u159"},
+    "59e69eca38134647a76e46944f7960f5":{
+      "scriptId":"u160"},
+    "eb329759f4024247bfc2e4612e3b4cb7":{
+      "scriptId":"u161"},
+    "a0223b03b84446f386a736bef0086148":{
+      "scriptId":"u162"},
+    "97fd0da824b647a0ab2f0f556f71fa43":{
+      "scriptId":"u163"},
+    "1f71182af0c142b39ebdc62b23b01f3e":{
+      "scriptId":"u164"},
+    "6ca3e0533f054f249a8f2548fd9ad381":{
+      "scriptId":"u165"},
+    "27173b33411e4dc3ac3ead10596b1538":{
+      "scriptId":"u166"},
+    "2f95cc01aad4493a82b852c2ef36ede8":{
+      "scriptId":"u167"},
+    "aef6dacb4a4b469095f06f9c84b4ef4b":{
+      "scriptId":"u168"},
+    "d31ff7ecc670481b83847f46938cc95d":{
+      "scriptId":"u169"},
+    "ef353532af2d4b149a4219237fa02b7d":{
+      "scriptId":"u170"},
+    "b1023c885899484fa031acec73f692cb":{
+      "scriptId":"u171"},
+    "bcb761df65fe4af09580e04fa97dd9ff":{
+      "scriptId":"u172"},
+    "063e6f9a2cc54114995c0f52d24c65f4":{
+      "scriptId":"u173"},
+    "690b7889c920412da26bdd027ee9c032":{
+      "scriptId":"u174"},
+    "84897c4f5edf4abe86e50a9eb682fc02":{
+      "scriptId":"u175"},
+    "f68829f4111f4313bbbcd15eca6aceaf":{
+      "scriptId":"u176"},
+    "eebea53322b34c7bad230860c1828192":{
+      "scriptId":"u177"},
+    "f560609236be4a80bfc81ee043469401":{
+      "scriptId":"u178"},
+    "6402db67935d4abba001c7a18703e80c":{
+      "scriptId":"u179"},
+    "5b69f035920c4164bd144b17cda3cb80":{
+      "scriptId":"u180"},
+    "6ecce6a9bc584d26a746a75cafd7b545":{
+      "scriptId":"u181"},
+    "6529c2ea03f64387aa438fc3b101a7db":{
+      "scriptId":"u182"},
+    "af70148155104d4ab9aa1207a210e165":{
+      "scriptId":"u183"},
+    "39ad42073d5e411ea79d52ed2bb38b50":{
+      "scriptId":"u184"},
+    "cf8a753857a74782b8d062e5bcd8c194":{
+      "scriptId":"u185"},
+    "2e7345d314ac4bd98e36aa7b97e5da65":{
+      "scriptId":"u186"},
+    "6d38c920857e48aa9aaa1bd629e3e4d2":{
+      "scriptId":"u187"},
+    "8d2eefeb19b44cbdb1a6496e1af7df68":{
+      "scriptId":"u188"},
+    "da281bab7e3c493d991dfa958fa5992b":{
+      "scriptId":"u189"},
+    "fd924d53d54e4a92886269c9f56e176d":{
+      "scriptId":"u190"},
+    "a5c17be1b2a0418699f9c651cdec4b2a":{
+      "scriptId":"u191"},
+    "02254dd9335b4e3ba1df8e58be46bfe8":{
+      "scriptId":"u192"},
+    "d8a786678e3c4d699da698ec6a1111a3":{
+      "scriptId":"u193"}}});

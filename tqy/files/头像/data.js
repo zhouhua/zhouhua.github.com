@@ -1,17 +1,17 @@
 ﻿$axure.loadCurrentPage({
   "url":"头像.html",
-  "generationDate":new Date(1410514723060.42),
+  "generationDate":new Date(1410945747605.6),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable",
-"mouseX",
-"mouseY",
-"drag"],
+"number",
+"movepanel",
+"upown"],
   "page":{
     "packageId":"7699e6c2f6c94a7698746017e2cacd1a",
     "type":"Axure:Page",
     "name":"头像",
     "notes":{
-},
+      "操作任务":"<p><span>返回前</span></p><p><span>1.尝试添加头像</span></p><p><span>2.取消添加</span></p><p><span>&nbsp;</span></p><p><span>返回后</span></p><p><span>1.再次尝试添加头像</span></p>"},
     "style":{
       "baseStyle":"627587b6038d43cca051c114ac41ad32",
       "pageAlignment":"near",
@@ -409,9 +409,10 @@
                   "isNewIfGroup":false,
                   "actions":[{
                       "action":"linkWindow",
-                      "description":"在 当前窗口 打开 链接",
+                      "description":"在 当前窗口 打开 我的单据",
                       "target":{
                         "targetType":"page",
+                        "url":"我的单据.html",
                         "includeVariables":true},
                       "linkType":"current"}]}]}},
           "tabbable":true,
