@@ -13,50 +13,35 @@
     "loadFeedbackPlugin":false},
   "sitemap":{
     "rootNodes":[{
-        "pageName":"登录",
+        "pageName":"Home",
         "type":"Wireframe",
-        "url":"登录.html",
+        "url":"home.html",
         "children":[{
-            "pageName":"头像",
+            "pageName":"Page 1",
             "type":"Wireframe",
-            "url":"头像.html"},
+            "url":"page_1.html"},
 {
-            "pageName":"选取",
+            "pageName":"Page 2",
             "type":"Wireframe",
-            "url":"选取.html"},
+            "url":"page_2.html"},
 {
-            "pageName":"确认",
+            "pageName":"Page 3",
             "type":"Wireframe",
-            "url":"确认.html"}]},
+            "url":"page_3.html"}]},
 {
-        "pageName":"我的单据",
+        "pageName":"Home的副本",
         "type":"Wireframe",
-        "url":"我的单据.html"},
+        "url":"home的副本.html"},
 {
-        "pageName":"我的考勤",
+        "pageName":"Home的副本",
         "type":"Wireframe",
-        "url":"我的考勤.html"},
+        "url":"home的副本_1.html"},
 {
-        "pageName":"关于我",
+        "pageName":"Home的副本",
         "type":"Wireframe",
-        "url":"关于我.html"},
-{
-        "pageName":"我的单据的副本",
-        "type":"Wireframe",
-        "url":"我的单据的副本.html"},
-{
-        "pageName":"我的单据2",
-        "type":"Wireframe",
-        "url":"我的单据2.html"},
-{
-        "pageName":"New Page 1",
-        "type":"Wireframe",
-        "url":"new_page_1.html"}]},
+        "url":"home的副本_2.html"}]},
   "globalVariables":{
-    "onloadvariable":"",
-    "number":"",
-    "movepanel":"",
-    "upown":""},
+    "onloadvariable":""},
   "defaultAdaptiveView":{
     "name":"",
     "size":{
@@ -67,7 +52,7 @@
   "stylesheet":{
     "defaultStyles":{
       "buttonShape":{
-        "id":"a80c5557ea704239aef6bfed561c76ce",
+        "id":"d7e60c98d2d64b5e878945acd4a0c9bc",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -126,7 +111,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "paragraph":{
-        "id":"6655c9c31a414a9d9c40c1de1628530d",
+        "id":"c2b90420193f44fe951f306a90803243",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -185,7 +170,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h1":{
-        "id":"c5944423791649efa4dedff33e00d71c",
+        "id":"787f52969b5649ba959b46074d9ba92f",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"32px",
         "fontWeight":"700",
@@ -244,7 +229,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h2":{
-        "id":"b9a90db0068045828f890667d4588a98",
+        "id":"238d0848ac2440859cbea53a2fbefb7e",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"24px",
         "fontWeight":"700",
@@ -303,7 +288,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h3":{
-        "id":"be860655c29f4f11be1323feef48fed5",
+        "id":"6f8fa95bbebf4005bc63b40c96dbcf4d",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"18px",
         "fontWeight":"700",
@@ -362,7 +347,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h4":{
-        "id":"87d14297b9d34a9d9f32f649e2762b45",
+        "id":"cf30a71be237476192a3a3066d7bc830",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"14px",
         "fontWeight":"700",
@@ -421,7 +406,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h5":{
-        "id":"9490c02036844d2c88946a4106f19875",
+        "id":"e6e36ab9fadc492c8e2289d8793d6dab",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"700",
@@ -480,7 +465,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "h6":{
-        "id":"99f109674ff6433e8e9be1301d4ca6ff",
+        "id":"637da3854c8f4724a760bdb3a52af86b",
         "fontName":"'Arial Negreta', 'Arial'",
         "fontSize":"10px",
         "fontWeight":"700",
@@ -539,7 +524,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "imageBox":{
-        "id":"740a8ef24abf4944b7a51b794c2222c9",
+        "id":"42a0504936dc41b6ace077cd3ba65ae0",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -598,7 +583,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "hyperlink":{
-        "id":"57244b6ccaab4c8cb5586fd7cb3a02ed",
+        "id":"f37295b1c8d44f8ebb8fb59481b6aebd",
         "foreGroundFill":{
           "fillType":"solid",
           "color":0xFF0000FF,
@@ -612,12 +597,12 @@
         "visible":true,
         "limbo":false},
       "hyperlinkMouseOver":{
-        "id":"b49516b73197474bbf2b6e3e4a540ca1",
+        "id":"2cc078197aa141f2ac64eeadc86fc8cf",
         "underline":true},
       "hyperlinkMouseDown":{
-        "id":"bb565b2da98a483384fa0c6af96fa053"},
+        "id":"d8e1f23573c94134a7377f210b732ca3"},
       "textBox":{
-        "id":"e8e2dd7022984993b8278b0c1fafa7df",
+        "id":"098ac64ee5694a6faa80283fd7ddcb66",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -676,7 +661,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "textArea":{
-        "id":"5f06bc952ae746d19b25df4c735a9aa6",
+        "id":"99e131706ceb467ca254838c12843874",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -735,7 +720,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "comboBox":{
-        "id":"8a39bdfd81f5486881f8ed6bfcf06e39",
+        "id":"ca447105cc744d16adf6dd8af514e52c",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -794,7 +779,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "listBox":{
-        "id":"6cf56a405fb94f2b927139edf4d14ab2",
+        "id":"3b9d4c6a559c4f46a9b16504841f1e48",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -853,7 +838,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "checkbox":{
-        "id":"124251b0a32f493189a27f11f11c11af",
+        "id":"3bbd93372b68444b86f62cdca156bc23",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -912,7 +897,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "radioButton":{
-        "id":"fd2a8711d1a543ccadc22ffbc379550b",
+        "id":"2cce4bc1681741e8bd175f489f933377",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -971,7 +956,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "flowShape":{
-        "id":"80f6924f00fa4c2e8fe261bbe5e2d897",
+        "id":"2b354bf01bcd45eea4cc79fdb91df86d",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1037,7 +1022,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "treeNodeObject":{
-        "id":"8a3b05530f684bb993083bc221539d73",
+        "id":"b825fda0b2eb4933b7e6b44647512337",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1096,7 +1081,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "button":{
-        "id":"c5e318c15d2545f98ea4c4feee8b7326",
+        "id":"dce6941a20194d86bb66ef3928d03049",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1155,7 +1140,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "imageMapRegion":{
-        "id":"8388b188252441c5b2215997ba75dc29",
+        "id":"fc6e70b654b34c208cf02280fadf6984",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1214,7 +1199,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "inlineFrame":{
-        "id":"b6bdd5c56ab642f3a17c049b972bab48",
+        "id":"7b56a911b27b4e84b8d4786d16c205d3",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1273,7 +1258,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "dynamicPanel":{
-        "id":"f1654612fe194ae2ad6d89e32ec7113b",
+        "id":"5ef3c99cc3334dac9bf8723cf5e3a8db",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1332,7 +1317,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "referenceDiagramObject":{
-        "id":"51c5d65d55a343769169dac8516b4e7e",
+        "id":"96d8d5b1283948a7964f25bbc5b08829",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1391,7 +1376,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "repeater":{
-        "id":"8cef8c365e3f4f2989d9895e015396e0",
+        "id":"0973c5babf5b45838556d02c64401ad6",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1450,7 +1435,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "table":{
-        "id":"d030166eb1774d47b59ca81f18230214",
+        "id":"fe627c1094c448e596570a0679c5d63b",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1509,7 +1494,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "tableCell":{
-        "id":"0a39b5f0901e4507a6f1dcbf241ec54f",
+        "id":"42b07af8e0a04763b28c5b0c95dc9eaa",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1568,7 +1553,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "menuObject":{
-        "id":"2057c758933a4e989bea404f123735f8",
+        "id":"9a908b28cf3c4f349858c8d1bdde8344",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1627,7 +1612,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "horizontalLine":{
-        "id":"997d3a2b2e63469d8548dde07cb4fb5c",
+        "id":"a2c3103c15e841fdbc53692609505882",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1686,7 +1671,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "verticalLine":{
-        "id":"da5ee7d168b544619ae2108ec4b33aa6",
+        "id":"9e7b42a9fce646148a28173c9b7c6b47",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
@@ -1745,7 +1730,7 @@
             "b":0,
             "a":0.349019607843137}}},
       "connector":{
-        "id":"6b6c1a61cc73426d9eb6c78f560058f3",
+        "id":"fbde737c9a054e879f16e297401c69ee",
         "fontName":"'Arial Normal', 'Arial'",
         "fontSize":"13px",
         "fontWeight":"400",
