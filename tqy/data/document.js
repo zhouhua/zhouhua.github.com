@@ -27,19 +27,7 @@
 {
             "pageName":"Page 3",
             "type":"Wireframe",
-            "url":"page_3.html"}]},
-{
-        "pageName":"Home的副本",
-        "type":"Wireframe",
-        "url":"home的副本.html"},
-{
-        "pageName":"Home的副本",
-        "type":"Wireframe",
-        "url":"home的副本_1.html"},
-{
-        "pageName":"Home的副本",
-        "type":"Wireframe",
-        "url":"home的副本_2.html"}]},
+            "url":"page_3.html"}]}]},
   "globalVariables":{
     "onloadvariable":""},
   "defaultAdaptiveView":{
