@@ -27,7 +27,11 @@
 {
             "pageName":"Page 3",
             "type":"Wireframe",
-            "url":"page_3.html"}]}]},
+            "url":"page_3.html"}]},
+{
+        "pageName":"Home的副本",
+        "type":"Wireframe",
+        "url":"home的副本.html"}]},
   "globalVariables":{
     "onloadvariable":""},
   "defaultAdaptiveView":{
