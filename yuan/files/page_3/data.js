@@ -1,0 +1,71 @@
+﻿$axure.loadCurrentPage({
+  "url":"page_3.html",
+  "generationDate":new Date(1411445961174.54),
+  "isCanvasEnabled":false,
+  "variables":["OnLoadVariable"],
+  "page":{
+    "packageId":"4d07169d12374c55a3452755929e9aa5",
+    "type":"Axure:Page",
+    "name":"Page 3",
+    "notes":{
+},
+    "style":{
+      "baseStyle":"627587b6038d43cca051c114ac41ad32",
+      "pageAlignment":"near",
+      "fill":{
+        "fillType":"solid",
+        "color":0xFFFFFFFF},
+      "image":null,
+      "imageHorizontalAlignment":"near",
+      "imageVerticalAlignment":"near",
+      "imageRepeat":"auto",
+      "favicon":null,
+      "sketchFactor":"0",
+      "colorStyle":"appliedColor",
+      "fontName":"应用字体",
+      "borderWidth":"0"},
+    "adaptiveStyles":{
+},
+    "interactionMap":{
+},
+    "diagram":{
+      "objects":[{
+          "id":"a9185b53fa4345b68be01b8e28fcd11d",
+          "label":"",
+          "type":"imageBox",
+          "styleType":"imageBox",
+          "visible":true,
+          "style":{
+            "location":{
+              "x":101,
+              "y":80.0000152587891},
+            "size":{
+              "width":579,
+              "height":390}},
+          "adaptiveStyles":{
+},
+          "objects":[{
+              "id":"030667f2c8b348459a9eb86e67b50a95",
+              "label":"",
+              "isContained":true,
+              "type":"richTextPanel",
+              "styleType":"paragraph",
+              "visible":true,
+              "style":{
+                "location":{
+                  "x":101,
+                  "y":80.0000152587891},
+                "size":{
+                  "width":579,
+                  "height":390}},
+              "adaptiveStyles":{
+}}],
+          "images":{
+            "normal~":"images/page_3/u0.png"}}]}},
+  "masters":{
+},
+  "objectPaths":{
+    "a9185b53fa4345b68be01b8e28fcd11d":{
+      "scriptId":"u0"},
+    "030667f2c8b348459a9eb86e67b50a95":{
+      "scriptId":"u1"}}});
