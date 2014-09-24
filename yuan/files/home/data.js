@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"home.html",
-  "generationDate":new Date(1411524195401.49),
+  "generationDate":new Date(1411529479671.25),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -6751,7 +6751,7 @@
                               "y":298},
                             "size":{
                               "width":760,
-                              "height":252}},
+                              "height":280}},
                           "adaptiveStyles":{
 },
                           "objects":[{
@@ -6777,7 +6777,7 @@
                                   "y":298},
                                 "size":{
                                   "width":760,
-                                  "height":252}},
+                                  "height":280}},
                               "adaptiveStyles":{
 }}],
                           "images":{
@@ -6808,7 +6808,7 @@
                               "color":0xFFFF9900},
                             "location":{
                               "x":262,
-                              "y":594},
+                              "y":608},
                             "size":{
                               "width":356,
                               "height":44},
@@ -6844,7 +6844,7 @@
                                   "color":0xFFFF9900},
                                 "location":{
                                   "x":262,
-                                  "y":594},
+                                  "y":608},
                                 "size":{
                                   "width":356,
                                   "height":44},
@@ -9471,8 +9471,8 @@
                   "style":{
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "location":{
-                      "x":243,
-                      "y":68},
+                      "x":170,
+                      "y":82},
                     "size":{
                       "width":80,
                       "height":80}},
@@ -9490,8 +9490,8 @@
                       "style":{
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "location":{
-                          "x":243,
-                          "y":68},
+                          "x":170,
+                          "y":82},
                         "size":{
                           "width":80,
                           "height":80}},
@@ -9510,8 +9510,8 @@
                   "style":{
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "location":{
-                      "x":243,
-                      "y":288},
+                      "x":170,
+                      "y":302},
                     "size":{
                       "width":80,
                       "height":80}},
@@ -9529,8 +9529,8 @@
                       "style":{
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "location":{
-                          "x":243,
-                          "y":288},
+                          "x":170,
+                          "y":302},
                         "size":{
                           "width":80,
                           "height":80}},
@@ -9549,8 +9549,8 @@
                   "style":{
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "location":{
-                      "x":243,
-                      "y":178},
+                      "x":170,
+                      "y":192},
                     "size":{
                       "width":80,
                       "height":80}},
@@ -9568,8 +9568,8 @@
                       "style":{
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "location":{
-                          "x":243,
-                          "y":178},
+                          "x":170,
+                          "y":192},
                         "size":{
                           "width":80,
                           "height":80}},
@@ -9589,8 +9589,8 @@
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "fontSize":"20px",
                     "location":{
-                      "x":373,
-                      "y":96},
+                      "x":300,
+                      "y":110},
                     "size":{
                       "width":124,
                       "height":22}},
@@ -9609,8 +9609,8 @@
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "fontSize":"20px",
                         "location":{
-                          "x":373,
-                          "y":96},
+                          "x":300,
+                          "y":110},
                         "size":{
                           "width":124,
                           "height":22}},
@@ -9630,8 +9630,8 @@
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "fontSize":"20px",
                     "location":{
-                      "x":373,
-                      "y":206},
+                      "x":300,
+                      "y":220},
                     "size":{
                       "width":191,
                       "height":22}},
@@ -9650,8 +9650,8 @@
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "fontSize":"20px",
                         "location":{
-                          "x":373,
-                          "y":206},
+                          "x":300,
+                          "y":220},
                         "size":{
                           "width":191,
                           "height":22}},
@@ -9671,8 +9671,8 @@
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "fontSize":"20px",
                     "location":{
-                      "x":373,
-                      "y":305},
+                      "x":300,
+                      "y":319},
                     "size":{
                       "width":305,
                       "height":45}},
@@ -9691,8 +9691,8 @@
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "fontSize":"20px",
                         "location":{
-                          "x":373,
-                          "y":305},
+                          "x":300,
+                          "y":319},
                         "size":{
                           "width":305,
                           "height":45}},
@@ -9711,8 +9711,8 @@
                   "style":{
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "location":{
-                      "x":243,
-                      "y":410},
+                      "x":170,
+                      "y":424},
                     "size":{
                       "width":80,
                       "height":80}},
@@ -9730,8 +9730,8 @@
                       "style":{
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "location":{
-                          "x":243,
-                          "y":410},
+                          "x":170,
+                          "y":424},
                         "size":{
                           "width":80,
                           "height":80}},
@@ -9758,10 +9758,10 @@
                       "mouseOver":{
                         "underline":true}},
                     "location":{
-                      "x":373,
-                      "y":451},
+                      "x":300,
+                      "y":465},
                     "size":{
-                      "width":348,
+                      "width":455,
                       "height":22}},
                   "adaptiveStyles":{
 },
@@ -9785,10 +9785,10 @@
                           "mouseOver":{
                             "underline":true}},
                         "location":{
-                          "x":373,
-                          "y":451},
+                          "x":300,
+                          "y":465},
                         "size":{
-                          "width":348,
+                          "width":455,
                           "height":22}},
                       "adaptiveStyles":{
 }}],
@@ -9800,12 +9800,12 @@
                           "isNewIfGroup":false,
                           "actions":[{
                               "action":"linkWindow",
-                              "description":"在 新窗口/标签页 打开 http://pan.baidu.com/s/1i33i9V3",
+                              "description":"在 新窗口/标签页 打开 http://zhouhua.github.io/田沁园的简历.pdf",
                               "target":{
                                 "targetType":"webUrl",
                                 "urlLiteral":{
                                   "exprType":"stringLiteral",
-                                  "value":"http://pan.baidu.com/s/1i33i9V3",
+                                  "value":"http://zhouhua.github.io/田沁园的简历.pdf",
                                   "stos":[]},
                                 "includeVariables":false},
                               "linkType":"new"}]}]}},
@@ -9825,8 +9825,8 @@
                     "fontName":"'幼圆 Regular', '幼圆'",
                     "fontSize":"20px",
                     "location":{
-                      "x":373,
-                      "y":420},
+                      "x":300,
+                      "y":434},
                     "size":{
                       "width":87,
                       "height":22}},
@@ -9845,8 +9845,8 @@
                         "fontName":"'幼圆 Regular', '幼圆'",
                         "fontSize":"20px",
                         "location":{
-                          "x":373,
-                          "y":420},
+                          "x":300,
+                          "y":434},
                         "size":{
                           "width":87,
                           "height":22}},
@@ -9878,7 +9878,7 @@
               "opacity":0.756862759590149},
             "location":{
               "x":908,
-              "y":911},
+              "y":857},
             "size":{
               "width":110,
               "height":14}},
@@ -9899,7 +9899,7 @@
                   "opacity":0.756862759590149},
                 "location":{
                   "x":908,
-                  "y":911},
+                  "y":857},
                 "size":{
                   "width":110,
                   "height":14}},
