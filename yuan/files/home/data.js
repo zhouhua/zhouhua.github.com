@@ -1,6 +1,6 @@
 ﻿$axure.loadCurrentPage({
   "url":"home.html",
-  "generationDate":new Date(1411452704522.51),
+  "generationDate":new Date(1411524195401.49),
   "isCanvasEnabled":false,
   "variables":["OnLoadVariable"],
   "page":{
@@ -5186,7 +5186,7 @@
                       "x":421,
                       "y":215},
                     "size":{
-                      "width":409,
+                      "width":449,
                       "height":339},
                     "visible":false},
                   "adaptiveStyles":{
@@ -7053,9 +7053,9 @@
                             "fontName":"'幼圆 Regular', '幼圆'",
                             "stateStyles":{
                               "mouseOver":{
-                                "underline":true},
+},
                               "mouseDown":{
-                                "underline":true}},
+}},
                             "location":{
                               "x":251,
                               "y":29},
@@ -7077,9 +7077,9 @@
                                 "fontName":"'幼圆 Regular', '幼圆'",
                                 "stateStyles":{
                                   "mouseOver":{
-                                    "underline":true},
+},
                                   "mouseDown":{
-                                    "underline":true}},
+}},
                                 "location":{
                                   "x":251,
                                   "y":29},
@@ -7089,9 +7089,7 @@
                               "adaptiveStyles":{
 }}],
                           "images":{
-                            "normal~":"resources/images/transparent.gif",
-                            "mouseOver~":"resources/images/transparent.gif",
-                            "mouseDown~":"resources/images/transparent.gif"}},
+                            "normal~":"resources/images/transparent.gif"}},
 {
                           "id":"a2924e4c29d8434395703c30182e279f",
                           "label":"2文本1",
@@ -7974,11 +7972,11 @@
                             "fontName":"'幼圆 Regular', '幼圆'",
                             "stateStyles":{
                               "mouseOver":{
-                                "underline":true},
+},
                               "mouseDown":{
-                                "underline":true}},
+}},
                             "location":{
-                              "x":256.5,
+                              "x":256,
                               "y":240},
                             "size":{
                               "width":150,
@@ -7998,11 +7996,11 @@
                                 "fontName":"'幼圆 Regular', '幼圆'",
                                 "stateStyles":{
                                   "mouseOver":{
-                                    "underline":true},
+},
                                   "mouseDown":{
-                                    "underline":true}},
+}},
                                 "location":{
-                                  "x":256.5,
+                                  "x":256,
                                   "y":240},
                                 "size":{
                                   "width":150,
@@ -8010,9 +8008,7 @@
                               "adaptiveStyles":{
 }}],
                           "images":{
-                            "normal~":"resources/images/transparent.gif",
-                            "mouseOver~":"resources/images/transparent.gif",
-                            "mouseDown~":"resources/images/transparent.gif"}},
+                            "normal~":"resources/images/transparent.gif"}},
 {
                           "id":"22fa946925404298b73becc4c545d602",
                           "label":"200",
@@ -8324,9 +8320,9 @@
                             "fontName":"'幼圆 Regular', '幼圆'",
                             "stateStyles":{
                               "mouseOver":{
-                                "underline":true},
+},
                               "mouseDown":{
-                                "underline":true}},
+}},
                             "location":{
                               "x":251,
                               "y":29},
@@ -8348,9 +8344,9 @@
                                 "fontName":"'幼圆 Regular', '幼圆'",
                                 "stateStyles":{
                                   "mouseOver":{
-                                    "underline":true},
+},
                                   "mouseDown":{
-                                    "underline":true}},
+}},
                                 "location":{
                                   "x":251,
                                   "y":29},
@@ -8360,9 +8356,7 @@
                               "adaptiveStyles":{
 }}],
                           "images":{
-                            "normal~":"resources/images/transparent.gif",
-                            "mouseOver~":"resources/images/transparent.gif",
-                            "mouseDown~":"resources/images/transparent.gif"}},
+                            "normal~":"resources/images/transparent.gif"}},
 {
                           "id":"9b2ee37ac3bd47888e0b849406ab48ef",
                           "label":"110",
@@ -9217,9 +9211,9 @@
                             "fontName":"'幼圆 Regular', '幼圆'",
                             "stateStyles":{
                               "mouseOver":{
-                                "underline":true},
+},
                               "mouseDown":{
-                                "underline":true}},
+}},
                             "location":{
                               "x":292,
                               "y":265},
@@ -9241,9 +9235,9 @@
                                 "fontName":"'幼圆 Regular', '幼圆'",
                                 "stateStyles":{
                                   "mouseOver":{
-                                    "underline":true},
+},
                                   "mouseDown":{
-                                    "underline":true}},
+}},
                                 "location":{
                                   "x":292,
                                   "y":265},
@@ -9253,9 +9247,7 @@
                               "adaptiveStyles":{
 }}],
                           "images":{
-                            "normal~":"resources/images/transparent.gif",
-                            "mouseOver~":"resources/images/transparent.gif",
-                            "mouseDown~":"resources/images/transparent.gif"}},
+                            "normal~":"resources/images/transparent.gif"}},
 {
                           "id":"b76b990649bd4ab6bbf4a22a0025cc84",
                           "label":"100",
