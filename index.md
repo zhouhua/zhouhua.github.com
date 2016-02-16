@@ -7,7 +7,7 @@ group: navigation
 {% include JB/setup %}
 
 <script language="javascript" type="text/javascript">
-        window.location.href="http://www.zhouhua.info/"; 
+        // window.location.href="http://www.zhouhua.info/"; 
 </script>
 
 首页建设中……
